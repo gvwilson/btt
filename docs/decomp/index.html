@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="repo" content="https://github.com/gvwilson/btt">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Building Tech Together: Who Does What</title>
+  <link rel="stylesheet" href="../tango.css">
+<link rel="stylesheet" href="../mccole.css">
+
+<link rel="stylesheet" href="../pages.css">
+
+
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']]
+    }
+  };
+</script>
+<script
+  type="text/javascript"
+  id="MathJax-script"
+  async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+  
+
+</head>
+
+  <body>
+    <main data-slug="decomp">
+      <div class="row title">
+  <div class="col-1 left">
+    <p>
+      <a href="../"><img src="../codebender-logo.svg" alt="logo" class="logo"/></a>
+    </p>
+  </div>
+  <div class="col-10 center">
+    <h1>Who Does What</h1>
+  </div>
+  <div class="col-1"></div>
+</div>
+
+
+<div class="row notex">
+  <div class="col-1 left">
+    <a href="../meetings/">&lArr;</a>
+  </div>
+  <div class="col-10 center">
+    <span class="tagline">Deciding on responsibilities, and deciding how to decide, is a team&rsquo;s first challenge.</span>
+  </div>
+  <div class="col-1 right">
+    <a href="../grading/">&rArr;</a>
+  </div>
+</div>
+<ul class="syllabus">
+<li>People learn better together than alone <em>if</em> their teams are working well.</li>
+<li><strong>Stream-aligned teams</strong> works on a single product, service, or set of features.</li>
+<li><strong>Enabling team</strong> is specialists in a particular domain who help stream-aligned teams solve specific problems.</li>
+<li><strong>Complicated subsystem team</strong> builds and maintains modules for stream-aligned teams to use.</li>
+<li><strong>Platform team</strong> creates internal services to allow stream-aligned teams to work consistently but independently.</li>
+<li>Can be hard for some teams or individuals to get recognition for their work.</li>
+<li><strong>Modular decomposition</strong> leads to big bang integration and makes each person a single point of failure.</li>
+<li><strong>Functional decomposition</strong> has the same problems plus uneven distribution of annoyance.</li>
+<li><strong>Feature decomposition</strong> and <strong>rotating decomposition</strong> are fairer but doesn&rsquo;t allow people to dive deep into any skill.</li>
+<li>Avoid allowing high-status individuals to snag most prestigious roles: they&rsquo;re often not as good as they think they are.</li>
+</ul>
+
+
+      <p>Most people learn better together than they do on their own <span class="bib-ref">[<a class="bib-ref" href="../bib/#Michaelson2004">Michaelson2004</a>]</span>:
+they achieve higher grades,
+retain information longer,
+are less likely to drop out of school,
+and graduate with better communication skills
+and a better understanding of what will be expected of them
+in their subsequent careers.
+On the other hand,
+a badly-run team is worse than no team at all,
+since people will waste hours or days arguing with one another,
+duplicating or undoing each other&rsquo;s work,
+and wishing that they had taken some other course or joined some other lab.</p>
+<p>As noted in Chapter&nbsp;1
+the software you get reflects the division of labor.
+No matter how you allocate work,
+make sure that everyone understands who is doing what.
+Actual roles can be fluid;
+the most important thing is that
+team members understand and accept their responsibilities and everyone else&rsquo;s
+at any particular moment <span class="bib-ref">[<a class="bib-ref" href="../bib/#Barke2019">Barke2019</a>]</span>.</p>
+<h2 id="decomp-division">Division of Labor</h2>
+<p>In a <strong>modular decomposition</strong>,
+each person is responsible for one part of the program (<a class="fig-ref" href="#decomp-division">Figure&nbsp;1</a>).
+For example,
+one person might build the user interface
+while a second implements the data analysis
+and a third handles the back-end interactions with the database.
+Having people own parts of the code like this
+produces lower failure rates in industry <span class="bib-ref">[<a class="bib-ref" href="../bib/#Bird2011">Bird2011</a>]</span>,
+but is a bad strategy in a course project:</p>
+<ol>
+<li>
+<p>It leads to <strong>big bang integration</strong>,
+    in which all the components only meet each other for the first time
+    at the end of the project.
+    Big bangs almost always fail <span class="fixme" markdown="1">citation</span>.</p>
+</li>
+<li>
+<p>Each team member only really understands one aspect of the project,
+    so if someone drops out or fails to do their work,
+    the project as a whole will fail.</p>
+</li>
+</ol>
+<figure id="decomp-division">
+<img src="./division.svg" alt="Modular, functional, and feature decomposition."/>
+<figcaption markdown="1">Figure&nbsp;1: Dividing work in a software team.</figcaption>
+</figure>
+
+<p>In a <strong>functional decomposition</strong>,
+on the other hand,
+each person is responsible for one type of task:
+one person does design,
+a second writes code,
+a third takes care of testing,
+and so on.
+This strategy avoids the problem of big-bang integration,
+but once again,
+every team member is a single point of failure</p>
+<p><strong>Feature decomposition</strong> avoids the weaknesses of the first two approaches.
+Instead of owning an entire subsystem for the life of the project,
+each team member handles design, coding, testing, and deployment
+for one small feature after another.
+This strategy gives everyone a chance to hone all their skills,
+and is a good way to cope with the endless multitasking of student life.</p>
+<p><strong>Rotating decomposition</strong> has the same benefits and drawbacks as feature decomposition.
+If everyone does one task for a couple of weeks,
+then a different task for the next two weeks,
+and so on,
+then the team has to pay ramp-up costs several times over.
+In the long term,
+though,
+it is more robust (having a team member drop out is less harmful),
+and if everyone on the team is familiar with every aspect of the software,
+they can all contribute to design and debugging sessions.</p>
+<p>Any of these strategies is better than <strong>chaotic decomposition</strong>,
+which unfortunately is the most common approach.
+If people have different ideas about who&rsquo;s supposed to do what,
+some things won&rsquo;t be done at all
+while others will be done several times over.
+You can tell if your decomposition is chaotic
+by counting how many times people say,
+&ldquo;I thought <em>you</em> were doing that!&rdquo;
+or &ldquo;But I&rsquo;ve already done that!&rdquo;
+All other decompositions tend toward chaos under pressure,
+so it&rsquo;s important to establish rules early
+and stick to them when your load is light
+so that the instinct to do the right thing will be there when you need it.</p>
+<h2 id="decomp-deciding">How to Decide</h2>
+<p>Feature decomposition and rotating decomposition solve another problem,
+which is that agreeing on how work should be split up in principle
+is usually much easier than agreeing on who should do what.
+Some jobs have higher social status than others,
+and what is or isn&rsquo;t considered important
+usually reflects divides within society—so much so that
+sociologists use the phrase &ldquo;<a href="https://en.wikipedia.org/wiki/Women%27s_work">women&rsquo;s work</a>&rdquo; to describe the phenomenon.
+It is also known as &ldquo;<a href="https://en.wikipedia.org/wiki/Racial_issues_faced_by_black_quarterbacks">quarterback syndrome</a>&rdquo;:
+two thirds of NFL players in the United States are Black,
+but 83% of quarterbacks are white,
+which is the position on a team with the highest social status.</p>
+<p>Among programmers,
+writing operating systems or training AI models
+has higher status than building user interfaces;
+people doing the former are both paid more and more likely to be male
+than people doing the latter,
+regardless of ability or value delivered to the employer.
+This creates a feedback loop:
+white and Asian men pursue certain career paths
+because they have high status (they want to be &ldquo;real programmers&rdquo;),
+and the fact that they are pursuing those careers is what maintains their higher status.
+It also creates a confirmation loop:
+since women and people of color get fewer chances to do certain tasks,
+they are less good at them,
+which &ldquo;confirms&rdquo; the initial bias.</p>
+<p>All of this starts in the classroom.
+For example,
+<span class="bib-ref">[<a class="bib-ref" href="../bib/#Grunspan2016">Grunspan2016</a>]</span> found that
+while female students&rsquo; ranking of fellow students was generally accurate,
+male students consistently over-estimated the performance of their male peers.
+The result is that in mixed-gender teams,
+female students are more likely to wind up responsible for taking notes,
+writing documentation,
+and other low-status tasks <span class="fixme" markdown="1">citation</span>.
+Some have experienced this so often that
+they have come to accept it as the price they have to pay for being in tech.
+Others protest,
+but those who do are often dismissed as being &ldquo;difficult&rdquo;.
+Many take a third path and decide to leave programming—after all,
+why play a game that&rsquo;s unfair?</p>
+<blockquote>
+<h3>In the beginning</h3>
+<p>Programming was originally considered a female occupation,
+but as it became more lucrative it came to be viewed as &ldquo;naturally&rdquo; male.
+<span class="bib-ref">[<a class="bib-ref" href="../bib/#Abbate2012">Abbate2012</a>, <a class="bib-ref" href="../bib/#Ensmenger2012">Ensmenger2012</a>]</span> describe how this happened,
+while <span class="bib-ref">[<a class="bib-ref" href="../bib/#Hicks2018">Hicks2018</a>]</span> looks at how Britain lost its early dominance in computing
+by systematically discriminating against its most qualified workers:
+women.
+Some men become quite uncomfortable when this is brought up,
+but we need to learn how to discuss our own history
+if we want to be able to think clearly about what we&rsquo;re doing today will change society tomorrow.</p>
+</blockquote>
+    </main>
+    <footer>
+  <div class="row">
+    <div class="col-1 left">
+      <a href="../meetings/">&lArr;</a>
+    </div>
+    <div class="col-10 center">
+      <a href="../">Home</a>
+      &middot;
+      <a href="../license/">License</a>
+      &middot;
+      <a href="https://github.com/gvwilson/btt">Repository</a>
+    </div>
+    <div class="col-1 right">
+      <a href="../grading/">&rArr;</a>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

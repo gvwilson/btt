@@ -1,0 +1,13 @@
+title: "Who Does What"
+tag: "Deciding on responsibilities, and deciding how to decide, is a team's first challenge."
+syllabus:
+-   People learn better together than alone *if* their teams are working well.
+-   "**Stream-aligned teams** works on a single product, service, or set of features."
+-   "**Enabling team** is specialists in a particular domain who help stream-aligned teams solve specific problems."
+-   "**Complicated subsystem team** builds and maintains modules for stream-aligned teams to use."
+-   "**Platform team** creates internal services to allow stream-aligned teams to work consistently but independently."
+-   Can be hard for some teams or individuals to get recognition for their work.
+-   "**Modular decomposition** leads to big bang integration and makes each person a single point of failure."
+-   "**Functional decomposition** has the same problems plus uneven distribution of annoyance."
+-   "**Feature decomposition** and **rotating decomposition** are fairer but doesn't allow people to dive deep into any skill."
+-   "Avoid allowing high-status individuals to snag most prestigious roles: they're often not as good as they think they are."

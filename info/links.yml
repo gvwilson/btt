@@ -1,0 +1,184 @@
+# configuration
+
+- key: config_website
+  url: "https://third-bit.com/btt/"
+  en: "Website"
+- key: config_repo
+  url: "https://github.com/gvwilson/btt"
+  en: "GitHub repo"
+
+# AAA
+
+- key: adhd_thread
+  url: https://twitter.com/NomeDaBarbarian/status/1369846245200515072
+  title: "A thread on ADHD"
+
+- key: all_contributors
+  url: https://allcontributors.org/
+  en: "All Contributors"
+
+- key: aosa
+  url: https://aosabook.org/
+  en: "The Architecture of Open Source Applications"
+
+# BBB
+
+- key: buzzfeed_datacamp
+  url: https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup
+  en: "A Multimillion-Dollar Startup Hid A Sexual Harassment Incident By Its CEO—Then A Community of Outsiders Dragged It Into the Light"
+
+# CCC
+
+- key: carpentries
+  url: https://carpentries.org/
+  en: "Software Carpentry"
+
+- key: cc_by_nc
+  url: https://creativecommons.org/licenses/by-nc/4.0/
+  title: "CC-BY-NC License"
+
+- key: charles_rules
+  url: https://geekfeminism.wikia.com/wiki/Charles%27_Rules_of_Argument
+  title: "Charles' Rules of Argument"
+
+- key: choose-license
+  url: https://choosealicense.com/
+  title: "Choose a License"
+
+- key: creative-commons
+  url: https://creativecommons.org/
+  title: "Creative Commons"
+
+# DDD
+
+- key: dobzhanskys_law
+  url: https://en.wikipedia.org/wiki/Nothing_in_Biology_Makes_Sense_Except_in_the_Light_of_Evolution
+  en: "Dobzhansky's Law"
+
+- key: doi2bib
+  url: https://doi2bib.org/
+  title: "Turn DOIs into bibliography entries"
+
+# EEE
+
+# FFF
+
+- key: wapost_facebook_vaccine
+  url: https://www.washingtonpost.com/technology/2021/03/14/facebook-vaccine-hesistancy-qanon/
+  title: "Massive Facebook study on users' doubt in vaccines finds a small group appears to play a big role in pushing the skepticism"
+
+# GGG
+
+- key: gelman_dunning_kruger
+  url: https://statmodeling.stat.columbia.edu/2021/10/12/can-the-dunning-kruger-effect-be-explained-as-a-misunderstanding-of-regression-to-the-mean/
+  title: "Can the Dunning-Kruger effect be explained as a misunderstanding of regression to the mean?"
+
+- key: github_mvg
+  url: https://github.com/github/MVG
+  title: "GitHub Minimum Viable Governance"
+
+- key: goodharts_law
+  url: https://en.wikipedia.org/wiki/Goodhart%27s_law
+  title: "Goodhart's Law"
+
+- key: gvwilson
+  url: https://third-bit.com/
+  en: "Greg Wilson"
+
+# HHH
+
+# III
+
+# JJJ
+
+- key: jarry_dunning_kruger
+  url: https://www.mcgill.ca/oss/article/critical-thinking/dunning-kruger-effect-probably-not-real
+  en: "The Dunning-Kruger Effect Is Probably Not Real"
+
+- key: jira
+  url: https://www.atlassian.com/software/jira
+  en: "Jira issue tracker"
+
+# KKK
+
+# LLL
+
+# MMM
+
+# NNN
+
+- key: noaa_disruptive
+  url: https://coast.noaa.gov/ddb/
+  title: "Dealing with Disruptive Behaviors"
+
+# OOO
+
+- key: osi
+  url: https://opensource.org/
+  title: "Open Source Initiative"
+
+- key: osi-license-list
+  url: https://opensource.org/licenses
+  title: "Open Source Initiative License List"
+
+# PPP
+
+- key: plos
+  url: https://plos.org/
+  title: "PLoS"
+
+# QQQ
+
+- key: quarterback_syndrome
+  url: https://en.wikipedia.org/wiki/Racial_issues_faced_by_black_quarterbacks
+  title: Quarterback syndrome
+
+# RRR
+
+# SSS
+
+- key: sci-hub
+  url: https://en.wikipedia.org/wiki/Sci-Hub
+  title: "Sci-Hub"
+
+- key: scratch
+  url: https://scratch.mit.edu/
+  title: Scratch
+
+# TTT
+
+- key: t3
+  url: https://teachtogether.tech/
+  en: "Teaching Tech Together"
+
+- key: taylor-francis
+  url: https://taylorandfrancis.com/
+  title: "Taylor & Francis"
+
+- key: tldr-gpl
+  url: "https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)"
+  title: "tl;dr summary of the GPL"
+
+# UUU
+
+- key: udhr
+  url: https://en.wikipedia.org/wiki/Universal_Declaration_of_Human_Rights
+  title: "Universal Declaration of Human Rights"
+
+- key: ultima_online_players
+  url: https://twitter.com/ZenOfDesign/status/1371347166736834560
+  title: "Number of badly-behaved players in Ultima Online"
+
+# VVV
+
+# WWW
+
+- key: womens_work
+  url: https://en.wikipedia.org/wiki/Women%27s_work
+  title: Women's work
+
+# XXX
+
+# YYY
+
+# ZZZ

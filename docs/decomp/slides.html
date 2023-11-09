@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="repo" content="https://github.com/gvwilson/btt">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Building Tech Together: Who Does What</title>
+  <link rel="stylesheet" href="../tango.css">
+<link rel="stylesheet" href="../mccole.css">
+
+<link rel="stylesheet" href="../slides.css">
+<script src="../slides.js" defer></script>
+
+
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']]
+    }
+  };
+</script>
+<script
+  type="text/javascript"
+  id="MathJax-script"
+  async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+  
+
+</head>
+
+  <body>
+
+<p>
+  <a href="">Building Tech Together</a>
+</p>
+<h1>Who Does What</h1>
+
+<hr>
+
+<h2>Goals</h2>
+<ul>
+<li>Most people learn better together than alone  <span class="bib-ref">[<a class="bib-ref" href="../bib/#Michaelson2004">Michaelson2004</a>]</span></li>
+<li><em>If</em> their team works well together</li>
+<li>Good meetings are necessary but not sufficient (Chapter&nbsp;2)</li>
+<li>Also have to decide who&rsquo;s doing what</li>
+<li>And how to decide who&rsquo;s going to do what</li>
+</ul>
+<hr />
+<!--# class="aside" -->
+
+<h2>Agreement Matters Most</h2>
+<ul>
+<li>Roles can be fluid</li>
+<li>Most important thing is that team members understand and accept their responsibilities
+    and everyone else&rsquo;s <span class="bib-ref">[<a class="bib-ref" href="../bib/#Barke2019">Barke2019</a>]</span></li>
+</ul>
+<hr />
+<h2>What We&rsquo;re Simulating</h2>
+<ul>
+<li><span class="bib-ref">[<a class="bib-ref" href="../bib/#Skelton2019">Skelton2019</a>]</span> describes four ways to organize teams</li>
+<li>Apply directly to software companies and research labs</li>
+<li>Teams in courses should simulate</li>
+</ul>
+<figure id="topologies-topologies">
+<img src="./topologies.svg" alt="Four kinds of teams: stream-aligned, enabling, platform, and complicated subsystem"/>
+<figcaption markdown="1">Figure&nbsp;1: Four kinds of teams.</figcaption>
+</figure>
+
+<hr />
+<h2>Stream-Aligned Team</h2>
+<ul>
+<li>Stream (n.) &ldquo;the continuous flow of work aligned to a business domain or organizational capability&rdquo;</li>
+<li>
+<p>So a <strong>stream-aligned team</strong> works on a single product, service, or set of features</p>
+</li>
+<li>
+<p>Define clear boundaries for what it&rsquo;s building</p>
+</li>
+<li>Produce a steady flow of features and fixes</li>
+<li>Reach out to support teams as necessary</li>
+</ul>
+<hr />
+<h2>Enabling Team</h2>
+<ul>
+<li>Specialists in a particular domain,
+    e.g. accessibility or performance optimization</li>
+<li>
+<p>Helps stream-aligned teams that encounter problems they can&rsquo;t solve themselves</p>
+</li>
+<li>
+<p>Try to understand the needs of stream-aligned teams
+    (rather than saying, &ldquo;I have a hammer, so your problem must be a nail&rdquo;)</p>
+</li>
+<li>Learn about new tools and methods
+    <em>before</em> stream-aligned teams run into problems that need them</li>
+<li>Share knowledge as the border between specialized and common-place shifts</li>
+</ul>
+<hr />
+<!--# class="aside" -->
+
+<h2>Boundaries Move</h2>
+<ul>
+<li>Virtualization and cloud deployment used to be specialized skills</li>
+<li>Now part of most developers&rsquo; everyday lives</li>
+<li>Enabling teams recognize these shifts and (re-)train members of stream-aligned teams</li>
+</ul>
+<hr />
+<h2>Complicated Subsystem Team</h2>
+<ul>
+<li>Counterparts of enabling teams</li>
+<li>Builds and maintains modules for product teams to use
+    that they can&rsquo;t (easily) build for themselves</li>
+<li>Biggest responsibility is to build the right thing</li>
+<li>Very easy for subsystem teams to build what&rsquo;s technically interesting
+    rather than what&rsquo;s useful</li>
+</ul>
+<hr />
+<h2>Platform Team</h2>
+<ul>
+<li>Create internal services to keep everything else moving</li>
+<li>In particular,
+    allow stream-aligned teams to work consistently but independently<ul>
+<li>Common for teams to choose different tools or methods to solve the same problem</li>
+<li>Creates maintenance and integration headaches down the road</li>
+</ul>
+</li>
+<li>Getting recognition for work is a challenge for enabling and platform teams<ul>
+<li>&ldquo;Nobody thinks about the sewer system until the toilet doesn&rsquo;t flush&rdquo;</li>
+</ul>
+</li>
+<li>Unethical to recommend breaking things on purpose occasionally
+    to remind everyone you exist…</li>
+</ul>
+<hr />
+<h2>Collaboration</h2>
+<figure id="topologies-interactions">
+<img src="./interactions.svg" alt="Three kinds of interaction: collaboration, facilitation, and X-as-a-service"/>
+<figcaption markdown="1">Figure&nbsp;2: Interactions between different kinds of teams.</figcaption>
+</figure>
+
+<ul>
+<li>Collaboration: close partnership, usually between two teams at a time</li>
+<li>X-as-a-service: one team acts as a customer for another<ul>
+<li>Some organizations have one team buy services from another,
+    which makes work visible but discourages collaboration</li>
+</ul>
+</li>
+<li>Facilitating: enabling team partners with stream-aligned team
+    long enough to get obstacle out of the way</li>
+</ul>
+<hr />
+<h2>Adaptation</h2>
+<ul>
+<li>Team Topologies model makes sense with multiple collaborating teams over long time</li>
+<li>But courses are short…</li>
+<li>…collaboration between teams makes evaluation much harder (Chapter&nbsp;4)…</li>
+<li>…and the point of a course is for people to learn</li>
+<li>Want a model that prepares for the one above but works in the classroom</li>
+</ul>
+<hr />
+<h2>Three Axes of Division</h2>
+<figure id="decomp-division">
+<img src="./division.svg" alt="Modular, functional, and feature decomposition."/>
+<figcaption markdown="1">Figure&nbsp;1: Dividing work in a software team.</figcaption>
+</figure>
+
+<ol>
+<li>Layer of software (modular)</li>
+<li>Kind of work (functional)</li>
+<li>Value being delivered (feature)</li>
+</ol>
+<hr />
+<h2>Modular Decomposition</h2>
+<ul>
+<li>Each person is responsible for one module of the program<ul>
+<li>UI, data analysis, back-end interaction with database, etc.</li>
+</ul>
+</li>
+<li>Having people own parts of the code produces lower failure rates in industry <span class="bib-ref">[<a class="bib-ref" href="../bib/#Bird2011">Bird2011</a>]</span></li>
+<li>A bad strategy in a course:<ol>
+<li>Leads to <strong>big bang integration</strong>, which almost always fails</li>
+<li>Each team member only understands one module,
+    so everyone is a single point of failure.</li>
+</ol>
+</li>
+</ul>
+<hr />
+<h2>Functional Decomposition</h2>
+<ul>
+<li>Each person is responsible for one type of task<ul>
+<li>Design, coding, testing, deployment, etc.</li>
+</ul>
+</li>
+<li>Once again,
+    everyone is a single point of failure</li>
+<li>Unidirectional flow of annoyance:
+    downstream team members have to live with whatever upstream team members decide to do</li>
+</ul>
+<hr />
+<h2>Feature Decomposition</h2>
+<ul>
+<li>Each team member handles all aspects of development for one feature at a time</li>
+<li>Gives everyone a chance to practice all their skills</li>
+<li>But no one gets as far in any particular specialty</li>
+<li>And integrating features developed in parallel can be painful</li>
+</ul>
+<hr />
+<h2>Rotating Decomposition</h2>
+<ul>
+<li>People fill one role for a couple of weeks,
+    a different role for the next two weeks,
+    etc.</li>
+<li>Resilient in the face of team turnover</li>
+<li>And more people can participate in design/debugging sessions</li>
+<li>But everyone is always ramping up</li>
+</ul>
+<hr />
+<!--# class="aside" -->
+
+<h2>Chaotic Decomposition</h2>
+<ul>
+<li>Unfortunately the most common approach in practice</li>
+<li>Some things done multiple times or not at all</li>
+<li>All other decompositions tend toward chaos under pressure</li>
+<li>So establish good habits early</li>
+<li>And stick to them when workload is light</li>
+<li>So that the instinct to do the right thing will be there when you need it</li>
+</ul>
+<hr />
+<h2>One Other Reason</h2>
+<ul>
+<li>If teams use modular or functional decomposition,
+    self-appointed alpha geeks often snag the high-status work<ul>
+<li>Shoulder people who aren&rsquo;t as pushy, privileged, or self-confident into lower-status roles</li>
+</ul>
+</li>
+<li>Lowers the team&rsquo;s overall grade<ul>
+<li>Female students&rsquo; ranking of fellow students is generally accurate</li>
+<li>Male students consistently over-estimate their male peers <span class="bib-ref">[<a class="bib-ref" href="../bib/#Grunspan2016">Grunspan2016</a>]</span></li>
+</ul>
+</li>
+</ul>
+<hr />
+<!--# class="aside" -->
+
+<h2>Confirmation Loops</h2>
+<ul>
+<li>&ldquo;<a href="https://en.wikipedia.org/wiki/Women%27s_work">Women&rsquo;s work</a>&rdquo; or &ldquo;<a href="https://en.wikipedia.org/wiki/Racial_issues_faced_by_black_quarterbacks">quarterback syndrome</a>&ldquo;<ul>
+<li>Two thirds of NFL players are Black but 83% of quarterbacks are white</li>
+</ul>
+</li>
+<li>Writing operating systems or training AI models
+    has higher status than building user interfaces</li>
+<li>People doing the former are both paid more and more likely to be male
+    than people doing the latter,
+    regardless of ability or value delivered to the employer</li>
+<li>Creates a feedback loop:<ul>
+<li>White/Asian men pursue careers with high status</li>
+<li>The fact that they are pursuing those careers maintains that status</li>
+</ul>
+</li>
+<li>Creates a confirmation loop<ul>
+<li>Women and people of color get fewer chances to do certain tasks</li>
+<li>So they are less good at them, which &ldquo;confirms&rdquo; the initial bias</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>&ldquo;But I Haven&rsquo;t Seen That&rdquo;</h2>
+<ul>
+<li>Some people have experienced this so often that
+    they have come to accept it as the price they have to pay for being in tech</li>
+<li>Those who protest are often dismissed as being &ldquo;difficult&rdquo;</li>
+<li>Many take a third path and decide to leave the field<ul>
+<li>Why play a game that&rsquo;s unfair?</li>
+</ul>
+</li>
+<li><strong>Survivor bias</strong> </li>
+</ul>
+<hr />
+<!--# class="aside" -->
+
+<h2>It Wasn&rsquo;t Always Thus</h2>
+<ul>
+<li>Programming was originally considered a female occupation</li>
+<li>Only came to be viewed as a male occupation when it became more lucrative
+    <span class="bib-ref">[<a class="bib-ref" href="../bib/#Abbate2012">Abbate2012</a>, <a class="bib-ref" href="../bib/#Ensmenger2012">Ensmenger2012</a>, <a class="bib-ref" href="../bib/#Hicks2018">Hicks2018</a>]</span></li>
+<li>What is &ldquo;normal&rdquo; changes over time</li>
+<li>And can be changed deliberately</li>
+</ul>
+<hr />
+<!--# class="exercise" -->
+
+<h2>Division of Labor</h2>
+<ol>
+<li>What are the pros and cons of your team trying
+    two or more methods of work decomposition during your project?</li>
+<li>Since you&rsquo;ll only have time to try each once,
+    and will be doing each for the time time,
+    how will you know which struggles are intrinsic to the method
+    and which are <strong>learning effects</strong>?</li>
+</ol>
+
+  </body>
+</html>

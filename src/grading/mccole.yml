@@ -1,0 +1,15 @@
+title: Grading
+tag: "Because your team's real product is your grades, not your software."
+syllabus:
+-   "Measuring programmers' productivity is hard and depends on context."
+-   Developers are most productive when they're thriving, which depends on four factors.
+-   "**Agency**: have a voice in how they're measured and can disagree with team definitions of success."
+-   "**Motivation and self-efficacy**: motivated by problems, can see tangible progress, doing the work they want to do, and confident they can solve problems even when they're hard."
+-   "**Learning culture**: learning new skills and able to share what they're learning."
+-   "**Support and belonging**: accepted for who they are and able to grow, learn, and make mistakes."
+-   Being graded while juggling several courses works against all of these, but society isn't willing to invest enough resources to support other forms of feedback.
+-   Much easier to grade artefacts than processes, but ignoring the latter devalues **invisible work**.
+-   Organizations prefer everyone to do things the same way, even if it's less productive, because it's easier to manage.
+-   No one has invented a meaningful measure of code quality.
+-   Peer evaluation can be gamed, and is subject to conscious and unconscious bias.
+-   It's unfair to ask people to assess each other or each other's work if they have not been trained to do so.

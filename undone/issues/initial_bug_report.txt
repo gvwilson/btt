@@ -1,0 +1,11 @@
+id: 247
+date: 2023-02-19T09:30:20+0500
+title: JPEG images not equal after resaving
+type: bug
+severity: high
+labels: utilities; images
+
+1. Open 'kitten.jpg' in ImageHammer.
+2. Immediately'Save as… k2.jpg' in same folder.
+3. On command-line, 'diff kitten.jpg k2.jpg'.
+4. 'diff' reports files differ even thoug
