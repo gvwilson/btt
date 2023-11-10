@@ -6,10 +6,38 @@
   url: https://carpentries.org/
   en: "Software Carpentry"
 
+- key: cc-by-nc
+  url: https://creativecommons.org/licenses/by-nc/4.0/
+  title: "CC-BY-NC License"
+
+- key: dobzhansky
+  url: https://en.wikipedia.org/wiki/Nothing_in_Biology_Makes_Sense_Except_in_the_Light_of_Evolution
+  en: "Dobzhansky's Rule"
+
+- key: doi2bib
+  url: https://doi2bib.org/
+  title: "Turn DOIs into bibliography entries"
+
 - key: gvwilson
   url: https://third-bit.com/
   en: "Greg Wilson"
 
+- key: petre-marian
+  url: https://www.open.ac.uk/people/mp8
+  title: "Marian Petre"
+
+- key: plos
+  url: https://plos.org/
+  title: "PLoS"
+
+- key: sci-hub
+  url: https://en.wikipedia.org/wiki/Sci-Hub
+  title: "Sci-Hub"
+
 - key: t3
   url: https://teachtogether.tech/
   en: "Teaching Tech Together"
+
+- key: taylor-francis
+  url: https://taylorandfrancis.com/
+  title: "Taylor & Francis"

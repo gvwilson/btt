@@ -28,9 +28,130 @@
   <body>
     <main>
       <h1>Introduction</h1>
-<div class="tagline"><p>An overview of where we're going and why.</p></div>
+<div class="tagline"><p>What this book talks about and why.</p></div>
 
-      
+      <p>These lessons will help you succeed in your first group software project.
+Some topics are purely technical,
+while others are social:
+forming teams,
+managing people who aren&rsquo;t pulling their weight,
+cutting features when time runs short,
+and understanding who owns the things you produce.
+Our aim is to teach you how to be a <em>compassionate programmer</em>:
+one who cares about the well-being of their colleagues,
+their users,
+and society.
+This focus is not entirely altruistic—everything you do to help others
+also helps your future self—but now that we know how much harm software can do,
+we need to build it better.</p>
+<p>Much of what&rsquo;s hard about building software stems from the fact that
+our mental capacity is limited.
+Other challenges that appear technical
+are actually caused by how people think and act in groups.
+Our lessons are therefore based on a modified version of <a href="https://en.wikipedia.org/wiki/Nothing_in_Biology_Makes_Sense_Except_in_the_Light_of_Evolution">Dobzhansky&rsquo;s Rule</a>:</p>
+<blockquote>
+<p>Nothing in software engineering makes sense except in the light of psychology.</p>
+</blockquote>
+<h2>Audience</h2>
+<p>Every lesson should be written with a specific audience in mind <span class="bib-ref">[<a class="bib-ref" href="../bib/#Wi2019">Wi2019</a>]</span>.
+These <strong>learner personas</strong> describe ours:</p>
+<ul>
+<li>
+<p><em>Yanina</em> is in the third year of a computer science degree.
+    She worked on several volunteer projects in high school and through her mosque,
+    but the &ldquo;Introduction to Software Engineering&rdquo; course she&rsquo;s about to take
+    will be her first semester-long team project at university.
+    This guide will help her and her teammates figure out what to do when.</p>
+</li>
+<li>
+<p><em>Brad</em> is in Yanina&rsquo;s classes.
+    He started programming when he was nine years old,
+    and as a result can do many assignments in half the time it takes other students
+    (something he attributes to intelligence and aptitude
+    rather than to his parents being able to afford to send him to after-school coding camps).
+    He finds any discussion of what he calls &ldquo;fluffy stuff&rdquo; tiresome;
+    this guide will help him understand why that attitude is self-defeating.</p>
+</li>
+<li>
+<p><em>Sharla</em> taught the &ldquo;Introduction to Software Engineering&rdquo; class last semester,
+    and came away feeling that their students had wasted a lot of time
+    on things that turned out not to be useful.
+    This guide will help them give more structure to the next offering
+    and set more realistic expectations.</p>
+</li>
+</ul>
+<p>This book can be read on its own or as a companion to <span class="bib-ref">[<a class="bib-ref" href="../bib/#Wi2022">Wi2022</a>]</span>.
+If you are looking for a course project,
+please consider adding a tool to the ones it covers.</p>
+<h2>Licensing</h2>
+<p>All of the written material on this site is made available
+under the Creative Commons - Attribution - NonCommercial 4.0 International license
+(<a href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>),
+which allows you to use and remix this material for non-commercial purposes,
+as-is or in adapted form,
+provided you cite its original source.
+Please see FIXME for details.</p>
+<h2>Acknowledgments</h2>
+<p>This book is dedicated to <a href="https://www.open.ac.uk/people/mp8">Marian Petre</a>,
+who taught me that not everything worth studying can be measured,
+and to Tom Wilkie,
+who taught me how to turn a thousand words I&rsquo;d written into a hundred someone would actually want to read.
+I am also grateful to all of the students who have done projects with me over the years.</p>
+<p>I have tried to base these lessons on the best available research.
+Where that doesn&rsquo;t have answers,
+I have drawn on the experience of the people mentioned below.
+Any errors, omissions, or misunderstandings that remain are entirely our fault.</p>
+<ul>
+<li><a href="https://mcis.cs.queensu.ca/bram.html">Bram Adams</a></li>
+<li><a href="https://rohanalexander.com/">Rohan Alexander</a></li>
+<li><a href="http://tavisharmstrong.com/">Tavish Armstrong</a></li>
+<li><a href="https://www.barik.net/">Titus Barik</a></li>
+<li><a href="http://www.vasken.ca/">Robert Beghian</a></li>
+<li><a href="https://yabellini.netlify.app/">Yanina Bellini Saibene</a></li>
+<li><a href="https://twistedsquare.com/">Neil Brown</a></li>
+<li><a href="https://jordicabot.com/">Jordi Cabot</a></li>
+<li><a href="https://silvia.rbind.io/">Silvia Canelón</a></li>
+<li>Francisco Canas</li>
+<li><a href="https://mikeconley.ca/">Mike Conley</a></li>
+<li><a href="https://mikedebo.com/">Michael DiBernardo</a></li>
+<li><a href="http://www.isaacezer.com/">Isaac Ezer</a></li>
+<li><a href="https://ianfs.dev/">Ian Flores Siaca</a></li>
+<li><a href="https://adam.goucher.ca/">Adam Goucher</a></li>
+<li><a href="https://twitter.com/MustafaHaddara/">Mustafa Haddara</a></li>
+<li><a href="http://johanharjono.com/">Johan Harjono</a></li>
+<li><a href="https://katehertweck.com/">Kate Hertweck</a></li>
+<li><a href="https://people.csail.mit.edu/dnj/">Daniel Jackson</a></li>
+<li><a href="https://jacobian.org/">Jacob Kaplan-Moss</a></li>
+<li><a href="https://sites.google.com/view/ritu-kapur">Ritu Kapur</a></li>
+<li><a href="https://zainhkazmi.github.io/">Zain Kazmi</a></li>
+<li><a href="https://www.linkedin.com/in/lauriemacdougallsookraj/">Laurie MacDougall Sookraj</a></li>
+<li><a href="https://www.linkedin.com/in/darren-mcelligott-07689473/">Darren McElligott</a></li>
+<li><a href="https://kimmoir.blog/">Kim Moir</a></li>
+<li><a href="https://nmorandeira.netlify.app/">Natalia Morandeira</a></li>
+<li><a href="https://cs.uwaterloo.ca/~m2nagapp/">Meiyappan Nagappan</a></li>
+<li><a href="https://parris.org/">Iain Parris</a></li>
+<li><a href="https://patitsas.github.io/">Elizabeth Patitsas</a></li>
+<li><a href="https://utmandrew.bitbucket.io/">Andrew Petersen</a></li>
+<li><a href="https://shazow.net/">Andrey Petrov</a></li>
+<li><a href="https://www.andrewpotapov.com/">Andrew Potapov</a></li>
+<li><a href="http://www.mi.fu-berlin.de/w/Main/LutzPrechelt">Lutz Prechelt</a></li>
+<li><a href="https://students.washington.edu/yreg/">Yim Register</a></li>
+<li><a href="https://evanjustevan.com/">Evan Schultz</a></li>
+<li><a href="https://www.win.tue.nl/~aserebre/">Alex Serebrenik</a></li>
+<li><a href="https://www.linkedin.com/in/naaz-sibia/">Naaz Sibia</a></li>
+<li><a href="https://web.cs.unlv.edu/stefika/">Andreas Stefik</a></li>
+<li>Rory Tulk</li>
+<li><a href="https://bwinton.latte.ca/">Blake Winton</a></li>
+<li><a href="https://azaidman.github.io/">Andy Zaidman</a></li>
+<li><a href="https://andreas-zeller.info/">Andreas Zeller</a></li>
+</ul>
+<p>Parts of these lessons originally appeared in <span class="bib-ref">[<a class="bib-ref" href="../bib/#Sh2019">Sh2019</a>, <a class="bib-ref" href="../bib/#Wi2019">Wi2019</a>, <a class="bib-ref" href="../bib/#Ir2021">Ir2021</a>, <a class="bib-ref" href="../bib/#Sm2021">Sm2021</a>]</span>;
+I&rsquo;m grateful to <a href="https://taylorandfrancis.com/">Taylor &amp; Francis</a>,
+<a href="https://plos.org/">PLoS</a>,
+and my co-authors for allowing that material to be re-used under open licenses.
+I would also like to thank David Graf for <a href="https://doi2bib.org/">doi2bib</a>
+and Alexandra Elbakyan for <a href="https://en.wikipedia.org/wiki/Sci-Hub">Sci-Hub</a>:
+this book would have been much harder to write without their idealism and hard work.</p>
     </main>
     <footer>
   <a href="../license/">License</a> &middot; <a href="https://github.com/gvwilson/btt">Repository</a>

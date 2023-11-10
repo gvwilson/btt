@@ -85,3 +85,8 @@ def toc(pargs, kwargs, node):
     chapters = '<ol class="toc" type="1">\n' + "\n".join(chapters) + "\n</ol>\n"
     appendices = '<ol class="toc" type="A">\n' + "\n".join(appendices) + "\n</ol>\n"
     return f"{chapters}{appendices}"
+
+@shortcodes.register("x")
+def x_reference(pargs, kwargs, node):
+    """Handle [%x slug %] cross-reference shortcode."""
+    return "FIXME"
