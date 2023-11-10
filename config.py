@@ -21,6 +21,9 @@ copy = [
 
 exclude = copy + [
     "*~",
+    "*.csv",
+    "*.py",
+    "*.yml",
     ".#*",
     "CODE_OF_CONDUCT.md",
     "LICENSE.md",

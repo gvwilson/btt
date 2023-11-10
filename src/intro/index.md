@@ -18,14 +18,14 @@ also helps your future self—but now that we know how much harm software can do
 we need to build it better.
 
 Much of what's hard about building software stems from the fact that
-our mental capacity is limited.
-Other challenges that appear technical
+our mental capacity is limited [%b Hermans2021 %].
+Other challenges that initially appear technical
 are actually caused by how people think and act in groups.
-Our lessons are therefore based on a modified version of [Dobzhansky's Rule][dobzhansky]:
+One of our central themes is there a modified version of [Dobzhansky's Rule][dobzhansky]:
 
 > Nothing in software engineering makes sense except in the light of psychology.
 
-## Audience
+## Audience {: #intro-audience}
 
 Every lesson should be written with a specific audience in mind [%b Wilson2019 %].
 These **learner personas** describe ours:
@@ -55,7 +55,49 @@ This book can be read on its own or as a companion to [%b Wilson2022 %].
 If you are looking for a course project,
 please consider adding a tool to the ones it covers.
 
-## Licensing
+## An Example {: #intro-example}
+
+Are some programmers really ten times more productive than average?
+To find out,
+[%b Prechelt2000 %] looked at how long it took a set of programmers
+to solve the same problem in the language of their choice.
+The time in hours is shown as a whisker plot in [%f intro-prechelt %];
+each dot is a single data point,
+while the left and right boundaries of the box show the 25th and 75th percentiles respectively,
+and the mark in the middle shows the median.
+
+[% figure
+   slug="intro-prechelt"
+   img="prechelt-development-time.svg"
+   caption="Development Time"
+   alt="Box-and-whisker plot show that most developers spent between zero and 20 hours but a few took as long as 63 hours."
+%]
+
+The shortest and longest development times were 0.6 and 63 hours respectively,
+giving a ratio of 105X.
+However,
+the subjects used seven different languages;
+if we only look at those who used Java (about 30% of the whole)
+the shortest and longest times are 3.8 and 63 hours,
+giving a ratio of "only" 17X.
+
+But comparing the best and the worst of anything gives us
+an exaggerated impression of the difference.
+If we compare the 75th percentile (which is the middle of the top half of the data)
+to the 25th percentile (which is the middle of the bottom half)
+we get a ratio of 18.5/7.25 or 2.55;
+if we compare the 90th percentile to the 50th we get 3.7,
+and other comparisons give us other values.
+As [%b Prechelt2019 %] explains,
+the answers to our original question are therefore:
+
+1.  It depends what you mean.
+
+2.  No, good programmers aren't 10 times more productive than average.
+
+3.  But yes, it's reasonable to say that they are about four times more productive.
+
+## Licensing {: #intro-license}
 
 All of the written material on this site is made available
 under the Creative Commons - Attribution - NonCommercial 4.0 International license
@@ -65,7 +107,7 @@ as-is or in adapted form,
 provided you cite its original source.
 Please see [% x license %] for details.
 
-## Acknowledgments
+## Acknowledgments {: #intro-ack}
 
 This book is dedicated to [Marian Petre][petre-marian],
 who taught me that not everything worth studying can be measured,

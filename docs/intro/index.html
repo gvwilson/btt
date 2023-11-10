@@ -44,14 +44,14 @@ This focus is not entirely altruistic—everything you do to help others
 also helps your future self—but now that we know how much harm software can do,
 we need to build it better.</p>
 <p>Much of what&rsquo;s hard about building software stems from the fact that
-our mental capacity is limited.
-Other challenges that appear technical
+our mental capacity is limited <span class="bib-ref">[<a class="bib-ref" href="../bib/#Hermans2021">Hermans2021</a>]</span>.
+Other challenges that initially appear technical
 are actually caused by how people think and act in groups.
-Our lessons are therefore based on a modified version of <a href="https://en.wikipedia.org/wiki/Nothing_in_Biology_Makes_Sense_Except_in_the_Light_of_Evolution">Dobzhansky&rsquo;s Rule</a>:</p>
+One of our central themes is there a modified version of <a href="https://en.wikipedia.org/wiki/Nothing_in_Biology_Makes_Sense_Except_in_the_Light_of_Evolution">Dobzhansky&rsquo;s Rule</a>:</p>
 <blockquote>
 <p>Nothing in software engineering makes sense except in the light of psychology.</p>
 </blockquote>
-<h2>Audience</h2>
+<h2 id="intro-audience">Audience</h2>
 <p>Every lesson should be written with a specific audience in mind <span class="bib-ref">[<a class="bib-ref" href="../bib/#Wilson2019">Wilson2019</a>]</span>.
 These <strong>learner personas</strong> describe ours:</p>
 <ul>
@@ -83,7 +83,48 @@ These <strong>learner personas</strong> describe ours:</p>
 <p>This book can be read on its own or as a companion to <span class="bib-ref">[<a class="bib-ref" href="../bib/#Wilson2022">Wilson2022</a>]</span>.
 If you are looking for a course project,
 please consider adding a tool to the ones it covers.</p>
-<h2>Licensing</h2>
+<h2 id="intro-example">An Example</h2>
+<p>Are some programmers really ten times more productive than average?
+To find out,
+<span class="bib-ref">[<a class="bib-ref" href="../bib/#Prechelt2000">Prechelt2000</a>]</span> looked at how long it took a set of programmers
+to solve the same problem in the language of their choice.
+The time in hours is shown as a whisker plot in <a class="fig-ref" href="#intro-prechelt">Figure&nbsp;1</a>;
+each dot is a single data point,
+while the left and right boundaries of the box show the 25th and 75th percentiles respectively,
+and the mark in the middle shows the median.</p>
+<figure id="intro-prechelt">
+<img src="./prechelt-development-time.svg" alt="Box-and-whisker plot show that most developers spent between zero and 20 hours but a few took as long as 63 hours."/>
+<figcaption markdown="1">Figure&nbsp;1: Development Time</figcaption>
+</figure>
+
+<p>The shortest and longest development times were 0.6 and 63 hours respectively,
+giving a ratio of 105X.
+However,
+the subjects used seven different languages;
+if we only look at those who used Java (about 30% of the whole)
+the shortest and longest times are 3.8 and 63 hours,
+giving a ratio of &ldquo;only&rdquo; 17X.</p>
+<p>But comparing the best and the worst of anything gives us
+an exaggerated impression of the difference.
+If we compare the 75th percentile (which is the middle of the top half of the data)
+to the 25th percentile (which is the middle of the bottom half)
+we get a ratio of 18.5/7.25 or 2.55;
+if we compare the 90th percentile to the 50th we get 3.7,
+and other comparisons give us other values.
+As <span class="bib-ref">[<a class="bib-ref" href="../bib/#Prechelt2019">Prechelt2019</a>]</span> explains,
+the answers to our original question are therefore:</p>
+<ol>
+<li>
+<p>It depends what you mean.</p>
+</li>
+<li>
+<p>No, good programmers aren&rsquo;t 10 times more productive than average.</p>
+</li>
+<li>
+<p>But yes, it&rsquo;s reasonable to say that they are about four times more productive.</p>
+</li>
+</ol>
+<h2 id="intro-license">Licensing</h2>
 <p>All of the written material on this site is made available
 under the Creative Commons - Attribution - NonCommercial 4.0 International license
 (<a href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>),
@@ -91,7 +132,7 @@ which allows you to use and remix this material for non-commercial purposes,
 as-is or in adapted form,
 provided you cite its original source.
 Please see Appendix&nbsp;A for details.</p>
-<h2>Acknowledgments</h2>
+<h2 id="intro-ack">Acknowledgments</h2>
 <p>This book is dedicated to <a href="https://www.open.ac.uk/people/mp8">Marian Petre</a>,
 who taught me that not everything worth studying can be measured,
 and to Tom Wilkie,
