@@ -3,13 +3,12 @@ title: "Introduction"
 tag: "What this book talks about and why."
 ---
 
-These lessons will help you succeed in your first group software project.
+These lessons are designed to help you succeed in your first collaborative software project.
 Some topics are purely technical,
-while others are social:
-forming teams,
-managing people who aren't pulling their weight,
+while others are about the social aspects of programming:
+working in teams,
 cutting features when time runs short,
-and understanding who owns the things you produce.
+and making sure everyone's work is evaluated fairly.
 Our aim is to teach you how to be a *compassionate programmer*:
 one who cares about the well-being of their colleagues,
 their users,
@@ -28,16 +27,16 @@ Our lessons are therefore based on a modified version of [Dobzhansky's Rule][dob
 
 ## Audience
 
-Every lesson should be written with a specific audience in mind [%b Wi2019 %].
+Every lesson should be written with a specific audience in mind [%b Wilson2019 %].
 These **learner personas** describe ours:
 
--   *Yanina* is in the third year of a computer science degree.
+-   *Yani* is in the third year of a computer science degree.
     She worked on several volunteer projects in high school and through her mosque,
     but the "Introduction to Software Engineering" course she's about to take
     will be her first semester-long team project at university.
     This guide will help her and her teammates figure out what to do when.
 
--   *Brad* is in Yanina's classes.
+-   *Brad* is in Yani's classes.
     He started programming when he was nine years old,
     and as a result can do many assignments in half the time it takes other students
     (something he attributes to intelligence and aptitude
@@ -45,13 +44,14 @@ These **learner personas** describe ours:
     He finds any discussion of what he calls "fluffy stuff" tiresome;
     this guide will help him understand why that attitude is self-defeating.
 
--   *Sharla* taught the "Introduction to Software Engineering" class last semester,
-    and came away feeling that their students had wasted a lot of time
+-   *Sharla* has taught the "Introduction to Software Engineering" class twice;
+    each time,
+    they came away feeling that their students had wasted a lot of time
     on things that turned out not to be useful.
-    This guide will help them give more structure to the next offering
+    This guide will help them structure the next offering
     and set more realistic expectations.
 
-This book can be read on its own or as a companion to [%b Wi2022 %].
+This book can be read on its own or as a companion to [%b Wilson2022 %].
 If you are looking for a course project,
 please consider adding a tool to the ones it covers.
 
@@ -121,7 +121,7 @@ Any errors, omissions, or misunderstandings that remain are entirely our fault.
 - [Andy Zaidman](https://azaidman.github.io/)
 - [Andreas Zeller](https://andreas-zeller.info/)
 
-Parts of these lessons originally appeared in [%b Sh2019 Wi2019 Ir2021 Sm2021 %];
+Parts of these lessons originally appeared in [%b Sholler2019 Wilson2019 Irving2021 Smalls2021 %];
 I'm grateful to [Taylor & Francis][taylor-francis],
 [PLoS][plos],
 and my co-authors for allowing that material to be re-used under open licenses.
