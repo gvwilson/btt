@@ -5,7 +5,7 @@ syllabus:
 - FIXME
 ---
 
-The first release of GitHub's [Minimum Viable Governance][github-mvg] guidelines
+The first release of GitHub's [Minimum Viable Governance][github_mvg] guidelines
 included this:
 
 <blockquote>
@@ -119,7 +119,7 @@ But while society accepts that
 people of different heights need different desks and seating to be comfortable,
 there is still a lot of stigma associated with differences in mental function,
 which are often classified according to
-[how inconvenient they are to other people][adhd-thread].
+[how inconvenient they are to other people][adhd_thread].
 One example is how tests for
 attention-deficit/hyperactivity disorder
 (ADHD) are phrased.

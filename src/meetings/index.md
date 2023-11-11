@@ -203,7 +203,7 @@ so that the moderator can group related questions together.
 <div class="callout" markdown="1">
 ### Are you a blowfish or a clam?
 
-[NOAA's guide][noaa-disruptive] to dealing with disruptive behaviors
+[NOAA's guide][noaa_disruptive] to dealing with disruptive behaviors
 has useful labels and even more useful advice
 for handling people who may send meetings off course.
 </div>

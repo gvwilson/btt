@@ -1,6 +1,16 @@
+# AAA
+
+- key: adhd_thread
+  url: https://twitter.com/NomeDaBarbarian/status/1369846245200515072
+  title: "A thread on ADHD"
+
 - key: aosa
   url: https://aosabook.org/
   en: "The Architecture of Open Source Applications"
+
+# BBB
+
+# CCC
 
 - key: carpentries
   url: https://carpentries.org/
@@ -10,6 +20,12 @@
   url: https://creativecommons.org/licenses/by-nc/4.0/
   title: "CC-BY-NC License"
 
+- key: charles_rules
+  url: https://geekfeminism.wikia.com/wiki/Charles%27_Rules_of_Argument
+  title: "Charles' Rules of Argument"
+
+# DDD
+
 - key: dobzhansky
   url: https://en.wikipedia.org/wiki/Nothing_in_Biology_Makes_Sense_Except_in_the_Light_of_Evolution
   en: "Dobzhansky's Rule"
@@ -18,9 +34,45 @@
   url: https://doi2bib.org/
   title: "Turn DOIs into bibliography entries"
 
+# EEE
+
+# FFF
+
+- key: wapost_facebook_vaccine
+  url: https://www.washingtonpost.com/technology/2021/03/14/facebook-vaccine-hesistancy-qanon/
+  title: "Massive Facebook study on users' doubt in vaccines finds a small group appears to play a big role in pushing the skepticism"
+
+# GGG
+
+- key: github_mvg
+  url: https://github.com/github/MVG
+  title: "GitHub Minimum Viable Governance"
+
 - key: gvwilson
   url: https://third-bit.com/
   en: "Greg Wilson"
+
+# HHH
+
+# III
+
+# JJJ
+
+# KKK
+
+# LLL
+
+# MMM
+
+# NNN
+
+- key: noaa_disruptive
+  url: https://coast.noaa.gov/ddb/
+  title: "Dealing with Disruptive Behaviors"
+
+# OOO
+
+# PPP
 
 - key: petre-marian
   url: https://www.open.ac.uk/people/mp8
@@ -30,9 +82,21 @@
   url: https://plos.org/
   title: "PLoS"
 
+# QQQ
+
+# RRR
+
+# SSS
+
 - key: sci-hub
   url: https://en.wikipedia.org/wiki/Sci-Hub
   title: "Sci-Hub"
+
+- key: scratch
+  url: https://scratch.mit.edu/
+  title: Scratch
+
+# TTT
 
 - key: t3
   url: https://teachtogether.tech/
@@ -41,3 +105,19 @@
 - key: taylor-francis
   url: https://taylorandfrancis.com/
   title: "Taylor & Francis"
+
+# UUU
+
+- key: ultima_online_players
+  url: https://twitter.com/ZenOfDesign/status/1371347166736834560
+  title: "Number of badly-behaved players in Ultima Online"
+
+# VVV
+
+# WWW
+
+# XXX
+
+# YYY
+
+# ZZZ

@@ -51,10 +51,10 @@ they will often avoid making it necessary.
 ### A few bad apples
 
 An internal study at Facebook in 2021 found that
-[just over 100 people were the source of
-almost half of harmful disinformation about COVID-19 vaccination][wapost-facebook-vaccine].
+[just over 100 people][wapost_facebook_vaccine] were the source of
+almost half of harmful disinformation about COVID-19 vaccination.
 Similarly,
-one of the designers of the game *Ultima Online* [reported][ultima-online-players],
+one of the designers of the game *Ultima Online* [reported][ultima_online_players],
 "…we asked players what percentage of the player base were degenerate player killers.
 Players responded with 10%.
 The metrics told us the answer was closer to 0.1%."
@@ -202,8 +202,7 @@ What can you do if conflict becomes more personal and heated?
     For example, don't call someone stupid when what you really mean is
     that they're racist or homophobic.
 
-[Captain Awkward][captain-awkward] has useful advice for discussions like these,
-and [Charles' Rules of Argument][charles-rules] are very useful online.
+Please also see [Charles' Rules of Argument][charles_rules].
 
 Sometimes, though, it isn't just one person on the team who's a problem:
 sometimes the whole team is dysfunctional.
