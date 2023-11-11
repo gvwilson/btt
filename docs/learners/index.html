@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="repo" content="https://github.com/gvwilson/btt">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../tango.css">
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script
+    type="text/javascript"
+    id="MathJax-script"
+    async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <title>Building Tech Together: Learners</title>
+</head>
+
+  <body>
+    <main>
+      <h1>Learners</h1>
+
+  <div class="tagline"><p>FIXME</p></div>
+  <ul class="syllabus">
+<li>FIXME</li>
+</ul>
+
+
+      <p>We know as much about teaching and learning as we do about public health.
+The problem is,
+while university professors are experts in their own fields,
+many of them don&rsquo;t know what we know.
+Most people in the tech industry don&rsquo;t either,
+which means many of us learn more slowly and less reliably than we could.</p>
+<p>Research starting in the 1980s showed that
+most neurotypical adults undergo a series of fairly predictable cognitive transitions
+on their way from being a novice to being an expert in any domain <span class="bib-ref">[<a class="bib-ref" href="../bib/#Benner2000">Benner2000</a>]</span>.
+(We say &ldquo;most&rdquo; and &ldquo;neurotypical&rdquo; because there are outliers in anything involving people.)</p>
+<p>For our purposes,
+we will say that people are novices, competent practitioners, or experts.
+Some characteristics that most novices share include doing things by rote
+(i.e., following a series of steps without understanding why they work),
+asking questions that don&rsquo;t make sense
+(e.g., &ldquo;What color is the database?&rdquo;)
+and not being able to tell what is and isn&rsquo;t relevant—for example,
+using their own filenames or variable names when searching for help online
+because they don&rsquo;t yet have a clear distinction between
+what belongs to the library and application
+and what is specific to their code.</p>
+<div class="callout">
+<h3>Confidence</h3>
+<ul>
+<li>Explain that Dunning-Kruger isn&rsquo;t a thing…</li>
+<li>…but confidence is not an indicator of knowledge</li>
+</ul>
+</div>
+<p>What ties these things together is that novices don&rsquo;t have a mental model of the problem.
+A mental model is a simplified representation of something
+that&rsquo;s good enough for present needs.
+One example is the ball-and-spring models used to represent molecules in chemistry classes:
+real atoms aren&rsquo;t marbles and atomic bonds aren&rsquo;t springs,
+but this model is good enough to explain why burning methane produces carbon dioxide and water.</p>
+<p>What about experts?
+They can typically solve problems at a glance,
+and are usually much better at debugging than competent practitioners
+because they are better able to reason backward from effects to causes.
+They also tend to be <em>less</em> good as teachers because of expert blind spot:
+they know their subject so well that they&rsquo;ve forgotten how hard it is for newcomers.</p>
+<p>To explain where these differences come from,
+imagine that the knowledge in your brain is stored as a graph
+in which ideas are nodes and the connections between them are arcs.
+(Your brain doesn&rsquo;t actually work this way,
+but it&rsquo;s a useful mental model.)
+A novice&rsquo;s mental model is disconnected:
+some key facts are missing, and other pieces don&rsquo;t join up (<a class="fig-ref" href="#learners-models">Figure&nbsp;1</a>).
+In contrast,
+a competent practitioner&rsquo;s mental model is connected:
+given fact <code>A</code>,
+she can reason her way through <code>B</code> and <code>C</code> to solution <code>D</code>.
+She might take a wrong turn to <code>Y</code> and <code>Z</code> along the way and have to backtrack,
+but she&rsquo;ll get there eventually.</p>
+<p>What makes an expert different isn&rsquo;t that she has more facts
+(though she usually does).
+Instead,
+the difference is that she has many more connections,
+so the distance between any two ideas is usually much less.
+In fact,
+in many cases the problem and its solution will be directly connected
+so that she can go from one to the other in a single step.
+This is what we mean by expert intuition:
+rather than <em>reasoning</em> their way through problems,
+they <em>recognize</em> them in the same way that most people recognize human faces.
+Being able to do this explains why they can solve problems at a glance,
+but also why they have trouble explaining their thinking:
+they can&rsquo;t tell someone else how they did it
+any more than we can explain how we recognize faces.</p>
+<figure id="learners-models">
+<img src="./learners-models.svg" alt="Mental models"/>
+<figcaption markdown="1">Figure&nbsp;1: The differences between novice, competent, and expert mental models.</figcaption>
+</figure>
+
+<p>This model of learning leaves out
+almost everything discussed in <span class="bib-ref">[<a class="bib-ref" href="../bib/#Kirschner2018">Kirschner2018</a>]</span> and other recent work,
+but is good enough to start with.
+Novices, competent practitioners, and experts are at different stages of cognitive development,
+so they need different kinds of teaching <span class="bib-ref">[<a class="bib-ref" href="../bib/#Kalyuga2003">Kalyuga2003</a>]</span>.
+Novices need to be told what to learn next:
+since they don&rsquo;t have yet a mental model of the problem,
+they don&rsquo;t know what to ask for.
+As <span class="bib-ref">[<a class="bib-ref" href="../bib/#Kirschner2006">Kirschner2006</a>]</span> and many others have shown,
+discovery-based learning in which people are told &ldquo;go figure out how to solve this problem&rdquo;
+is less effective for novices than guided learning because they don&rsquo;t know what to ask next.</p>
+<p>Once someone is a competent practitioner,
+though,
+being told step-by-step what to tackle next is both unnecessary and frustrating.
+Competent practitioners should be mentored instead of lectured:
+they should tackle problems on their own,
+but have someone at hand to get them unstuck
+if it takes them more than a few minutes to figure out what to do next.
+Finally,
+the most effective way to &ldquo;teach&rdquo; experts is to have them reflect or introspect on their own practice <span class="bib-ref">[<a class="bib-ref" href="../bib/#Schon1984">Schon1984</a>]</span>.</p>
+<p>FIXME: tutorials, Stack Overflow, and LLMs</p>
+    </main>
+    <footer>
+  <a href="../license/">License</a> &middot; <a href="https://github.com/gvwilson/btt">Repository</a>
+</footer>
+
+  </body>
+</html>

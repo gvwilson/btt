@@ -55,7 +55,7 @@ One goal of project courses is to move learners from left to right in
 [%f projects-models %].
 The instructor's job is to mentor rather than to lecture;
 most of the learning will take place in the team or on your own.
-Using the terms of [%x thinking %],
+Using the terms of [%x learners %],
 a project course is where your school starts treating you like a competent practitioner
 rather than like a novice.
 
