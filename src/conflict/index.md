@@ -1,7 +1,8 @@
 ---
 title: "Managing Conflict"
-lede: "The hardest part of working together"
-template: page
+tag: "The hardest part of working together"
+syllabus:
+- FIXME
 ---
 
 You just missed an important deadline, and people are unhappy.
