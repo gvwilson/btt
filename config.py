@@ -6,6 +6,12 @@ author = "Greg Wilson"
 
 chapters = [
     "intro",
+    "crunch",
+    "meetings",
+    "governance",
+    "conflict",
+    "teams",
+    "thinking",
     "finale",
     "license",
     "bib",

@@ -68,6 +68,24 @@ most books on how to program are a mix of personal experience and received wisdo
 which is usually just someone else's personal experience repackaged as a universal truth.
 We therefore cite research findings to back up our claims where we can.
 
+<div class="callout" markdown="1">
+### Why does everything take so long?
+
+[%b Sedano2017 %] found that software development projects have nine types of waste:
+building the wrong feature or product,
+mismanaging the backlog,
+rework,
+unnecessarily complex solutions,
+extraneous cognitive load ([%x thinking %]),
+psychological distress,
+waiting and multitasking,
+knowledge loss,
+and ineffective communication.
+*None of these are software issues,*
+so if you only think about the code in your project and not about the people writing it,
+everything will take longer and hurt more than it needs to.
+</div>
+
 ## An Example {: #intro-example}
 
 People sometimes talk about 10X programmers—ones who are

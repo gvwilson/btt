@@ -57,7 +57,7 @@ def date(pargs, kwargs, node):
 
 @shortcodes.register("f")
 def figure_ref(pargs, kwargs, node):
-    """Handle [% f slug %] figure reference shortcodes."""
+    """Handle [%f slug %] figure reference shortcodes."""
     util.require((len(pargs) == 1) and (not kwargs), f"Bad 'f' shortcode in {node}")
     slug = pargs[0]
     known = ark.site.config["_figures_"]
@@ -111,6 +111,17 @@ def rootpage(pargs, kwargs, node):
         return FIRST_H1.sub("", path.read_text())
     except OSError:
         util.fail(f"cannot read .ark file {str(path)}")
+
+
+@shortcodes.register("t")
+def table_ref(pargs, kwargs, node):
+    """Handle [%t slug %] table reference shortcodes."""
+    util.require((len(pargs) == 1) and (not kwargs), f"Bad 't' shortcode in {node}")
+    slug = pargs[0]
+    # known = ark.site.config["_tables_"]
+    # util.require(slug in known, f"Unknown table slug {slug} in {node}")
+    known = {slug: "FIXME"}
+    return f'<a class="tbl-ref" href="#{slug}">Table&nbsp;{known[slug]}</a>'
 
 
 @shortcodes.register("toc")
