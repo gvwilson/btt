@@ -126,7 +126,7 @@ The first and most important lesson in this chapter is therefore
 to think very hard about what's more important—how much you produce
 or how much of a martyr you appear to be—and to pace yourself accordingly.
 
-## Time Management
+## Time Management {: #crunch-time}
 
 [%b Edwards2009 %] found that
 starting assignments early and working consistently predicted good grades.

@@ -83,7 +83,7 @@ to mentoring a wave of newcomers.
 In practice,
 this approach is just as much work as partnering with a company or non-profit.
 
-## Elevator Pitch
+## Elevator Pitch {: #projects-pitch}
 
 Once you know where the goalposts are,
 the next thing is to get everyone to agree on what you're supposed to accomplish.
