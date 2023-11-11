@@ -36,6 +36,7 @@ exclude = copy + [
     "*~",
     "*.csv",
     "*.py",
+    "*.tbl",
     "*.yml",
     ".#*",
     "CODE_OF_CONDUCT.md",

@@ -1,17 +1,13 @@
 """Ark shortcodes."""
 
 from pathlib import Path
-import re
-from textwrap import dedent
 
 import ark
 import pybtex.plugin
 import shortcodes
 
+import regex
 import util
-
-
-FIRST_H1 = re.compile(r"^#\s+.+$", re.MULTILINE)
 
 
 @shortcodes.register("b")
@@ -89,14 +85,9 @@ def figure_def(pargs, kwargs, node):
     known = ark.site.config["_figures_"]
 
     label = f"Figure&nbsp;{known[slug]}"
-    return dedent(
-        f"""\
-        <figure id="{slug}"{cls}>
-        <img src="./{img}" alt="{alt}"{scale}/>
-        <figcaption markdown="1">{label}: {caption}</figcaption>
-        </figure>
-        """
-    )
+    body = f'<img src="./{img}" alt="{alt}"{scale}/>'
+    caption = f'<figcaption markdown="1">{label}: {caption}</figcaption>'
+    return f'<figure id="{slug}"{cls}>\n{body}\n{caption}\n</figure>'
 
 
 @shortcodes.register("rootpage")
@@ -108,7 +99,7 @@ def rootpage(pargs, kwargs, node):
     )
     path = Path(ark.site.home(), pargs[0])
     try:
-        return FIRST_H1.sub("", path.read_text())
+        return regex.FIRST_H1.sub("", path.read_text())
     except OSError:
         util.fail(f"cannot read .ark file {str(path)}")
 
@@ -118,10 +109,31 @@ def table_ref(pargs, kwargs, node):
     """Handle [%t slug %] table reference shortcodes."""
     util.require((len(pargs) == 1) and (not kwargs), f"Bad 't' shortcode in {node}")
     slug = pargs[0]
-    # known = ark.site.config["_tables_"]
-    # util.require(slug in known, f"Unknown table slug {slug} in {node}")
-    known = {slug: "FIXME"}
+    known = ark.site.config["_tables_"]
+    util.require(slug in known, f"Unknown table slug {slug} in {node}")
     return f'<a class="tbl-ref" href="#{slug}">Table&nbsp;{known[slug]}</a>'
+
+
+@shortcodes.register("table")
+def table_def(pargs, kwargs, node):
+    """Handle table definition."""
+    allowed = {"slug", "tbl", "caption"}
+    util.require(
+        (not pargs) and allowed.issuperset(kwargs.keys()),
+        f"Bad 'table' shortcode {pargs} and {kwargs} in {node}",
+    )
+
+    slug = kwargs["slug"]
+    tbl = kwargs["tbl"]
+    caption = util.markdownify(kwargs["caption"], True)
+
+    util.require_file(node, tbl, "table")
+    known = ark.site.config["_tables_"]
+    content = util.read_file(node, tbl, "table").strip()
+
+    label = f"Table&nbsp;{known[slug]}"
+    caption = f'<caption markdown="1">{label}: {caption}</caption>'
+    return f'<div class="table" markdown="1">\n\n{content}\n\n{caption}</div>'
 
 
 @shortcodes.register("toc")

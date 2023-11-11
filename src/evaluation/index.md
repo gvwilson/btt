@@ -75,17 +75,14 @@ course projects can and should produce a lot more than just code.
 For example,
 [% b Spinellis2007 %] looked at how much content of different kinds
 went into the FreeBSD project in 2006.
-[%t starting-spinellis-stats %] doesn't divide "source code" into "application code" and "tests",
+[%t evaluation-spinellis-stats %] doesn't divide "source code" into "application code" and "tests",
 but it's still an eye-opener.
 
-<div class="table" id="starting-spinellis-stats" caption="FreeBSD 2006" markdown="1">
-| Asset | Source | Size (KB) | Percentage |
-| ----- | ------ | --------- | ---------- |
-| Issues database | GNATS | 711783 | 30.5% |
-| Source code | C/C++ | 431519 | 18.5% |
-| Documentation | troff, DocBook | 114450 | 5.0% |
-| Version history | CVS | 1076762 | 46.0% |
-</div>
+[% table
+   slug="evaluation-spinellis-stats"
+   tbl="spinellis-stats.tbl"
+   caption="FreeBSD 2006"
+%]
 
 Here are some of the things that you might be required to produce:
 

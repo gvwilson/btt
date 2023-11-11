@@ -22,7 +22,7 @@ and the key to doing that is to distinguish between:
 
 Every team should have a short weekly status meeting.
 For each meeting,
-create a table in a shared document like the one in [%t important-status %].
+create a table in a shared document like the one in [%t meetings-log %].
 Everyone adds a few bullet points to their row in the table
 at least half an hour before the meeting starts
 so that the whole team can mull everything over.
@@ -30,18 +30,13 @@ If anyone wants to discuss something,
 they highlight it by adding a comment.
 The meeting moderator then goes through the highlighted items one by one,
 spending no more than a couple of minutes on each;
-anything that requires more time is deferred to a discussion meeting
+anything that requires more time is deferred to a discussion meeting.
 
-<div class="table" id="important-status" caption="Status Update Table" markdown="1">
-| Person | Progress | Plans | Problems |
-| ------ | -------- | ----- | ---------- |
-| Ren    | Parsing OCTL records | Tag OCTL records in DVC | Duplicate OCTL tags? |
-|        | Deployed progress bar patch | Help onboard Silvia | |
-| Mikka  | Refactored PostgreSQL connector | #156: handle records with NULL timestamp | Clarify authorship guidelines |
-|        | Patched database tests | #171: auto-archive duplicate records | |
-| Sanjay | … | … | … |
-| Jess   | … | … | … |
-</div>
+[% table
+   slug="meetings-log"
+   tbl="meetings-log.tbl"
+   caption="Status Update Table"
+%]
 
 ## Decision Meetings {: #meetings-decision}
 
