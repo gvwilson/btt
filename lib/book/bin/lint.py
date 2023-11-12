@@ -9,17 +9,16 @@ import re
 import shortcodes
 import yaml
 
-import bin_util
-import regex
 import util
+import regex
 
 
 def main():
     """Main driver."""
     args = parse_args()
-    config = bin_util.load_config(args.config)
+    config = util.load_config(args.config)
     content = {
-        "bib": util.read_bibliography(),
+        "bib": _collect_bib_keys(),
         "html": _collect_files(config, "html"),
         "src": _collect_files(config, "markdown"),
     }
@@ -30,14 +29,12 @@ def main():
 
 def lint_bibliography_key_order(args, config, content):
     """Check bibliography file keys for ordering."""
-    content = Path("info", "bibliography.bib").read_text()
-    keys = list(m for m in regex.BIB_KEY.findall(content))
     previous = None
-    for k in keys:
-        if (previous is not None) and k <= previous:
-            print(f"bibliography key {k} out of order")
-        previous = k
-    
+    for key in content["bib"]:
+        if (previous is not None) and key <= previous:
+            print(f"bibliography key {key} out of order")
+        previous = key
+
 
 def lint_caption_punctuation(args, config, content):
     """Check punctuation at the ends of captions."""
@@ -56,7 +53,7 @@ def lint_caption_punctuation(args, config, content):
 
 def lint_chapters_again_keys(args, config, content):
     """Check chapters against chapter keys."""
-    expected = set(bin_util.source_dirs(args.src, config))
+    expected = set(util.source_dirs(args.src, config))
     actual = {str(p) for p in Path(args.src).glob("*") if p.is_dir()}
     report_diff("chapter keys vs. directories", expected, actual)
 
@@ -73,10 +70,10 @@ def lint_dom_structure(args, config, content):
 def lint_duplicate_files(args, config, content):
     """Check for duplicated files."""
     source_dirs = {
-        Path(d): i for (i, d) in enumerate(bin_util.source_dirs(args.src, config))
+        Path(d): i for (i, d) in enumerate(util.source_dirs(args.src, config))
     }
     ark_data = {
-        src_dir: bin_util.load_ark_data(Path(src_dir), "copied", [])
+        src_dir: util.load_ark_data(Path(src_dir), "copied", [])
         for src_dir in source_dirs
     }
     ark_lookup = {
@@ -95,14 +92,14 @@ def lint_duplicate_files(args, config, content):
     for src_dir, values in ark_lookup.items():
         if values:
             print(
-                f"{src_dir}/{bin_util.ARK_FILE} contains unused {', '.join(sorted(values))}"
+                f"{src_dir}/{util.ARK_FILE} contains unused {', '.join(sorted(values))}"
             )
 
 
 def lint_shortcodes(args, config, content):
     """Check shortcode usage in a single pass."""
     collected = _collect_shortcodes(content)
-    _check_bibliography(collected["b"], content["bib"])
+    report_diff("biblography keys", set(collected["b"]), set(content["bib"]))
 
 
 def lint_single_h1(args, config, content):
@@ -129,7 +126,7 @@ def lint_slug_format(args, config, content):
             _check(figure, slug, "figure")
         for table_div in doc.find_all("div", class_="table"):
             _check(table_div, slug, "table div")
-        if slug not in bin_util.get_lint(config).get("disable_h2_id", {}):
+        if slug not in util.get_lint(config).get("disable_h2_id", {}):
             for heading in doc.find_all("h2"):
                 _check(heading, slug, "H2 heading")
 
@@ -161,10 +158,10 @@ def report_diff(title, expected, actual):
         print(f"{title} extra: {', '.join(sorted(diff))}")
 
 
-def _check_bibliography(seen, available):
-    """Check that citations exists and are used."""
-    exists = {entry.key for entry in available}
-    report_diff("bibliography keys", seen, exists)
+def _collect_bib_keys():
+    """Collect bibliography keys from file."""
+    content = Path("info", "bibliography.bib").read_text()
+    return list(m for m in regex.BIB_KEY.findall(content))
 
 
 def _collect_dom(seen, node):
