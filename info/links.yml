@@ -24,6 +24,14 @@
   url: https://geekfeminism.wikia.com/wiki/Charles%27_Rules_of_Argument
   title: "Charles' Rules of Argument"
 
+- key: choose-license
+  url: https://choosealicense.com/
+  title: "Choose a License"
+
+- key: creative-commons
+  url: https://creativecommons.org/
+  title: "Creative Commons"
+
 # DDD
 
 - key: dobzhansky
@@ -72,6 +80,14 @@
 
 # OOO
 
+- key: osi
+  url: https://opensource.org/
+  title: "Open Source Initiative"
+
+- key: osi-license-list
+  url: https://opensource.org/licenses
+  title: "Open Source Initiative License List"
+
 # PPP
 
 - key: petre-marian
@@ -106,7 +122,15 @@
   url: https://taylorandfrancis.com/
   title: "Taylor & Francis"
 
+- key: tldr-gpl
+  url: "https://tldrlegal.com/license/gnu-general-public-license-v3-(gpl-3)"
+  title: "tl;dr summary of the GPL"
+
 # UUU
+
+- key: udhr
+  url: https://en.wikipedia.org/wiki/Universal_Declaration_of_Human_Rights
+  title: "Universal Declaration of Human Rights"
 
 - key: ultima_online_players
   url: https://twitter.com/ZenOfDesign/status/1371347166736834560
