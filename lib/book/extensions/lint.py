@@ -1,12 +1,13 @@
 """Check configuration."""
 
 import argparse
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 from collections import defaultdict
 import hashlib
 from pathlib import Path
 import re
 import shortcodes
+import yaml
 
 import bin_util
 import regex
@@ -26,6 +27,17 @@ def main():
         if name.startswith("lint_"):
             func(args, config, content)
 
+
+def lint_bibliography_key_order(args, config, content):
+    """Check bibliography file keys for ordering."""
+    content = Path("info", "bibliography.bib").read_text()
+    keys = list(m for m in regex.BIB_KEY.findall(content))
+    previous = None
+    for k in keys:
+        if (previous is not None) and k <= previous:
+            print(f"bibliography key {k} out of order")
+        previous = k
+    
 
 def lint_caption_punctuation(args, config, content):
     """Check punctuation at the ends of captions."""
@@ -49,16 +61,14 @@ def lint_chapters_again_keys(args, config, content):
     report_diff("chapter keys vs. directories", expected, actual)
 
 
-def lint_bibliography_key_order(args, config, content):
-    """Check bibliography file keys for ordering."""
-    content = Path("info", "bibliography.bib").read_text()
-    keys = list(m for m in regex.BIB_KEY.findall(content))
-    previous = None
-    for k in keys:
-        if (previous is not None) and k <= previous:
-            print(f"bibliography key {k} out of order")
-        previous = k
-    
+def lint_dom_structure(args, config, content):
+    """Check DOM structure against spec."""
+    seen = {}
+    for filepath, doc in content["html"].items():
+        seen = _collect_dom(seen, doc)
+    allowed = yaml.safe_load(Path("lib", "book", "dom.yml").read_text())
+    _diff_dom(seen, allowed)
+
 
 def lint_duplicate_files(args, config, content):
     """Check for duplicated files."""
@@ -91,24 +101,8 @@ def lint_duplicate_files(args, config, content):
 
 def lint_shortcodes(args, config, content):
     """Check shortcode usage in a single pass."""
-
-    def _collect_b(pargs, kwargs, extra):
-        util.require(
-            (len(pargs) > 0) and (not kwargs),
-            f"Bad 'b' shortcode with {pargs} and {kwargs} in {extra['filename']}",
-        )
-        extra["b"].update(pargs)
-
-    parser = shortcodes.Parser(inherit_globals=False, ignore_unknown=True)
-    parser.register(_collect_b, "b")
-    collector = {"b": set()}
-    for filename in content["src"]:
-        collector["filename"] = filename
-        try:
-            parser.parse(Path(filename).read_text(), collector)
-        except shortcodes.ShortcodeSyntaxError as exc:
-            util.fail(f"%b shortcode parsing error in {filename}: {exc}")
-    _check_bibliography(collector["b"], content["bib"])
+    collected = _collect_shortcodes(content)
+    _check_bibliography(collected["b"], content["bib"])
 
 
 def lint_single_h1(args, config, content):
@@ -173,6 +167,27 @@ def _check_bibliography(seen, available):
     report_diff("bibliography keys", seen, exists)
 
 
+def _collect_dom(seen, node):
+    """Collect DOM element attributes from given node and its descendents."""
+
+    if not isinstance(node, Tag):
+        return seen
+    if node.name not in seen:
+        seen[node.name] = {}
+    for key, value in node.attrs.items():
+        if key not in seen[node.name]:
+            seen[node.name][key] = set()
+        if isinstance(value, str):
+            seen[node.name][key].add(value)
+        else:
+            for v in value:
+                seen[node.name][key].add(v)
+    for child in node:
+        _collect_dom(seen, child)
+
+    return seen
+
+
 def _collect_files(config, which):
     """Read text of source and output files."""
 
@@ -198,6 +213,47 @@ def _collect_files(config, which):
         *[Path(root_dir, slug, filename) for slug in config.chapters],
     ]
     return {p: transform(p.read_text()) for p in paths}
+
+
+def _collect_shortcodes(content):
+    """Gather information from shortcodes for checking."""
+
+    def _collect_b(pargs, kwargs, extra):
+        util.require(
+            (len(pargs) > 0) and (not kwargs),
+            f"Bad 'b' shortcode with {pargs} and {kwargs} in {extra['filename']}",
+        )
+        extra["b"].update(pargs)
+
+    parser = shortcodes.Parser(inherit_globals=False, ignore_unknown=True)
+    parser.register(_collect_b, "b")
+
+    collected = {"b": set()}
+    for filename in content["src"]:
+        collected["filename"] = filename
+        try:
+            parser.parse(Path(filename).read_text(), collected)
+        except shortcodes.ShortcodeSyntaxError as exc:
+            util.fail(f"%b shortcode parsing error in {filename}: {exc}")
+
+    return collected
+
+
+def _diff_dom(actual, expected):
+    """Show difference between two summaries of DOM structures."""
+    for name in sorted(actual):
+        if name not in expected:
+            print(f"DOM {name} seen but not expected")
+            continue
+        for attr in sorted(actual[name]):
+            if attr not in expected[name]:
+                print(f"DOM {name}.{attr} seen but not expected")
+                continue
+            if expected[name][attr] == "*":
+                continue
+            for value in sorted(actual[name][attr]):
+                if value not in expected[name][attr]:
+                    print(f"DOM {name}.{attr} == '{value}' seen but not expected")
 
 
 def _find_duplicate_files(source_dirs):
