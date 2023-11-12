@@ -27,6 +27,21 @@ def main():
             func(args, config, content)
 
 
+def lint_caption_punctuation(args, config, content):
+    """Check punctuation at the ends of captions."""
+
+    def _report(f, c):
+        """Is there a problem with this caption?"""
+        if c[-1] not in ".?":
+            print(f"{filepath} caption '{c}' badly formatted")
+
+    for filepath, doc in content["html"].items():
+        for caption in doc.find_all("caption"):
+            _report(filepath, caption.string)
+        for caption in doc.find_all("figcaption"):
+            _report(filepath, caption.string)
+
+
 def lint_chapters_again_keys(args, config, content):
     """Check chapters against chapter keys."""
     expected = set(bin_util.source_dirs(args.src, config))

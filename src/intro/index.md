@@ -100,7 +100,7 @@ Their times (in hours) are shown as a whisker plot in [%f intro-prechelt %].
 [% figure
    slug="intro-prechelt"
    img="prechelt-development-time.svg"
-   caption="Development Time"
+   caption="Distribution of development times."
    alt="Box-and-whisker plot show that most developers spent between zero and 20 hours but a few took as long as 63 hours."
 %]
 

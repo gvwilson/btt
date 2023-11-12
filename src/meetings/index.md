@@ -35,7 +35,7 @@ anything that requires more time is deferred to a discussion meeting.
 [% table
    slug="meetings-log"
    tbl="meetings-log.tbl"
-   caption="Status Update Table"
+   caption="An example of team status updates."
 %]
 
 ## Decision Meetings {: #meetings-decision}
