@@ -9,6 +9,7 @@ import re
 import shortcodes
 
 import bin_util
+import regex
 import util
 
 
@@ -17,8 +18,9 @@ def main():
     args = parse_args()
     config = bin_util.load_config(args.config)
     content = {
-        "src": _collect_files(config, "markdown"),
+        "bib": util.read_bibliography(),
         "html": _collect_files(config, "html"),
+        "src": _collect_files(config, "markdown"),
     }
     for name, func in globals().items():
         if name.startswith("lint_"):
@@ -31,6 +33,17 @@ def lint_chapters_again_keys(args, config, content):
     actual = {str(p) for p in Path(args.src).glob("*") if p.is_dir()}
     report_diff("chapter keys vs. directories", expected, actual)
 
+
+def lint_bibliography_key_order(args, config, content):
+    """Check bibliography file keys for ordering."""
+    content = Path("info", "bibliography.bib").read_text()
+    keys = list(m for m in regex.BIB_KEY.findall(content))
+    previous = None
+    for k in keys:
+        if (previous is not None) and k <= previous:
+            print(f"bibliography key {k} out of order")
+        previous = k
+    
 
 def lint_duplicate_files(args, config, content):
     """Check for duplicated files."""
@@ -80,7 +93,7 @@ def lint_shortcodes(args, config, content):
             parser.parse(Path(filename).read_text(), collector)
         except shortcodes.ShortcodeSyntaxError as exc:
             util.fail(f"%b shortcode parsing error in {filename}: {exc}")
-    _check_bibliography(collector["b"])
+    _check_bibliography(collector["b"], content["bib"])
 
 
 def lint_single_h1(args, config, content):
@@ -139,9 +152,9 @@ def report_diff(title, expected, actual):
         print(f"{title} extra: {', '.join(sorted(diff))}")
 
 
-def _check_bibliography(seen):
+def _check_bibliography(seen, available):
     """Check that citations exists and are used."""
-    exists = {entry.key for entry in util.read_bibliography()}
+    exists = {entry.key for entry in available}
     report_diff("bibliography keys", seen, exists)
 
 

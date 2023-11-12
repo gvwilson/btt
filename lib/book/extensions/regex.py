@@ -2,6 +2,9 @@
 
 import re
 
+# Bibliography keys.
+BIB_KEY = re.compile(r"^@.+?\{(.*?),", re.MULTILINE)
+
 # Level-1 Markdown heading.
 FIRST_H1 = re.compile(r"^#\s+.+$", re.MULTILINE)
 
