@@ -207,19 +207,6 @@ reinforce existing inequities; it also tends to lower the team's overall grade,
 since there's often little relationship between how outspoken people are and how
 well they work.
 
-<blockquote markdown="1">
-### The Dunning-Kruger effect
-
-[%b Kruger1999 %] reported that people who know a subject well can usually
-estimate their knowledge accurately, but people who don't will often
-overestimate their competence because they don't know what they don't know.
-More recent work has cast doubt on this finding: it could simply be an artifact
-of the way the original researchers did their statistics [%b Jarry2020 %].
-Either way, you should never trust self-reported expertise, as there's no easy
-way to tell if someone really knows what they're talking about or if what
-they're actually reporting is their self-esteem.
-</blockquote>
-
 Feature decomposition is a variation on
 modular decomposition that works well in practice. Instead of owning an entire
 subsystem for the life of the project, each team member handles the design,

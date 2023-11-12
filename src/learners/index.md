@@ -34,7 +34,7 @@ and what is specific to their code.
 
 ### Confidence
 
-The Dunning-Kruger Effect [Kruger1999] is supposedly
+The Dunning-Kruger Effect [%b Kruger1999 %] is supposedly
 a cognitive bias whereby people over-estimate their understanding of something
 because they don't yet know enough to realize how much they don't know.
 The original finding was probably a mirage due to poor statistics
@@ -132,7 +132,7 @@ Finally,
 the most effective way to "teach" experts
 is to have them reflect or introspect on their own practice [%b Schon1984 %].
 
-## Learning Strategies {: #cogload-strategies}
+## Learning Strategies {: #learners-strategies}
 
 All of this leads to six strategies
 that have been proven to help people learn faster and better [%b Weinstein2018 %].

@@ -63,7 +63,7 @@ exclude = copy + [
 ]
 
 lint = {
-    "disable_h2_id": ["conduct"],
+    "disable_h2_id": ["conduct", "license"],
 }
 
 markdown_settings = {

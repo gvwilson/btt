@@ -3,6 +3,7 @@
 
 # Tools
 ARK := ark
+BIBER := biber
 PYTHON := python
 
 # Directories.
@@ -64,6 +65,11 @@ reformat:
 lint: ${HTML}
 	@${PYTHON} ${ARK_BIN}/lint.py --config ${CONFIG} --src src
 
+## bibvalid: run biber to validate bibliography
+.PHONY: bibvalid
+bibvalid:
+	@biber --tool --validate-datamodel info/bibliography.bib
+
 ## valid: run html5validator on generated files
 .PHONY: valid
 valid:
@@ -78,6 +84,7 @@ valid:
 clean:
 	@rm -rf ${HTML_DIR}
 	@find . -name '*~' -exec rm {} \;
+	@find . -name '*.blg' -exec rm {} \;
 
 ## sterile: really tidy up
 .PHONY: sterile
