@@ -131,7 +131,7 @@ under the Creative Commons - Attribution - NonCommercial 4.0 International licen
 which allows you to use and remix this material for non-commercial purposes,
 as-is or in adapted form,
 provided you cite its original source.
-Please see [% x license %] for details.
+Please see [%x license %] for details.
 
 Parts of these lessons originally appeared in [%b Sholler2019 Wilson2019 Irving2021 Smalls2021 %];
 I'm grateful to [Taylor & Francis][taylor-francis],

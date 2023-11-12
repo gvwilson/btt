@@ -1,4 +1,5 @@
 ---
+blank: True
 title: "Structure"
 tag: "FIXME"
 syllabus:

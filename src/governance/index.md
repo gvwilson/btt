@@ -24,7 +24,7 @@ It sounds reasonable,
 but it is harmfully wrong.
 Every team has a power structure:
 the question is whether it's formal or informal—in other words,
-whether it's accountable or unaccountable [% b Freeman1972 %].
+whether it's accountable or unaccountable [%b Freeman1972 %].
 In the latter case,
 decisions will effectively be made by the people
 who are the most self-confident or stubborn

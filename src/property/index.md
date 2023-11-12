@@ -1,4 +1,5 @@
 ---
+blank: True
 title: "Intellectual Property"
 tag: "FIXME"
 syllabus:
@@ -149,7 +150,7 @@ Every creative work automatically has some sort of license—the only question i
 whether authors and users know what it is and choose to enforce it.
 Choosing a license for a project can be complex,
 not least because the law hasn't kept up with everyday practice;
-[% b Lindberg2008 %] is a good exploration of these issues if you want details.
+[%b Lindberg2008 %] is a good exploration of these issues if you want details.
 Depending on country, institution, and job role,
 most creative works are automatically eligible for intellectual property protection.
 However,
@@ -178,7 +179,7 @@ Don't write your own license.
 Legalese is a highly technical language, and words don't mean what you think they do.
 What's more,
 it's often hard to understand the interactions between multiple licenses
-on different kinds of material [% b Almeida2017 %].
+on different kinds of material [%b Almeida2017 %].
 </div>
 
 Just as the project's Code of Conduct is usually placed in a root-level file called `CONDUCT.md`,

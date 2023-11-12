@@ -1,4 +1,5 @@
 ---
+blank: True
 title: "Projects"
 tag: "FIXME"
 syllabus:

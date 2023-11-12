@@ -197,7 +197,7 @@ In other words,
 if you are interrupted half a dozen times per hour
 you are *never* at your productive peak.
 Ironically,
-the cost of self-interruptions may be even worse than the cost for external interruptions [% b Abad2018 %].
+the cost of self-interruptions may be even worse than the cost for external interruptions [%b Abad2018 %].
 
 <div class="callout" markdown="1">
 ### Open offices suck
