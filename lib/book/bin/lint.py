@@ -220,7 +220,7 @@ def _collect_ids(htmls, name, kind, cls=None):
     """Collect all IDs of a certain kind."""
     seen = set()
     for slug, doc in htmls.items():
-        nodes = doc.find_all(kind, cls_=cls)
+        nodes = doc.find_all(kind, class_=cls)
         for node in nodes:
             if "id" not in node.attrs:
                 print(f"{slug}: {name} node missing ID")

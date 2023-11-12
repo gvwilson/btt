@@ -3,6 +3,7 @@
 title = "Building Tech Together"
 repo = "https://github.com/gvwilson/btt"
 author = "Greg Wilson"
+do_blank = True
 
 chapters = [
     "intro",
