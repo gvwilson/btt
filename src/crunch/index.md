@@ -14,8 +14,8 @@ and casually mention how I'd been up until 6:00 a.m. working on some monster bug
 Looking back,
 I can't remember who I was trying to impress.
 Instead,
-what I remember is how much of the code I wrote in those all-nighters I threw away
-once I'd had some sleep.
+what I remember is how much of the code I wrote in those all-nighters
+I threw away once I'd had some sleep.
 My mistake was to confuse "long hours" with "getting things done".
 You can't produce software (or anything else) without doing some work,
 but you can easily do lots of work without producing anything of value.
@@ -43,6 +43,7 @@ they were somehow immune to science.
 To quote [%b Robinson2005 %]:
 
 <blockquote markdown="1">
+
 When Henry Ford famously adopted a 40-hour workweek in 1926,
 he was bitterly criticized by members of the National Association of Manufacturers.
 But his experiments,
@@ -59,16 +60,20 @@ for most people,
 eight hours a day,
 five days per week,
 is the best sustainable long-term balance point between output and exhaustion.
-Throughout the 30s, 40s, and 50s, these studies were apparently conducted by the hundreds;
+Throughout the 30s,
+40s, and 50s, these studies were apparently conducted by the hundreds;
 and by the 1960s,
-the benefits of the 40-hour week were accepted almost beyond question in corporate America.
+the benefits of the 40-hour week were accepted almost beyond question
+in corporate America.
 In 1962,
-the Chamber of Commerce even published a pamphlet extolling the productivity gains of reduced hours.
+the Chamber of Commerce even published a pamphlet
+extolling the productivity gains of reduced hours.
 
 But, somehow, Silicon Valley didn't get the memo…
+
 </blockquote>
 
-I spent two years at a data visualization startup.
+I spent two years at a data visualization startup in my early thirties.
 Three months before our first release,
 the head of development "asked" us to start coming in on Saturdays.
 We were already pulling one late night a week at that point
@@ -90,11 +95,13 @@ that will take hours to track down later.
 As Robinson writes:
 
 <blockquote markdown="1">
+
 Productivity varies over the course of the workday,
 with the greatest productivity occurring in the first four to six hours.
 After enough hours,
 productivity approaches zero;
 eventually it becomes negative.
+
 </blockquote>
 
 It's hard to quantify the productivity of programmers, testers, and UI designers
@@ -115,14 +122,17 @@ which puts them in the bottom 5% of the population.
 Two all nighters in a row and their effective IQ is 50—the level at which
 people are considered incapable of independent living.
 
-The catch in all of this is that people usually don't notice their abilities declining.
+The catch in all of this is that
+people usually don't notice their abilities declining.
 Just like drunks who think they're still able to drive,
-people who are deprived of sleep don't realize that they're not finishing their sentences (or thoughts).
-They certainly don't realize that they're calling functions with parameters in the wrong order
+people who are deprived of sleep don't realize that
+they're not finishing their sentences (or thoughts).
+They certainly don't realize that
+they're calling functions with parameters in the wrong order
 or that the reason the tests are failing is that
 they've forgotten to redeploy the application—again.
 
-The first and most important lesson in this chapter is therefore
+The first and most important lesson in this book is therefore
 to think very hard about what's more important—how much you produce
 or how much of a martyr you appear to be—and to pace yourself accordingly.
 
@@ -168,10 +178,13 @@ Laying things out on a grid can't answer that question,
 but at least it can tell you what the question is.
 
 <blockquote>
+
 How to prioritize:
-always finish first the tasks that will allow other people to continue/start/finish their work.
+always finish first
+the tasks that will allow other people to continue/start/finish their work.
 
 — Yanina Bellini Saibene
+
 </blockquote>
 
 If any task on your list is more than an hour long,
@@ -197,30 +210,37 @@ In other words,
 if you are interrupted half a dozen times per hour
 you are *never* at your productive peak.
 Ironically,
-the cost of self-interruptions may be even worse than the cost for external interruptions [%b Abad2018 %].
+the cost of self-interruptions may be even worse than
+the cost for external interruptions [%b Abad2018 %].
 
 <div class="callout" markdown="1">
+
 ### Open offices suck
 
 Open offices were created
-so that (mostly male) managers could keep an eye on (mostly female) office workers,
-and to reduce air conditioning costs [%b Eley1995 %].
-They lower productivity in every other way we can measure [%b Bernstein2018 %];
+to reduce air conditioning costs 
+and to allow (mostly male) managers to keep an eye on (mostly female) typists
+[%b Eley1995 %].
+They lower productivity in every way we can measure [%b Bernstein2018 %];
 sadly,
 the same is true of other interruption-rich environments
 like your favorite coffee shop.
-If you really want to be productive,
+If you really want to get more done,
 you should avoid both.
+
 </div>
 
 Finally,
 you will be more productive in the long run if your back doesn't ache,
 and being away from the keyboard
-gives your brain a chance to reflect on what you've just been doing.
+gives you a chance to reflect on what you've just been doing.
 You should therefore take a five-minute break every hour.
-Checking email doesn't count:
+Don't use the time to check email or your phone—that
+won't reset your brain.
+Instead,
 get up and stretch,
 refill your water bottle,
 or go and restack the dishwasher.
-You'll be amazed at how often you can solve a problem that's been baffling you for an hour
+You'll be amazed at how often you can solve a problem
+that's been baffling you for an hour
 by taking a short walk…

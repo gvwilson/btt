@@ -200,10 +200,60 @@ they can type "question about budget"
 rather than just "question"
 so that the moderator can group related questions together.
 
-<div class="callout" markdown="1">
-### Are you a blowfish or a clam?
+## Blowfish and Clams
 
 [NOAA's guide][noaa_disruptive] to dealing with disruptive behaviors
 has useful labels and even more useful advice
 for handling people who may send meetings off course.
-</div>
+For example:
+
+<blockquote markdown="1">
+
+*Description*:
+
+Blowfish is a very chatty, assertive "people person".
+Blowfish wants everyone to feel comfortable and positive about the process.
+
+They have a tendency to be overly talkative (almost compulsively)
+because they are enthusiastic,
+want to show off,
+or are well-informed and eager to use their knowledge.
+
+Blowfish can dominate the floor time at the expense of other group members.
+While they frequently have good ideas and strong contributions to make,
+they also ramble,
+monopolize the discussion,
+and do not give others an opportunity to express their thoughts.
+
+*Gentle Intervention*
+
+Listen actively:
+"I'd like to capture all your points on the easel chart
+and then get the other participants' feedback as well.
+Help me make sure I capture your thoughts correctly.
+Your first point is [pause for response]?"
+
+Label sidetracks and interrupt tactfully
+by clearly saying his or her name:
+"Blowfish? Blowfish? Blowfish?
+Is this comment related to what we are discussing
+or should it go into the parking lot?"
+
+**Firm Intervention**
+
+Describe the impact:
+"Let's use a round-robin technique
+to allow everyone an opportunity to contribute,"
+or,
+"We are collecting information from everyone right now—it
+is essential to hear other opinions and information"
+
+Redirect the behavior:
+"Thank you Blowfish—now let's hear from someone else,"
+or,
+"Hold that thought for now,
+and let's let Clam finish his thought,"
+or,
+"Let's ask some others what they think."
+
+</blockquote>

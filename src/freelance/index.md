@@ -8,6 +8,7 @@ are the advice I give people who want to become freelance trainers (which is the
 most rewarding work I've ever had).
 
 Start in the backup band.
+
 :   Be a helper at a gig someone else has organized in order to learn the
     business and make contacts.  If it's commercial training, the lead
     instructor should cover your travel and accommodation and pay a few hundred
@@ -15,25 +16,30 @@ Start in the backup band.
     one hour of the class and then give you feedback.
 
 Start with friends.
+
 :   Is a friend or colleague working somewhere that would benefit from training?
     If so, see if they can introduce you to their boss or to someone in HR
     (which is often responsible for arranging training).
 
 Start with conferences.
+
 :   Many conferences have a tutorial track; take a look at what's 6-12 months
     out and contact the organizers or the tutorial chair to see what they're
     looking for or whether they want what you already have.
 
 Go where other people aren't.
+
 :   Lots of recovering academics teach programming or data science to
     pharmaceutical companies and financial institutions.  Fewer think about less
     glamorous industries like trucking or office building management, but they
     need help too.
+
     1.  Use examples that are directly relevant to their field.
     2.  Talk to a few people *other than your initial contacts*
         to get a sense of what the average community member actually knows.
 
 Charge the going rate.
+
 :   You would expect to pay between $300 and $1000 for a day-long conference
     workshop; assuming a 20-person class and a 50/50 split between the
     instructor and the venue, that works out to $3K--$5K for you.  You should
@@ -41,12 +47,14 @@ Charge the going rate.
     clients ever agreed to pay me for my travel time.
 
 Negotiate for prep time.
+
 :   If you are offering a workshop at a conference, the organizers probably
     won't pay for your prep: they'll assume you already have a course.  If
     you're going on site to train a single client, ask for $50--$100/hr to
     prepare custom material, but don't be surprised if they say "no".
 
 Never give away the rights to your material.
+
 :   I strongly recommend publishing training material under a Creative Commons
     license, because if it's any good, it's going to wind up on the web anyway.
     If you'd rather keep it to yourself, that's OK, but do *not* let a client
@@ -54,9 +62,11 @@ Never give away the rights to your material.
     have paid you (well) for the privilege.
 
 Talk to your employer.
+
 :   Many people start training professional on the side and only switch to it
     full-time once they're sure they can support themselves.  I've never heard
     of an employer saying "no" to this, but:
+
     1.  Tell them up front: they're going to find out eventually, and if you've
         tried to hide it from them, they'll wonder what else you're not telling
         them.
@@ -71,10 +81,12 @@ Talk to your employer.
         email that your employer is OK with that *before* you do it.
 
 Create a professional-looking website.
+
 :   And make sure your LinkedIn profile is up-to-date, because potential
     customers are going to check you out before signing anything.  Your website
     will usually not include your rates: for whatever reason, people seem not
     to post those.  Instead, it should have:
+
     -   contact information (*not* your work email if you're starting part-time);
     -   a brief biography;
     -   samples of your training material;
@@ -90,9 +102,11 @@ Create a professional-looking website.
     -   the Code of Conduct for your workshops.
 
 Don't be afraid to say "no".
+
 :   Most people have a to-do list; if you're going to any kind of independent
     consulting or training, you should have a to-don't list as well.  Mine
     includes:
+
     -   Don't insist on teaching in person.  I have another blog post brewing
         about how to provide interactive online training, which I think provides
         most of the effectiveness at a far lower cost to family and the

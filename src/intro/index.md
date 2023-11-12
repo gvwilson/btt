@@ -69,6 +69,7 @@ which is usually just someone else's personal experience repackaged as a univers
 We therefore cite research findings to back up our claims where we can.
 
 <div class="callout" markdown="1">
+
 ### Why does everything take so long?
 
 [%b Sedano2017 %] found that software development projects have nine types of waste:
@@ -84,6 +85,7 @@ and ineffective communication.
 *None of these are software issues,*
 so if you only think about the code in your project and not about the people writing it,
 everything will take longer and hurt more than it needs to.
+
 </div>
 
 ## An Example {: #intro-example}
@@ -123,10 +125,40 @@ the best answers to our original question are therefore:
 
 -   but it's reasonable to say that they are about four times more productive.
 
+## Why This Book? {: #intro-why}
+
+Three books changed my life as a programmer.
+[%b Kernighan1981 %] taught me I could do more than just write software—I could *design* it—while
+[%b Glass2002 %] taught me we could study software and software development scientifically
+to determine what actually works (or doesn't).
+In between them I read [%b Hunt1999 %];
+for many programmers of my generation,
+it was the first thing that described the craft of software construction
+in a way that made sense.
+
+I referred to those books over and over again
+when I started teaching at the University of Toronto in the early 2000s,
+but re-reading them now,
+I'm struck by what they *don't* discuss.
+How do you run a meeting in a way that ensures everyone is heard?
+After forty years in tech,
+I believe that is the most important skill I ever learned.
+How and why does tech marginalize women,
+people of color,
+and members of the LGBT community?
+And given how software is being used to amplify hate for profit
+in ways that threaten us all,
+shouldn't every guide to being a better programmer at least mention the problem?
+
+The books I read when I was young didn't even ask these questions;
+neither do newer ones like [%b Larson2019 Orosz2023 Thomas2019 %].
+This book can't answer them all,
+but I hope you'll enjoy a little practical idealism.
+
 ## Licensing {: #intro-license}
 
 All of the written material on this site is made available
-under the Creative Commons - Attribution - NonCommercial 4.0 International license
+under the Creative Commons-Attribution-NonCommercial 4.0 International license
 ([CC-BY-NC-4.0][cc-by-nc]),
 which allows you to use and remix this material for non-commercial purposes,
 as-is or in adapted form,

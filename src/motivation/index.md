@@ -1,11 +1,13 @@
 ---
+blank: True
 title: "Motivation"
-tag: "FIXME"
+tag: "What gets people to learn or prevents them from learning?"
 syllabus:
 - FIXME
 ---
 
-One of the strongest predictors of whether or not a neurotypical adult learns something
+One of the strongest predictors
+of whether or not a neurotypical adult learns something
 is whether they are intrinsically motivated to learn it,
 i.e.,
 whether they're learning it to satisfy their own goals.

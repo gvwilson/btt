@@ -96,7 +96,8 @@ Share what you learn.
     do so more quickly.  Doing this also helps you figure out what you know now
     that you didn't know then, which can help you the next time around.
 
-<blockquote markdown="1">
+<div class="callout"  markdown="1">
+
 ### Buddies and mentors
 
 A well-run company's process for getting newly-hired people up to speed can be
@@ -104,4 +105,5 @@ anything from a simple checklist like the one in FIXME to a
 multi-week sequence of courses.  However it's done, it is most effective when
 new people are paired with buddies or mentors to direct their first questions
 to, and who will check in with them regularly to see how they're doing.
-</blockquote>
+
+</div>

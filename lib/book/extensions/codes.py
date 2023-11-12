@@ -146,7 +146,8 @@ def toc(pargs, kwargs, node):
     appendices = []
     for slug in ark.site.config["chapters"]:
         title = ark.site.config["_meta_"][slug]["title"]
-        entry = f'<li><a href="@root/{slug}/">{title}</a></li>'
+        status = " (undone)" if ark.site.config["_meta_"][slug].get("blank", None) else ""
+        entry = f'<li><a href="@root/{slug}/">{title}</a> {status}</li>'
         if "tag" in ark.site.config["_meta_"][slug]:
             chapters.append(entry)
         else:

@@ -1,6 +1,6 @@
 ---
 blank: True
-title: "Employment Rights"
+title: "Rights"
 tag: "FIXME"
 syllabus:
 - FIXME

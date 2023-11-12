@@ -9,19 +9,22 @@ The first release of GitHub's [Minimum Viable Governance][github_mvg] guidelines
 included this:
 
 <blockquote>
+
 **2.1. Consensus-Based Decision Making**
 
 Projects make decisions through consensus of the Maintainers.
 While explicit agreement of all Maintainers is preferred,
 it is not required for consensus.
 Rather,
-the Maintainers will determine consensus based on their good faith consideration of a number of factors,
+the Maintainers will determine consensus
+based on their good faith consideration of a number of factors,
 including the dominant view of the Contributors and nature of support and objections.
-The Maintainers will document evidence of consensus in accordance with these requirements.
+The Maintainers will document evidence of consensus
+in accordance with these requirements.
+
 </blockquote>
 
-It sounds reasonable,
-but it is harmfully wrong.
+It sounds reasonable but is harmfully wrong.
 Every team has a power structure:
 the question is whether it's formal or informal—in other words,
 whether it's accountable or unaccountable [%b Freeman1972 %].
@@ -41,7 +44,8 @@ are a practical way to do this in groups of up to a few dozen people,
 and work very well for smaller teams too:
 
 1.  Before each meeting, anyone who wishes may sponsor a proposal.
-    Proposals must be filed at least 24 hours before a meeting in order to be considered,
+    Proposals must be filed at least 24 hours before a meeting
+    in order to be considered,
     and must include:
     -   a one-line summary
     -   the full text of the proposal
@@ -49,7 +53,8 @@ and work very well for smaller teams too:
     -   pros and cons
     -   possible alternatives
 
-2.  A quorum is established in a meeting if half or more of voting members are present.
+2.  A quorum is established in a meeting
+    if half or more of voting members are present.
 
 3.  Once a person has sponsored a proposal,
     the group may not discuss or vote on the issue
@@ -65,7 +70,8 @@ and work very well for smaller teams too:
 
 6.  If the majority is uncomfortable with the proposal,
     it is sent back to its sponsor for further work.
-    (The sponsor may decide to drop it if it's clear the majority isn't ever going to support it.)
+    (The sponsor may decide to drop it
+    if it's clear the majority isn't ever going to support it.)
 
 7.  Otherwise,
     the group has a brief moderated discussion.
@@ -106,10 +112,12 @@ remember that the easier it is for people to figure out how to contribute,
 the more likely they are to do so [%b Steinmacher2014 %].
 
 <div class="callout" markdown="1">
+
 ### Nothing about us without us
 
-The rules laid out above were created
-by and for people near the middle of the bell curve with respect to focus and attention span.
+The rules laid out above
+were created by and for people near the middle of the bell curve
+with respect to focus and attention span.
 People who are neurodivergent
 (i.e., whose brains work differently from the average
 when it comes to sociability, learning, attention, and mood)
@@ -139,4 +147,5 @@ ask them what works well for them rather than ignoring the difference
 or guessing what they might want.
 Please do the same if you have teammates who have difficulty seeing, hearing, or moving about:
 they have expertise you don't.
+
 </div>

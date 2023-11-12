@@ -4,7 +4,7 @@ title: "How to Handle Being Fired"
 
 I hope you're never fired, or if you are, that the company handles it
 professionally.  In case they don't, these rules are based on [my experience
-being fired by DataCamp][buzzfeed-datacamp] and on what friends and colleagues
+being fired by DataCamp][buzzfeed_datacamp] and on what friends and colleagues
 went through there and at other companies.  Remember: however much you like your
 job, it won't love you back [%b Jaffe2021 %]
 
@@ -61,8 +61,6 @@ Go for long walks.
 
 Remember that it's OK to cry.
 :   And that other people do care about you.
-
-## Have an Exit Strategy
 
 We'll end this section with some advice from a former student:
 

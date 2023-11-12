@@ -48,6 +48,7 @@ or do a half-assed job,
 they will often avoid making it necessary.
 
 <div class="callout" markdown="1">
+
 ### A few bad apples
 
 An internal study at Facebook in 2021 found that
@@ -71,6 +72,7 @@ Instead, they are more likely to look out for each other than under normal circu
 That doesn't make for exciting viewing, though,
 and the powerful have always wanted the rest of us to believe that
 the only alternative to their rule is chaos.
+
 </div>
 
 ## What to Do {: #conflict-steps}
@@ -80,7 +82,8 @@ to agree on what the rules are
 so that everyone knows what's expected of them.
 A shared understanding of how to handle conflict helps in the same way:
 as with first aid training,
-having some idea of what to do makes you more likely to actually do something when the time comes.
+having some idea of what to do makes you more likely to actually do something
+when the time comes.
 
 Make sure you are not guilty of the same sin.
 :   You won't get very far complaining about someone else interrupting in meetings
@@ -88,7 +91,7 @@ Make sure you are not guilty of the same sin.
 
 Check expectations.
 :   Are you sure the offender knows what standards they are supposed to be meeting?
-    This is where things like the team contracts described in [%x teams %] come in handy.
+    This is where things like team contracts come in handy ([%x teams %]).
 
 Check the situation.
 :   Is someone dealing with an ailing parent or immigration woes?
@@ -107,8 +110,10 @@ Document the offense.
 Check with other team members.
 :   Are you alone in feeling that the offender is letting the team down?
     If so, you aren't necessarily wrong,
-    but it'll be a lot easier to fix things if you have the support of the rest of the team.
-    Finding out who else on the team is unhappy can be the hardest part of the whole process,
+    but it'll be a lot easier to fix things
+    if you have the support of the rest of the team.
+    Finding out who else on the team is unhappy
+    can be the hardest part of the whole process,
     since you can't even ask the question without letting on that you are upset.
     Word will almost certainly get back to whoever you are asking about,
     who might then accuse you of stirring up trouble.
@@ -135,41 +140,48 @@ Escalate as soon as there's a second offense.
 In a course, "escalation" means "taking the issue to the instructor".
 They have probably had dozens of students complain to them over the years
 about teammates not doing their share,
-and it isn't uncommon to have both halves of a pair say that they're doing all the work.
+and it isn't uncommon to have both halves of a pair say that
+they're doing all the work.
 In order to get them to take you seriously and help you fix the problem,
 you should send them an email signed by several people
 that describes what's happened and the steps already taken.
 Make sure the offender gets a copy as well,
 and ask the instructor to arrange a meeting to resolve the issue.
 
-One technique your instructor may ask you to use in such a meeting is active listening.
+One technique your instructor may ask you to use in such a meeting
+is active listening.
 When one person makes a point,
 the person on the other side of the issue explains it back to them,
 as in, "So what I think Igor is saying is…"
 It feels pedantic at first,
-but doing this confirms that the second person has actually paid attention to what the first person said.
+but doing this confirms that
+the second person has actually paid attention to what the first person said.
 It can also defuse a lot of tension,
 since explaining your position back to you clearly
 forces the other person to see the world through your eyes,
 if only for a few moments.
 
 <div class="callout" markdown="1">
+
 ### Hitchhikers
 
-Hitchhikers who show up but never actually do anything are particularly difficult to manage,
-in part because they are usually very good at appearing reasonable.
+People who show up but never actually do anything
+are usually very good at appearing reasonable.
 They will nod as you present your case, then say, "Well, yes, but…"
 and list a bunch of minor exceptions
 or cases where others on the team have also fallen short of expectations.
 Tracking progress and contributions is essential for handling them.
 If you can't back up your complaint,
 the instructor may be left with the impression that the whole team is dysfunctional.
+
 </div>
 
-Finally, it's important to recognize that good principles sometimes conflict [%b Berlin2000 %].
+Finally, it's important to recognize that
+good intentions aren't always compatible with each other [%b Berlin2000 %].
 For example,
 suppose that a student has a medically diagnosed attention disorder
-that requires them to talk to themselves quite loudly while programming in order to stay focused,
+that requires them to talk to themselves quite loudly while programming
+in order to stay focused,
 but other members of their team find this very distracting.
 Asking the student in question to program somewhere else
 would be punishing them for something they can't control,
@@ -177,7 +189,8 @@ while asking everyone else to put on headphones
 would make their interaction more difficult and their work less fun.
 There might not be a solution that satisfies everyone;
 in such cases,
-the best guide is to do the kindest thing possible.
+the best guide is to be as kind as possible
+to the person with the greatest burden.
 
 ## Escalation {: #conflict-escalation}
 
@@ -191,7 +204,8 @@ What can you do if conflict becomes more personal and heated?
 3.  Play for the audience.
     You probably won't change the mind or behavior of
     the person you are calling out,
-    but you might change the minds or strengthen the resolve of people who are observing.
+    but you might change the minds
+    or strengthen the resolve of people who are observing.
 
 4.  Pick your battles.
     You can't challenge everyone, every time, without exhausting yourself
@@ -206,8 +220,9 @@ Please also see [Charles' Rules of Argument][charles_rules].
 
 Sometimes, though, it isn't just one person on the team who's a problem:
 sometimes the whole team is dysfunctional.
-In my early thirties, for example, I worked in a data visualization startup.
-Individually, we were all smart, decent people.
+Individually,
+the people at the data visualization startup I mentioned in [%x crunch %]
+were all smart and decent.
 Put us together, though, and somehow our IQs canceled out,
 so that collectively we were as dumb as a sack full of hammers.
 
@@ -217,10 +232,12 @@ that teams will be dissolved and re-formed halfway through the project,
 *unless* every member on the team submits a separate signed request to stay together.
 There's a bit of psychology here:
 if people are required to ask for their team to be dissolved
-they will often think, "It's more trouble than it's worth, I'll just put up with it."
+they will often think,
+"It's more trouble than it's worth, I'll just put up with it."
 If dissolution is the default,
 though,
-then students won't be inhibited by any stigma attached to being the one who caused trouble.
+then students won't be inhibited by any stigma
+attached to being the one who caused trouble.
 
 Students also usually understand that dissolving their team and forming a new one
 takes time that could be invested in earning a higher grade.
@@ -228,12 +245,33 @@ Teams will therefore usually stick together
 if they see that troublemakers are actually being dealt with.
 
 <div class="callout" markdown="1">
+
 ### Who gets to keep the cat?
 
 If the instructor allows or requires teams to re-form partway through the project,
 they should explain at the start of the course
 what will happen to the work the team has done up to that point.
-Can each member of the team that is dissolving use everything the whole team has built up to that point?
-Do they have to re-start with whatever has been written by the teams they are joining?
+Can each member of the team that is dissolving
+use everything the whole team has built up to that point?
+Do they have to re-start
+with whatever has been written by the teams they are joining?
 Knowing this in advance helps everyone decide whether breaking up is worth it.
+
+</div>
+
+<div class="callout" markdown="1">
+
+### A hell of your own making
+
+A well-known online gaming company
+redirects users with sufficiently bad reputations to the same server
+so that they can make each other miserable.
+Instructors can do the same thing in teamwork courses:
+if teams are broken up and reorganized at the midpoint of the course,
+everyone that the instructor believes is problematic
+can be put in the same group.
+This strategy can backfire if someone is placed their unfairly,
+so it should be used carefully,
+but it does make everyone else's life better…
+
 </div>

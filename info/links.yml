@@ -10,6 +10,10 @@
 
 # BBB
 
+- key: buzzfeed_datacamp
+  url: https://www.buzzfeednews.com/article/daveyalba/datacamp-sexual-harassment-metoo-tech-startup
+  en: "A Multimillion-Dollar Startup Hid A Sexual Harassment Incident By Its CEO—Then A Community of Outsiders Dragged It Into the Light"
+
 # CCC
 
 - key: carpentries
@@ -52,6 +56,10 @@
 
 # GGG
 
+- key: gelman_dunning_kruger
+  url: https://statmodeling.stat.columbia.edu/2021/10/12/can-the-dunning-kruger-effect-be-explained-as-a-misunderstanding-of-regression-to-the-mean/
+  title: "Can the Dunning-Kruger effect be explained as a misunderstanding of regression to the mean?"
+
 - key: github_mvg
   url: https://github.com/github/MVG
   title: "GitHub Minimum Viable Governance"
@@ -65,6 +73,10 @@
 # III
 
 # JJJ
+
+- key: jarry_dunning_kruger
+  url: https://www.mcgill.ca/oss/article/critical-thinking/dunning-kruger-effect-probably-not-real
+  en: "The Dunning-Kruger Effect Is Probably Not Real"
 
 # KKK
 
