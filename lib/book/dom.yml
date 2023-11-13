@@ -92,6 +92,9 @@ table:
 tbody: []
 td:
   markdown: "1"
+  style:
+  - "text-align: left;"
+  - "text-align: right;"
 th:
   style: "*"
 thead: []
