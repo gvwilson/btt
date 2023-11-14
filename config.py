@@ -44,6 +44,7 @@ chapters = [
     "freelance",
     "fired",
     "credits",
+    "syllabus",
 ]
 
 theme = "book"

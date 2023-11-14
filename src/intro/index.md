@@ -28,13 +28,13 @@ This book can be read on its own or as a companion to [%b Wilson2022 %].
 please consider adding a tool to the ones it covers.)
 These three learner personas describe who this book is for:
 
--   *Rui* is in the third year of a computer science degree.
+-   *Yani* is in the third year of a computer science degree.
     She worked on several volunteer projects in high school and through her mosque,
     but the "Introduction to Software Engineering" course she's about to take
     will be the first time she has built software with other people.
     This book will help her and her teammates figure out who should do what, when.
 
--   *Brad* is in Rui's class.
+-   *Brad* is in Yani's class.
     He started programming when he was nine years old,
     and can do many assignments in half the time it takes other students.
     (He attributes this to natural aptitude
