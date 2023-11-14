@@ -26,7 +26,7 @@ we need to build it better.
 These learner personas describe who this book is for:
 
 -   *Yani* is in the third year of a computer science degree.
-    She worked on several volunteer projects in high school and through her mosque,
+    She worked on volunteer projects in high school and at her mosque,
     but the "Introduction to Software Engineering" course she's about to take
     will be the first time she has built software with other people.
     This book will help her and her teammates figure out who should do what, when.
@@ -70,7 +70,6 @@ which is usually just someone else's personal experience repackaged as a univers
 We therefore cite research findings to back up our claims where we can.
 
 <div class="callout" markdown="1">
-
 ### Why does everything take so long?
 
 [%b Sedano2017 %] found that software development projects have nine types of waste:
@@ -86,7 +85,6 @@ and ineffective communication.
 *None of these are software issues,*
 so if you only think about the code in your project and not about the people writing it,
 everything will take longer and hurt more than it needs to.
-
 </div>
 
 Our third theme is that the software we build is shaped by
