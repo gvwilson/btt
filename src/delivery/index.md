@@ -21,6 +21,21 @@ This chapter describes some things you might be asked to do when wrapping up.
 Even if they aren't required, doing them is good practice for working in the
 real world.
 
+<div class="callout" markdown="1">
+### How much of what?
+
+[%b Spinellis2007 %] looked at how much content of different kinds
+went into the FreeBSD project in 2006.
+[%t evaluation-spinellis-stats %] doesn't divide "source code" into "application code" and "tests",
+but it's still an eye-opener.
+
+[% table
+   slug="delivery-spinellis-stats"
+   tbl="spinellis-stats.tbl"
+   caption="Distribution of effort and artefacts in FreeBSD 2006."
+%]
+</div>
+
 ## What to Deliver
 
 At a minimum, your finished project should have:

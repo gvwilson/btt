@@ -18,6 +18,7 @@ chapters = [
     "automation",
     "grading",
     "performance",
+    "business",
     "structure",
     "testing",
     "errors",
@@ -68,7 +69,7 @@ exclude = copy + [
 ]
 
 lint = {
-    "disable_h2_id": ["conduct", "license"],
+    "disable_h2_id": ["conduct", "license", "syllabus"],
 }
 
 markdown_settings = {

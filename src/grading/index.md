@@ -8,12 +8,6 @@ syllabus:
 Many organizations make the mistake of focusing on outputs rather than on outcomes [%b Perri2018 %].
 In software teams this often takes the form of measuring progress by the number of features added to a product
 rather than by whether changes to the code are actually making people's lives easier.
-Claims like "80% of people only use 20% of a product's features" are often optimistic
-(FIXME citation):
-in most cases,
-people learn just enough to accomplish the task at hand
-and only discover more intermittently and accidentally if at all.
-
 The equivalent mistake in a project course
 is to measure progress by how much code you have written
 rather than by how your work compares to the grading scheme.
@@ -21,20 +15,19 @@ Doing this doesn't mean you should only do things that are going to show up on y
 but keep in mind that your actual product isn't your software:
 it's your grade.
 
-The first step in any project is therefore to figure out where the goalposts are.
-In a company,
-your boss should tell you what you're responsible for
-and the HR department should tell you what the criteria are
-for retention, promotion, and bonuses.
-Again,
-you shouldn't do only those things,
-but if you're going to drop any or put time elsewhere,
-you should do it with your eyes open.
-
 <div class="callout" markdown="1">
-### Co-operatives
+### Weigh and measure
 
-FIXME: explain how they're different
+An undergraduate program in software engineering (or anything else) has three purposes:
+to broaden your mind,
+to train you to do something that employers will pay you to do,
+and to give you and those future employers a sense of
+how much you can do and how well you can do it.
+Grades are inaccurate,
+frequently biased,
+and foster a zero-sum world view,
+but while many people are working on alternatives [%b Blum2020 %],
+we are stuck with them for now.
 </div>
 
 In a project course,
@@ -73,21 +66,6 @@ A final exam.
     but smart instructors will include some questions
     to test your understanding of *your* project
     to determine who actually did the work and who was hitchhiking ([%x teams %]).
-
-<div class="callout" markdown="1">
-### How much of what?
-
-[%b Spinellis2007 %] looked at how much content of different kinds
-went into the FreeBSD project in 2006.
-[%t evaluation-spinellis-stats %] doesn't divide "source code" into "application code" and "tests",
-but it's still an eye-opener.
-
-[% table
-   slug="evaluation-spinellis-stats"
-   tbl="spinellis-stats.tbl"
-   caption="Distribution of effort and artefacts in FreeBSD 2006."
-%]
-</div>
 
 The list below is a grading scheme for a typical one-semester project course:
 
@@ -170,3 +148,15 @@ I probably spend 10 to 12 hours reading and grading each project in a term.
 I've thought several times about using peer grading to reduce my load
 and give students some experience of what life is like on the other side of the red pen,
 but I've never been able to convince myself that it would be fair.
+
+<div class="callout" markdown="1">
+### Co-operatives
+
+FIXME:
+Project courses are often presented as "pretend you're starting a company".
+In every case I've seen,
+these "companies" follow the Silicon Valley model of a for-profit startup
+trying to attract venture capital funding
+to fuel explosive growth.
+Many alternatives exist [%x business %]
+</div>
