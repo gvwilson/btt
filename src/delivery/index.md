@@ -26,7 +26,7 @@ real world.
 
 [%b Spinellis2007 %] looked at how much content of different kinds
 went into the FreeBSD project in 2006.
-[%t evaluation-spinellis-stats %] doesn't divide "source code" into "application code" and "tests",
+[%t delivery-spinellis-stats %] doesn't divide "source code" into "application code" and "tests",
 but it's still an eye-opener.
 
 [% table

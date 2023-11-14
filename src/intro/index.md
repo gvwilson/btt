@@ -23,10 +23,7 @@ we need to build it better.
 
 ## Audience {: #intro-audience}
 
-This book can be read on its own or as a companion to [%b Wilson2022 %].
-(If you are looking for a course project,
-please consider adding a tool to the ones it covers.)
-These three learner personas describe who this book is for:
+These learner personas describe who this book is for:
 
 -   *Yani* is in the third year of a computer science degree.
     She worked on several volunteer projects in high school and through her mosque,
@@ -34,25 +31,29 @@ These three learner personas describe who this book is for:
     will be the first time she has built software with other people.
     This book will help her and her teammates figure out who should do what, when.
 
--   *Brad* is in Yani's class.
-    He started programming when he was nine years old,
-    and can do many assignments in half the time it takes other students.
-    (He attributes this to natural aptitude
-    rather than to his parents being able to afford to send him to after-school coding camps).
-    He finds discussion of what he calls "fluffy stuff" tiresome;
-    this guide will help him understand why that attitude is self-defeating.
-
--   *Sharla* has taught that software engineering class twice.
+-   *Sharla* has taught Yani's software engineering class twice.
     Each time,
     they came away feeling that
     their students had wasted time on things that weren't useful
     and hadn't learned things that would be.
     This book will help them restructure that course.
 
+-   *Avi* taught himself most of what he knows about programming
+    while doing a graduate degree in biology.
+    He has just started his first non-academic job as a data scientist,
+    where he will be building software with other people for the first time.
+    This book will help him understand what's expected of him
+    and how to collaborate with his new colleagues.
+
+This book can be read on its own or as a companion to [%b Wilson2022 %].
+(If you are looking for a course project,
+please consider adding a tool to the ones it covers.)
+
 ## Themes {: #intro-theme}
 
 Much of what's hard about building software stems from
-the way our brains work [%b Hermans2021 %].
+the way our brains work [%b Hermans2021 %],
+and in particular from our limited mental capabity ([%x cogload %]).
 One theme of this book is therefore
 this modified version of [Dobzhansky's Rule][dobzhansky]:
 
@@ -88,72 +89,15 @@ everything will take longer and hurt more than it needs to.
 
 </div>
 
-## An Example {: #intro-example}
-
-People sometimes talk about 10X programmers—ones who are
-ten times more productive than average—but do they actually exist?
-To find out,
-[%b Prechelt2000 %] looked at how long it took eighty programmers
-to solve the same problem in the language of their choice.
-Their times (in hours) are shown as a whisker plot in [%f intro-prechelt %].
-
-[% figure
-   slug="intro-prechelt"
-   img="prechelt-development-time.svg"
-   caption="Distribution of development times."
-   alt="Box-and-whisker plot show that most developers spent between zero and 20 hours but a few took as long as 63 hours."
-%]
-
-The shortest and longest development times were 0.6 and 63 hours respectively,
-giving a ratio of 105X.
-However,
-the subjects used seven different languages;
-if we only look at those who used Java (about 30% of the whole)
-the shortest and longest times are 3.8 and 63 hours,
-giving a ratio of "only" 17X.
-
-But comparing the best and the worst of anything gives us
-an exaggerated impression of the difference.
-If we compare the 75th percentile to the 25th percentile
-we get a ratio of 18.5/7.25 or 2.55;
-if we compare the 90th percentile to the 50th we get 3.7,
-and other comparisons give us other values.
-As [%b Prechelt2019 %] explains,
-the best answers to our original question are therefore:
-
--   good programmers aren't 10 times more productive than average;
-
--   but it's reasonable to say that they are about four times more productive.
-
-## Why This Book? {: #intro-why}
-
-Three books changed my life as a programmer.
-[%b Kernighan1981 %] taught me I could do more than just write software—I could *design* it—while
-[%b Glass2002 %] taught me we could study software and software development scientifically
-to determine what actually works (or doesn't).
-In between them I read [%b Hunt1999 %];
-for many programmers of my generation,
-it was the first thing that described the craft of software construction
-in a way that made sense.
-
-I referred to those books over and over again
-when I started teaching at the University of Toronto in the early 2000s,
-but re-reading them now,
-I'm struck by what they *don't* discuss.
-How do you run a meeting in a way that ensures everyone is heard?
-After forty years in tech,
-I believe that is the most important skill I ever learned.
-How and why does tech marginalize women,
-people of color,
-and members of the LGBT community?
-And given how software is being used to amplify hate for profit
-in ways that threaten us all,
-shouldn't every guide to being a better programmer at least mention the problem?
-
-The books I read when I was young didn't even ask these questions;
-neither do newer ones like [%b Larson2019 Orosz2023 Thomas2019 %].
-This book can't answer them all,
-but I hope you'll enjoy a little practical idealism.
+Our third theme is that the software we build is shaped by
+the organizations in which we build it,
+and shapes them in turn [%b Cataldo2008 %].
+How you run a meeting determines whose opinions are heard,
+which in turn determines the architecture that emerges from those meetings.
+How programmers (and others) are evaluated determines
+whether they thrive in their jobs or not [%b Hicks2023 %],
+and the tools that allow people to build communities online
+are used to amplify hate for profit.
 
 ## Licensing {: #intro-license}
 

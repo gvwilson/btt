@@ -1,63 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="repo" content="https://github.com/gvwilson/btt">
-  <link rel="icon" type="image/x-icon" href="../favicon.ico">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../tango.css">
-  
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)']]
-      }
-    };
-  </script>
-  <script
-    type="text/javascript"
-    id="MathJax-script"
-    async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-  <title>Building Tech Together: Performance Review</title>
-</head>
+---
+title: "Peer Evaluation"
+tag: "How to tell people they're good at their job (or not)."
+syllabus:
+- FIXME
+---
 
-  <body>
-    <main>
-      <h1>Performance Review</h1>
-
-  <div class="tagline"><p>How to tell people they're good at their job (or not).</p></div>
-  <ul class="syllabus">
-<li>FIXME</li>
-</ul>
-
-
-      <p>Performance reviews are essential to a company&rsquo;s operations.
+Performance reviews are essential to a company's operations.
 They can also be pretty frightening,
-since what you say (or don&rsquo;t) can directly affect people&rsquo;s careers.
+since what you say (or don't) can directly affect people's careers.
 There are lots of examples online about how to do them,
-so this chapter provides examples of how <em>not</em> to answer
-the kinds of questions that are often asked.</p>
-<div class="callout">
-<h3>Power and consequence</h3>
-<p>We can say all we want about the importance of honest feedback,
+so this chapter provides examples of how *not* to answer
+the kinds of questions that are often asked.
+
+<div class="callout" markdown="1">
+### Power and consequence
+
+We can say all we want about the importance of honest feedback,
 but honesty also compels us to acknowledge the imbalance of power in every organization:
-I can&rsquo;t fire my manager, but my manager can fire me.
+I can't fire my manager, but my manager can fire me.
 We also have to recognize that bad actors exist,
-even if they don&rsquo;t think of themselves that way.
+even if they don't think of themselves that way.
 Any feedback system therefore has to have checks and balances
-to guard against personal grudges and bigotry.</p>
-<p>FIXME: cut this chapter in half,
+to guard against personal grudges and bigotry.
+
+FIXME: cut this chapter in half,
 make it specific to peer grading in undergrad courses,
-and describe practical mechanisms to guard against the problems described above.</p>
+and describe practical mechanisms to guard against the problems described above.
 </div>
-<h2 id="performance-self">Self Assessment</h2>
-<p>These questions are answered by the person being reviewed.</p>
-<h3>Past Performance</h3>
-<p>Looking back on the previous performance period, what accomplishments or successes are you most proud of?
+
+## Self Assessment {: #peereval-self}
+
+These questions are answered by the person being reviewed.
+
+### Past Performance
+
+Looking back on the previous performance period, what accomplishments or successes are you most proud of?
 Why?
-What were the most significant challenges you faced, and how did you overcome them?</p>
+What were the most significant challenges you faced, and how did you overcome them?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -93,9 +73,10 @@ What were the most significant challenges you faced, and how did you overcome th
   </tr>
 </table>
 
-<p>How effectively did you meet the goals and objectives set for you during the past performance period?
+How effectively did you meet the goals and objectives set for you during the past performance period?
 Provide specific examples.
-What helped/hindered you in that process?</p>
+What helped/hindered you in that process?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -133,7 +114,8 @@ What helped/hindered you in that process?</p>
   </tr>
 </table>
 
-<p>What are 2-3 key strengths and how are you utilizing them in your role?</p>
+What are 2-3 key strengths and how are you utilizing them in your role?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -160,7 +142,8 @@ What helped/hindered you in that process?</p>
   </tr>
 </table>
 
-<p>How would team members describe working with you?</p>
+How would team members describe working with you?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -180,9 +163,11 @@ What helped/hindered you in that process?</p>
   </tr>
 </table>
 
-<h3>Future Growth</h3>
-<p>What new skills or knowledge do you want to acquire or develop to enhance your performance?
-How do they align with the company&rsquo;s objectives?</p>
+### Future Growth
+
+What new skills or knowledge do you want to acquire or develop to enhance your performance?
+How do they align with the company's objectives?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -222,8 +207,9 @@ How do they align with the company&rsquo;s objectives?</p>
   </tr>
 </table>
 
-<p>What do you see as your team&rsquo;s biggest challenge in the next six months?
-How are you preparing for it?</p>
+What do you see as your team's biggest challenge in the next six months?
+How are you preparing for it?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -263,7 +249,8 @@ How are you preparing for it?</p>
   </tr>
 </table>
 
-<p>How can your manager best support you?</p>
+How can your manager best support you?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -298,26 +285,30 @@ How are you preparing for it?</p>
   </tr>
 </table>
 
-<h2 id="performance-upward">Upward Assessment</h2>
-<p><em>This portion is the person&rsquo;s review of their manager, and is shared with their manager.</em></p>
-<p>To what extent do you agree or disagree with each of the following statements?
-(5-point Scale from Strongly Disagree to Strongly Agree)</p>
-<p>My manager:</p>
-<ol>
-<li>Communicates goals and team objectives clearly</li>
-<li>Meets with me regularly to review goals</li>
-<li>Is collaborative</li>
-<li>Has a strong work ethic</li>
-<li>Is trustworthy</li>
-<li>Recognizes me when I do good work</li>
-<li>Gives me valuable feedback that helps me reach my full potential</li>
-<li>Cares about my career and development</li>
-<li>Has a clear decision-making process to help make better decisions</li>
-<li>Lets me make decisions</li>
-<li>Is flexible and adaptable</li>
-<li>Stays calm in the face of pressure</li>
-</ol>
-<p>What could your manager do to make your work experience more effective and meaningful?</p>
+## Upward Assessment {: #peereval-upward}
+
+*This portion is the person's review of their manager, and is shared with their manager.*
+
+To what extent do you agree or disagree with each of the following statements?
+(5-point Scale from Strongly Disagree to Strongly Agree)
+
+My manager:
+
+1.  Communicates goals and team objectives clearly
+1.  Meets with me regularly to review goals
+1.  Is collaborative
+1.  Has a strong work ethic
+1.  Is trustworthy
+1.  Recognizes me when I do good work
+1.  Gives me valuable feedback that helps me reach my full potential
+1.  Cares about my career and development
+1.  Has a clear decision-making process to help make better decisions
+1.  Lets me make decisions
+1.  Is flexible and adaptable
+1.  Stays calm in the face of pressure
+
+What could your manager do to make your work experience more effective and meaningful?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -336,7 +327,8 @@ How are you preparing for it?</p>
   </tr>
 </table>
 
-<p>Anything else you&rsquo;d like to add regarding your manager?</p>
+Anything else you'd like to add regarding your manager?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -363,11 +355,15 @@ How are you preparing for it?</p>
   </tr>
 </table>
 
-<h2 id="performance-manager">Manager Assessment</h2>
-<p>These questions are answered by the person managing the person being reviewed.</p>
-<h3>Past Performance</h3>
-<p>What 2-3 strengths did you see this person exhibit in this performance period?
-Give examples of how these strengths had a positive impact on the team, department, or company.</p>
+## Manager Assessment {: #peereval-manager}
+
+These questions are answered by the person managing the person being reviewed.
+
+### Past Performance
+
+What 2-3 strengths did you see this person exhibit in this performance period?
+Give examples of how these strengths had a positive impact on the team, department, or company.
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -411,8 +407,9 @@ Give examples of how these strengths had a positive impact on the team, departme
   </tr>
 </table>
 
-<p>Were there any specific challenges or areas where this person faced difficulties?
-How did they handle those situations?</p>
+Were there any specific challenges or areas where this person faced difficulties?
+How did they handle those situations?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -445,9 +442,10 @@ How did they handle those situations?</p>
   </tr>
 </table>
 
-<p>How effectively did this person meet the goals and objectives
+How effectively did this person meet the goals and objectives
 set during the previous performance period?
-Can you provide specific examples of their achievements?</p>
+Can you provide specific examples of their achievements?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -465,8 +463,9 @@ Can you provide specific examples of their achievements?</p>
   </tr>
 </table>
 
-<p>In what areas do you think this person has shown the most growth and improvement
-since the last review?</p>
+In what areas do you think this person has shown the most growth and improvement
+since the last review?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -494,8 +493,10 @@ since the last review?</p>
   </tr>
 </table>
 
-<h3>Future Growth</h3>
-<p>What could this person do differently to be more impactful in the future?</p>
+### Future Growth
+
+What could this person do differently to be more impactful in the future?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -530,8 +531,9 @@ since the last review?</p>
   </tr>
 </table>
 
-<p>Are there any specific areas where the employee can take on new responsibilities
-to further their professional development?</p>
+Are there any specific areas where the employee can take on new responsibilities
+to further their professional development?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -562,9 +564,12 @@ to further their professional development?</p>
   </tr>
 </table>
 
-<h3>Manager Only</h3>
-<p><em>This section is <strong>not</strong> shared with the person being reviewed.</em></p>
-<p>Is there anything else you would like to add regarding this employee?</p>
+### Manager Only
+
+*This section is __not__ shared with the person being reviewed.*
+
+Is there anything else you would like to add regarding this employee?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -603,15 +608,19 @@ to further their professional development?</p>
   </tr>
 </table>
 
-<h2 id="performance-peer">Peer Assessment</h2>
-<p>These questions are answered by 2–3 colleagues of the person being reviewed.
+## Peer Assessment {: #peereval-peer}
+
+These questions are answered by 2–3 colleagues of the person being reviewed.
 There are lots of arguments about whether peer reviews should be anonymous or not:
 on the one hand we want people to say what they actually think,
 but on the other hand,
-anonymity opens the door to trolling.</p>
-<h3>Past Performance</h3>
-<p>What 2-3 strengths did you see this person exhibit in this performance period?
-Give examples of how these strengths had a positive impact on the team, department, or company.</p>
+anonymity opens the door to trolling.
+
+### Past Performance
+
+What 2-3 strengths did you see this person exhibit in this performance period?
+Give examples of how these strengths had a positive impact on the team, department, or company.
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -642,8 +651,9 @@ Give examples of how these strengths had a positive impact on the team, departme
   </tr>
 </table>
 
-<p>Describe how the employee communicates and collaborates with colleagues
-across different projects or departments.</p>
+Describe how the employee communicates and collaborates with colleagues
+across different projects or departments.
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -673,11 +683,13 @@ across different projects or departments.</p>
   </tr>
 </table>
 
-<h3>Future Growth</h3>
-<p>If you could give this person one piece of constructive advice
+### Future Growth
+
+If you could give this person one piece of constructive advice
 to make them more effective in their role,
 what would you say?
-How would this change impact their work?</p>
+How would this change impact their work?
+
 <table class="centered" width="90%">
   <tr>
     <th width="50%">Response</th>
@@ -720,10 +732,3 @@ How would this change impact their work?</p>
     </td>
   </tr>
 </table>
-    </main>
-    <footer>
-  <a href="../license/">License</a> &middot; <a href="https://github.com/gvwilson/btt">Repository</a>
-</footer>
-
-  </body>
-</html>

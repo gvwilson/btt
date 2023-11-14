@@ -129,7 +129,7 @@ Teamwork (10%)
     marks come off if you always do your work at the last moment,
     check in code that breaks the build,
     or are disrespectful
-    ([%x performance %]).
+    ([%x peereval %]).
 
 Retrospective (10%)
 :   This summarizes what you learned along the way ([%x retro %])
