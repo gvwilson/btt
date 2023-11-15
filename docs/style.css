@@ -127,8 +127,7 @@ div.card img:last-child {
  * Chapter taglines
  */
 
-div.tagline {
-    text-align: center;
+span.tagline {
     font-style: italic;
 }
 
