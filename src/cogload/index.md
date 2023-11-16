@@ -103,3 +103,8 @@ These patterns help competent practitioners think and talk to each other in many
 but pattern catalogs are too dry and too abstract for novices to make sense of on their own.
 However, giving names to a small number of patterns does seem to help,
 primarily by giving the learners a richer vocabulary to think and communicate with [%b Sajaniemi2006 %].
+
+[% fixme
+   "connect back to code comprehension"
+   "connect back to teamwork and org charts"
+%]

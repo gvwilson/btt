@@ -5,8 +5,6 @@ syllabus:
 - FIXME
 ---
 
-FIXME
-
 The most valuable part of your project isn't the software you write, or the
 grade you're given: it's the retrospective.
 Some teams call this a "post mortem",
@@ -18,8 +16,7 @@ The aim of a retrospective is to help the team and its members do better next ti
 by giving everyone a chance to reflect on what they've just accomplished. It is
 *not* to shame people, but it can be hard to critique someone's work without
 them taking it personally, so retrospectives add a few extra rules to the ones
-introduced for meetings
-in FIXME:
+introduced for meetings in [%x meetings %]:
 
 Get a moderator who wasn't part of the project.
 :   Someone who doesn't have a stake in the project should run the meeting.

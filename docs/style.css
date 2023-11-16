@@ -190,6 +190,18 @@ ul.syllabus {
 }
 
 /*
+ * FIXME markers.
+ */
+
+div.fixme {
+    border: solid var(--mediumborder) var(--stamp-red-dark);
+}
+
+span.fixme {
+    border-bottom: solid var(--mediumborder) var(--stamp-red-dark);
+}
+
+/*
  * Elements
  */
 

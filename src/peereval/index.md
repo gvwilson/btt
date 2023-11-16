@@ -22,11 +22,13 @@ We also have to recognize that bad actors exist,
 even if they don't think of themselves that way.
 Any feedback system therefore has to have checks and balances
 to guard against personal grudges and bigotry.
-
-FIXME: cut this chapter in half,
-make it specific to peer grading in undergrad courses,
-and describe practical mechanisms to guard against the problems described above.
 </div>
+
+[% fixme
+   "cut this chapter in half"
+   "make it specific to peer grading in undergrad courses"
+   "describe practical mechanisms to guard against the problems described above"
+%]
 
 ## Self Assessment {: #peereval-self}
 

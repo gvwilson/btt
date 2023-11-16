@@ -152,11 +152,10 @@ but I've never been able to convince myself that it would be fair.
 <div class="callout" markdown="1">
 ### Co-operatives
 
-FIXME:
 Project courses are often presented as "pretend you're starting a company".
 In every case I've seen,
 these "companies" follow the Silicon Valley model of a for-profit startup
 trying to attract venture capital funding
 to fuel explosive growth.
-Many alternatives exist [%x business %]
+Many alternatives exist [%x business %].
 </div>

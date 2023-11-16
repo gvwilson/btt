@@ -91,6 +91,19 @@ def figure_def(pargs, kwargs, node):
     return f'<figure id="{slug}"{cls}>\n{body}\n{caption}\n</figure>'
 
 
+@shortcodes.register("fixme")
+def fixme(pargs, kwargs, node):
+    """Handle [% fixme 'item' ... %] shortcode."""
+    util.require(
+        (len(pargs) > 0) and (not kwargs),
+        f"Bad 'fixme' shortcode with {pargs} and {kwargs}"
+    )
+    if len(pargs) == 1:
+        return f'<span class="fixme" markdown="1">{pargs[0]}</span>'
+    items = "\n".join(f"-   {x}" for x in pargs)
+    return f'<div class="fixme" markdown="1">\n{items}\n</div>'
+
+
 @shortcodes.register("rootpage")
 def rootpage(pargs, kwargs, node):
     """Handle [% rootpage NAME.md %] shortcode."""
