@@ -177,10 +177,7 @@ def toc(pargs, kwargs, node):
     appendices = []
     for slug in ark.site.config["chapters"]:
         title = ark.site.config["_meta_"][slug]["title"]
-        status = (
-            " (undone)" if ark.site.config["_meta_"][slug].get("blank", None) else ""
-        )
-        entry = f'<li><a href="@root/{slug}/">{title}</a> {status}</li>'
+        entry = f'<li><a href="@root/{slug}/">{title}</a></li>'
         if "tag" in ark.site.config["_meta_"][slug]:
             chapters.append(entry)
         else:
@@ -198,6 +195,8 @@ def x_reference(pargs, kwargs, node):
         f"Bad 'x' shortcode with {pargs} and {kwargs}",
     )
     slug = pargs[0]
+    if ark.site.config.get("draft", False) and (slug not in ark.site.config["chapters"]):
+        return '<span class="fixme">see&nbsp;FIXME</span>'
     util.require(
         slug in ark.site.config["_number_"], f"Unknown key in 'x' shortcode {slug}"
     )

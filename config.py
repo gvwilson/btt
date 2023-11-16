@@ -3,7 +3,7 @@
 title = "Building Tech Together"
 repo = "https://github.com/gvwilson/btt"
 author = "Greg Wilson"
-do_blank = True
+draft = True
 
 chapters = [
     "intro",
@@ -11,36 +11,15 @@ chapters = [
     "meetings",
     "governance",
     "conflict",
-    "teams",
-    "communicate",
-    "projects",
-    "process",
-    "automation",
     "grading",
     "peereval",
     "productivity",
-    "business",
-    "structure",
-    "testing",
-    "errors",
-    "fairness",
     "learners",
-    "cogload",
-    "motivation",
-    "demo",
-    "delivery",
     "retro",
-    "review",
-    "roles",
-    "property",
-    "security",
-    "rights",
-    "responsibilities",
     "finale",
     "license",
     "bib",
     "conduct",
-    "checklists",
     "persuasion",
     "join",
     "freelance",
@@ -52,12 +31,14 @@ chapters = [
 theme = "book"
 
 copy = [
+    "*.png",
     "*.svg",
 ]
 
 exclude = copy + [
     "*~",
     "*.csv",
+    "*.png",
     "*.py",
     "*.tbl",
     "*.yml",

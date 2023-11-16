@@ -2,6 +2,14 @@
 title: "Credits"
 ---
 
+<div class="row" markdown="1">
+<div class="col-3 center">
+<p>
+<img src="gvwilson-gage-2019.png" alt="Greg Wilson" width="90%"/>
+</p>
+</div>
+<div class="col-9" markdown="1">
+
 **[Greg Wilson][gvwilson]** has worked in industry and academia for over 40 years,
 and is the author, co-author, or editor of over a dozen books,
 including *Beautiful Code*,
@@ -9,3 +17,6 @@ including *Beautiful Code*,
 and *[Teaching Tech Together][t3]*.
 He was the co-founder and first Executive Director of [Software Carpentry][carpentries]
 and received ACM SIGSOFT's Influential Educator Award in 2020.
+
+</div>
+</div>
