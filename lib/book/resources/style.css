@@ -265,6 +265,10 @@ img.image {
     width: var(--image-width);
 }
 
+img.logo {
+    float: left;
+}
+
 table {
     border-collapse: collapse;
     caption-side: bottom;

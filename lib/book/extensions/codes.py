@@ -177,7 +177,7 @@ def thanks(pargs, kwargs, node):
     width = int(kwargs["width"])
     columns = _split_list(thanks, width)
     columns = "".join(["<td>" + "<br>".join(c) + "</td>" for c in columns])
-    return f'<table><tr>{columns}</tr></table>'
+    return f'<table class="no-id"><tr>{columns}</tr></table>'
 
 
 @shortcodes.register("toc")

@@ -243,9 +243,9 @@ Students also usually understand that dissolving their team and forming a new on
 takes time that could be invested in earning a higher grade.
 Teams will therefore usually stick together
 if they see that troublemakers are actually being dealt with.
+[%x reteam %] talks more about when, why, and how to re-form teams.
 
 <div class="callout" markdown="1">
-
 ### Who gets to keep the cat?
 
 If the instructor allows or requires teams to re-form partway through the project,
@@ -256,11 +256,9 @@ use everything the whole team has built up to that point?
 Do they have to re-start
 with whatever has been written by the teams they are joining?
 Knowing this in advance helps everyone decide whether breaking up is worth it.
-
 </div>
 
 <div class="callout" markdown="1">
-
 ### A hell of your own making
 
 A well-known online gaming company
@@ -273,5 +271,4 @@ can be put in the same group.
 This strategy can backfire if someone is placed their unfairly,
 so it should be used carefully,
 but it does make everyone else's life better…
-
 </div>
