@@ -122,48 +122,7 @@ I also thank all of the students who have done projects with me over the years,
 and the people mentioned below for their feedback;
 any errors, omissions, or misunderstandings that remain are entirely my fault.
 
-- [Bram Adams](https://mcis.cs.queensu.ca/bram.html)
-- [Rohan Alexander](https://rohanalexander.com/)
-- [Tavish Armstrong](http://tavisharmstrong.com/)
-- [Titus Barik](https://www.barik.net/)
-- [Robert Beghian](http://www.vasken.ca/)
-- [Yanina Bellini Saibene](https://yabellini.netlify.app/)
-- [Neil Brown](https://twistedsquare.com/)
-- [Jordi Cabot](https://jordicabot.com/)
-- [Silvia Canelón](https://silvia.rbind.io/)
-- Francisco Canas
-- [Mike Conley](https://mikeconley.ca/)
-- [Michael DiBernardo](https://mikedebo.com/)
-- [Isaac Ezer](http://www.isaacezer.com/)
-- [Ian Flores Siaca](https://ianfs.dev/)
-- [Adam Goucher](https://adam.goucher.ca/)
-- [Mustafa Haddara](https://twitter.com/MustafaHaddara/)
-- [Johan Harjono](http://johanharjono.com/)
-- [Kate Hertweck](https://katehertweck.com/)
-- [Daniel Jackson](https://people.csail.mit.edu/dnj/)
-- [Jacob Kaplan-Moss](https://jacobian.org/)
-- [Ritu Kapur](https://sites.google.com/view/ritu-kapur)
-- [Zain Kazmi](https://zainhkazmi.github.io/)
-- [Laurie MacDougall Sookraj](https://www.linkedin.com/in/lauriemacdougallsookraj/)
-- [Darren McElligott](https://www.linkedin.com/in/darren-mcelligott-07689473/)
-- [Kim Moir](https://kimmoir.blog/)
-- [Natalia Morandeira](https://nmorandeira.netlify.app/)
-- [Meiyappan Nagappan](https://cs.uwaterloo.ca/~m2nagapp/)
-- [Iain Parris](https://parris.org/)
-- [Elizabeth Patitsas](https://patitsas.github.io/)
-- [Andrew Petersen](https://utmandrew.bitbucket.io/)
-- [Andrey Petrov](https://shazow.net/)
-- [Andrew Potapov](https://www.andrewpotapov.com/)
-- [Lutz Prechelt](http://www.mi.fu-berlin.de/w/Main/LutzPrechelt)
-- [Yim Register](https://students.washington.edu/yreg/)
-- [Evan Schultz](https://evanjustevan.com/)
-- [Alex Serebrenik](https://www.win.tue.nl/~aserebre/)
-- [Naaz Sibia](https://www.linkedin.com/in/naaz-sibia/)
-- [Andreas Stefik](https://web.cs.unlv.edu/stefika/)
-- Rory Tulk
-- [Blake Winton](https://bwinton.latte.ca/)
-- [Andy Zaidman](https://azaidman.github.io/)
-- [Andreas Zeller](https://andreas-zeller.info/)
+[% thanks width=5 %]
 
 Finally,
 I would like to thank David Graf for [doi2bib][doi2bib]

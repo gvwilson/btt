@@ -5,6 +5,7 @@ from pathlib import Path
 import ark
 import pybtex.plugin
 import shortcodes
+import yaml
 
 import regex
 import util
@@ -149,6 +150,23 @@ def table_def(pargs, kwargs, node):
     return content
 
 
+@shortcodes.register("thanks")
+def thanks(pargs, kwargs, node):
+    """Handle [% thanks %] table of thanks shortcode."""
+    util.require(
+        (not pargs) and (list(kwargs.keys()) == ["width"]),
+        f"Badly-formatted 'thanks' shortcode with {pargs} and {kwargs}"
+    )
+
+    filepath = Path(ark.site.home(), "info", "thanks.yml")
+    thanks = yaml.safe_load(filepath.read_text()) or []
+    thanks = [f'<a href="{entry["url"]}">{entry["name"]}</a>' if "url" in entry else entry["name"] for entry in thanks]
+    width = int(kwargs["width"])
+    columns = _split_list(thanks, width)
+    columns = "".join(["<td>" + "<br>".join(c) + "</td>" for c in columns])
+    return f'<table><tr>{columns}</tr></table>'
+
+
 @shortcodes.register("toc")
 def toc(pargs, kwargs, node):
     """Handle [% toc %] table of contents shortcode."""
@@ -186,3 +204,21 @@ def x_reference(pargs, kwargs, node):
     kind = ark.site.config["_number_"][slug]["kind"]
     number = ark.site.config["_number_"][slug]["number"]
     return f"{kind}&nbsp;{number}"
+
+
+def _split_list(values, width):
+    """Split list into (nearly) equal-sized portions."""
+    heights = [len(values) // width] * width
+    total = sum(heights)
+    for i in range(width):
+        if total == len(values):
+            break
+        heights[i] += 1
+        total += 1
+
+    result = []
+    base = 0
+    for h in heights:
+        result.append(values[base:base+h])
+        base += h
+    return result
