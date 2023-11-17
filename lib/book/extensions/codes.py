@@ -127,7 +127,7 @@ def syllabus(pargs, kwargs, node):
     for slug in ark.site.config["chapters"]:
         if "syllabus" not in meta[slug]:
             continue
-        lines.append(f"\n## [{meta[slug]['title']}](@root/{slug})\n")
+        lines.append(f"\n## [{meta[slug]['title']}](@root/{slug}) {{: #syllabus-{slug}}}\n")
         for item in meta[slug]["syllabus"]:
             lines.append(f"- {item}")
     return "\n".join(lines)

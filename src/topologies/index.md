@@ -14,7 +14,7 @@ see also [%b Skelton2022 %] and [%b ODuinn2021 %] for remote teams
 [% figure
    slug="topologies-topologies"
    img="topologies.svg"
-   caption="Four kinds of teams"
+   caption="Four kinds of teams."
    alt="Four kinds of teams: stream-aligned, enabling, platform, and complicated subsystem"
 %]
 
