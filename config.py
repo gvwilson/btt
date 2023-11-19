@@ -32,7 +32,7 @@ chapters = [
     "syllabus",
 ]
 
-theme = "book"
+theme = "mccole"
 
 copy = [
     "*.png",
