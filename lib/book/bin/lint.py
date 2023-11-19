@@ -13,11 +13,21 @@ import util
 import regex
 
 
+ARK_FILE = ".ark"
+SVG_FONT = "Helvetica:12px"
+SVG_FONT_PAT = {
+    "font-family": re.compile(r"\bfont-family:\s*(.+?);"),
+    "font-size": re.compile(r"\bfont-size:\s*(.+?);"),
+}
+SVG_MAX_WIDTH = 640
+
+
 def main():
     """Main driver."""
     args = parse_args()
     config = util.load_config(args.config)
     content = {
+        "arkfiles": _collect_ark_files(config),
         "bib": _collect_bib_keys(),
         "html": _collect_files(config, "html"),
         "src": _collect_files(config, "markdown"),
@@ -69,38 +79,31 @@ def _lint_dom_structure(args, config, content):
 
 def _lint_duplicate_files(args, config, content):
     """Check for duplicated files."""
-    source_dirs = {
-        Path(d): i for (i, d) in enumerate(util.source_dirs(args.src, config))
-    }
-    ark_data = {
-        src_dir: util.load_ark_data(Path(src_dir), "copied", [])
-        for src_dir in source_dirs
-    }
-    ark_lookup = {
-        src_dir: {str(Path(args.src, x)) for x in data}
-        for src_dir, data in ark_data.items()
-    }
-    duplicates = _find_duplicate_files(source_dirs)
+    chapter_order = {slug: i for i, slug in enumerate(config.chapters)}
+    arkfiles = content["arkfiles"]
+    copied = {slug: values.get("copied", []) for slug, values in arkfiles.items()}
+    duplicates = _find_duplicate_files(config)
+
     for group in duplicates:
-        group = sorted(group, key=lambda filename: source_dirs[filename.parent])
+        group = sorted(group, key=lambda filename: chapter_order[filename.parent.name])
         for i, current in list(enumerate(group))[1:]:
             previous = str(group[i - 1])
-            if previous not in ark_lookup[current.parent]:
+            slug = str(current.parent.name)
+            if previous not in copied[slug]:
                 print(f"{current} not listed as duplicate of {previous}")
             else:
-                ark_lookup[current.parent].remove(previous)
-    for src_dir, values in ark_lookup.items():
-        if values:
-            print(
-                f"{src_dir}/{util.ARK_FILE} contains unused {', '.join(sorted(values))}"
-            )
+                copied[slug].remove(previous)
+
+    for slug, unused in copied.items():
+        if unused:
+            print(f"{slug}/{ARK_FILE} contains unused {', '.join(sorted(unused))}")
 
 
 def _lint_shortcodes(args, config, content):
     """Check shortcode usage in a single pass."""
     collected = _collect_shortcodes(content)
-    figure_ids = _collect_ids(content["html"], "figure", "figure")
-    table_ids = _collect_ids(content["html"], "table", "div", "table")
+    figure_ids = _collect_ids(content["html"], "figure")
+    table_ids = _collect_ids(content["html"], "table")
     report_diff("bib keys", set(collected["b"]), set(content["bib"]))
     report_diff("figure refs", set(collected["f"]), figure_ids)
     report_diff("table refs", set(collected["t"]), table_ids)
@@ -135,6 +138,34 @@ def _lint_slug_format(args, config, content):
                 _check(heading, slug, "H2 heading")
 
 
+def _lint_svg_files(args, config, content):
+    """Check style of SVG diagrams."""
+
+    def _bad_font(n):
+        return (n.attrs["font-family"] != "Helvetica") or (
+            not node.attrs.get("font-size", "").startswith("12")
+        )
+
+    sizes = defaultdict(set)
+    fontish = []
+    for filename in Path(args.src).glob("**/*.svg"):
+        doc = BeautifulSoup(filename.read_text(), features="xml").find("svg")
+        sizes[_get_svg_size(doc)].add(filename)
+        fontish.extend(
+            (filename, node)
+            for node in doc.find_all(lambda x: "font-family" in x.attrs)
+        )
+
+    for key in sorted(sizes.keys()):
+        if (key[0] != "px") or (key[1] > SVG_MAX_WIDTH):
+            print(f"SVG size {key}: {', '.join(sorted(str(s) for s in sizes[key]))}")
+
+    for filename, node in fontish:
+        if _bad_font(node):
+            print(f"file {filename} has suspicious fonts {node}")
+            continue
+
+
 def _lint_unresolved_markdown_links(args, config, content):
     """Look for Markdown [text][key] links that didn't resolve."""
     pat = re.compile(r"\]\[")
@@ -160,6 +191,18 @@ def report_diff(title, expected, actual):
         print(f"{title} missing: {', '.join(sorted(diff))}")
     if diff := actual - expected:
         print(f"{title} extra: {', '.join(sorted(diff))}")
+
+
+def _collect_ark_files(config):
+    """Collect .ark files in source."""
+    result = {}
+    for slug in config.chapters:
+        filepath = Path(config.src_dir, slug, ARK_FILE)
+        if not filepath.exists():
+            result[slug] = {}
+        else:
+            result[slug] = yaml.safe_load(filepath.read_text())
+    return result
 
 
 def _collect_bib_keys():
@@ -216,14 +259,16 @@ def _collect_files(config, which):
     return {p: transform(p.read_text()) for p in paths}
 
 
-def _collect_ids(htmls, name, kind, cls=None):
+def _collect_ids(htmls, kind):
     """Collect all IDs of a certain kind."""
     seen = set()
     for slug, doc in htmls.items():
-        nodes = doc.find_all(kind, class_=cls)
+        nodes = doc.find_all(kind)
         for node in nodes:
-            if "id" not in node.attrs:
-                print(f"{slug}: {name} node missing ID")
+            if node.has_attr("class") and "no-id" in node["class"]:
+                continue
+            elif "id" not in node.attrs:
+                print(f"{slug}: {kind} node missing ID")
             else:
                 seen.add(node.attrs["id"])
     return seen
@@ -286,16 +331,32 @@ def _diff_dom(actual, expected):
                     print(f"DOM {name}.{attr} == '{value}' seen but not expected")
 
 
-def _find_duplicate_files(source_dirs):
+def _find_duplicate_files(config):
     """Group files by duplicate hashes."""
     groups = defaultdict(set)
-    for src_dir in source_dirs:
-        for path in src_dir.glob("*"):
-            if (not path.is_file()) or (str(path).endswith("~")):
+    for slug in config.chapters:
+        for path in Path(config.src_dir, slug).glob("*"):
+            if (
+                (not path.is_file())
+                or str(path).endswith("~")
+                or str(path).startswith(".")
+            ):
                 continue
             hash_code = hashlib.sha256(path.read_bytes()).hexdigest()
             groups[hash_code].add(path)
     return [group for group in groups.values() if len(group) > 1]
+
+
+def _get_svg_size(svg):
+    """Get width and height of SVG document."""
+    result = (svg.attrs["width"], svg.attrs["height"])
+    if result[0].endswith("px"):
+        result = ("px", int(result[0][:-2]), int(result[1][:-2]))
+    elif result[0].endswith("pt"):
+        result = ("pt", int(result[0][:-2]), int(result[1][:-2]))
+    else:
+        result = ("raw", int(result[0]), int(result[1]))
+    return result
 
 
 def _in_code(node):

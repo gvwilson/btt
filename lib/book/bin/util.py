@@ -1,12 +1,9 @@
 """Utilities."""
 
 import importlib.util
-from pathlib import Path
 import sys
-import yaml
 
 
-ARK_FILE = ".ark"
 INDEX_FILE = "index.md"
 
 
@@ -19,16 +16,6 @@ def fail(msg):
 def get_lint(config):
     """Get a lint setting or empty list."""
     return config.lint if hasattr(config, "lint") else {}
-
-
-def load_ark_data(dir_path, section=None, default=None):
-    """Load .ark file if there, possibly slicing section."""
-    path = Path(dir_path, ARK_FILE)
-    if not path.exists():
-        return default
-    with open(path, "r") as reader:
-        data = yaml.safe_load(reader)
-        return data.get(section, default) if section else data
 
 
 def load_config(filename):
