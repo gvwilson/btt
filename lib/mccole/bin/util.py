@@ -7,10 +7,7 @@ import sys
 from bs4 import BeautifulSoup
 
 
-INDEX_FILE = "index.md"
-
-
-def collect_files(config, which):
+def collect_files(config, which, with_root=True):
     """Read text of source and output files."""
 
     def _same(x):
@@ -28,12 +25,14 @@ def collect_files(config, which):
         filename = "index.html"
         transform = _parse
     else:
-        util.fail(f"unknown file type in collector {which}")
+        fail(f"unknown file type in collector {which}")
 
-    paths = [
-        Path(root_dir, filename),
-        *[Path(root_dir, slug, filename) for slug in config.chapters],
-    ]
+    paths = [Path(root_dir, slug, filename) for slug in config.chapters]
+    if with_root:
+        paths = [
+            Path(root_dir, filename),
+            *paths,
+        ]
     return {p: transform(p.read_text()) for p in paths}
 
 
@@ -66,3 +65,8 @@ def source_dirs(src, config, exclude=[]):
     """Generate list of source directories."""
     exclude = set(exclude)
     return [f"{src}/{key}" for key in config.chapters if key not in exclude]
+
+
+def warning(msg):
+    """Print message but do not fail."""
+    print(msg, file=sys.stderr)
