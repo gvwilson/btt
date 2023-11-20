@@ -22,7 +22,7 @@ STEM := $(strip ${SLUG})-${BUILD_DATE}
 
 # Generated output.
 HTML := $(patsubst ${SRC_DIR}/%.md,${HTML_DIR}/%.html,${MARKDOWN})
-LATEX := ${HTML_DIR}/${SLUG}.tex
+LATEX := ${HTML_DIR}/${STEM}.tex
 
 # ----------------------------------------------------------------------
 
@@ -55,9 +55,8 @@ DOCS.md: ${ARK_BIN}/make_docs.py
 		> $@
 
 ## latex: re-create all-in-one LaTeX file
-latex: ${LATEX}
-${LATEX}:
-	@${PYTHON} ${ARK_BIN}/html2tex.py --config ${CONFIG} --outfile $@
+latex:
+	@${PYTHON} ${ARK_BIN}/html2tex.py --config ${CONFIG} --outfile ${LATEX}
 
 ## --------------------
 
@@ -119,5 +118,9 @@ book_settings:
 	@echo "CONFIG:" ${CONFIG}
 	@echo "HTML:" ${HTML}
 	@echo "HTML_DIR:" ${HTML_DIR}
+	@echo "LATEX:" ${LATEX}
 	@echo "MARKDOWN:" ${MARKDOWN}
 	@echo "SRC_DIR:" ${SRC_DIR}
+	@echo "SLUG:" ${SLUG}
+	@echo "BUILD_DATE:" ${BUILD_DATE}
+	@echo "STEM:" ${STEM}

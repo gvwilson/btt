@@ -2,7 +2,7 @@
 title: "Credits"
 ---
 
-<div class="row" markdown="1">
+<div class="row notex" markdown="1">
 <div class="col-3 center">
 <p>
 <img src="gvwilson-gage-2019.png" alt="Greg Wilson" width="90%"/>

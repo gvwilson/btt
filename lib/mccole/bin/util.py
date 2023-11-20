@@ -7,7 +7,7 @@ import sys
 from bs4 import BeautifulSoup
 
 
-def collect_files(config, which):
+def collect_files(config, which, with_root=True):
     """Read text of source and output files."""
 
     def _same(x):
@@ -27,10 +27,12 @@ def collect_files(config, which):
     else:
         util.fail(f"unknown file type in collector {which}")
 
-    paths = [
-        Path(root_dir, filename),
-        *[Path(root_dir, slug, filename) for slug in config.chapters],
-    ]
+    paths = [Path(root_dir, slug, filename) for slug in config.chapters]
+    if with_root:
+        paths = [
+            Path(root_dir, filename),
+            *paths,
+        ]
     return {p: transform(p.read_text()) for p in paths}
 
 
