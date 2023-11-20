@@ -4,7 +4,9 @@
   <body>
     <main>
       {% include "title.html" %}
+      <div class="content">
       {{ node.html }}
+      </div>
     </main>
     {% include "foot.html" %}
   </body>
