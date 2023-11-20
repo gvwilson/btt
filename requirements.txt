@@ -1,4 +1,4 @@
--r lib/book/requirements.txt
+-r lib/mccole/info/requirements.txt
 kaleido
 pandas
 plotly

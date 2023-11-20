@@ -15,8 +15,14 @@ HTML_DIR := docs
 CONFIG := config.py
 MARKDOWN := ${SRC_DIR}/index.md $(wildcard src/*/index.md)
 
+# Configuration.
+SLUG := $(shell python ${CONFIG} --slug)
+BUILD_DATE := $(shell date '+%Y-%m-%d')
+STEM := $(strip ${SLUG})-${BUILD_DATE}
+
 # Generated output.
 HTML := $(patsubst ${SRC_DIR}/%.md,${HTML_DIR}/%.html,${MARKDOWN})
+LATEX := ${HTML_DIR}/${SLUG}.tex
 
 # ----------------------------------------------------------------------
 
@@ -47,6 +53,11 @@ DOCS.md: ${ARK_BIN}/make_docs.py
 		--notdirs conduct docs license \
 		--notfiles '*/test_*.py' \
 		> $@
+
+## latex: re-create all-in-one LaTeX file
+latex: ${LATEX}
+${LATEX}:
+	@${PYTHON} ${ARK_BIN}/html2tex.py --config ${CONFIG} --outfile $@
 
 ## --------------------
 

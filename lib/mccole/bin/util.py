@@ -7,9 +7,6 @@ import sys
 from bs4 import BeautifulSoup
 
 
-INDEX_FILE = "index.md"
-
-
 def collect_files(config, which):
     """Read text of source and output files."""
 
@@ -66,3 +63,8 @@ def source_dirs(src, config, exclude=[]):
     """Generate list of source directories."""
     exclude = set(exclude)
     return [f"{src}/{key}" for key in config.chapters if key not in exclude]
+
+
+def warning(msg):
+    """Print message but do not fail."""
+    print(msg, file=sys.stderr)
