@@ -44,6 +44,7 @@ exclude = copy + [
     "*~",
     "*.csv",
     "*.png",
+    "*.pdf",
     "*.py",
     "*.tbl",
     "*.yml",
@@ -76,6 +77,7 @@ extension = "/"
 # Display values for LaTeX generation.
 if __name__ == "__main__":
     import sys
+
     assert len(sys.argv) == 2, "Expect exactly one argument"
     if sys.argv[1] == "--slug":
         print(slug)

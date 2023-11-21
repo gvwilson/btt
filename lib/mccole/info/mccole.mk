@@ -1,19 +1,23 @@
 # By default, show available commands
 .DEFAULT: commands
 
-# Tools
-ARK := ark
-BIBER := biber
-PYTHON := python
-
 # Directories.
 ARK_BIN := lib/mccole/bin
 SRC_DIR := src
 HTML_DIR := docs
 
+# Tools
+ARK := ark
+BIBTEX := biber
+LATEX := xelatex
+PYTHON := python
+CONVERT_SVG := ${ARK_BIN}/convert_svg.sh
+
 # Files.
+BIBLIOGRAPHY := info/bibliography.bib
+TEX_CLASS := lib/mccole/info/krantz.cls
 CONFIG := config.py
-MARKDOWN := ${SRC_DIR}/index.md $(wildcard src/*/index.md)
+MARKDOWN := ${SRC_DIR}/index.md $(wildcard ${SRC_DIR}/*/index.md)
 
 # Configuration.
 SLUG := $(shell python ${CONFIG} --slug)
@@ -22,7 +26,7 @@ STEM := $(strip ${SLUG})-${BUILD_DATE}
 
 # Generated output.
 HTML := $(patsubst ${SRC_DIR}/%.md,${HTML_DIR}/%.html,${MARKDOWN})
-LATEX := ${HTML_DIR}/${STEM}.tex
+TEX_FILE := ${HTML_DIR}/${STEM}.tex
 
 # ----------------------------------------------------------------------
 
@@ -56,7 +60,28 @@ DOCS.md: ${ARK_BIN}/make_docs.py
 
 ## latex: re-create all-in-one LaTeX file
 latex:
-	@${PYTHON} ${ARK_BIN}/html2tex.py --config ${CONFIG} --outfile ${LATEX}
+	@${PYTHON} ${ARK_BIN}/html2tex.py --config ${CONFIG} --outfile ${TEX_FILE}
+
+## pdf: create PDF version of material
+pdf:
+	cp ${BIBLIOGRAPHY} docs
+	cp ${TEX_CLASS} docs
+	cd docs && ${LATEX} ${STEM}
+	cd docs && ${BIBTEX} ${STEM}
+	cd docs && ${LATEX} ${STEM}
+	cd docs && ${LATEX} ${STEM}
+
+# Generated PDFs
+SRC_SVG := $(wildcard ${SRC_DIR}/*/*.svg)
+SRC_PDF := $(patsubst ${SRC_DIR}/%.svg,${SRC_DIR}/%.pdf,${SRC_SVG})
+DOCS_PDF := $(patsubst ${SRC_DIR}/%.pdf,${HTML_DIR}/%.pdf,${SRC_PDF})
+
+## diagrams: convert diagrams from SVG to PDF
+diagrams: ${DOCS_PDF}
+${SRC_DIR}/%.pdf: ${SRC_DIR}/%.svg ${CONVERT_SVG}
+	${CONVERT_SVG} $< $@
+${HTML_DIR}/%.pdf: ${SRC_DIR}/%.pdf
+	cp $< $@
 
 ## --------------------
 
@@ -75,10 +100,10 @@ reformat:
 lint: ${HTML}
 	@${PYTHON} ${ARK_BIN}/lint.py --config ${CONFIG} --src src
 
-## bibvalid: run biber to validate bibliography
+## bibvalid: validate bibliography
 .PHONY: bibvalid
 bibvalid:
-	@biber --tool --validate-datamodel info/bibliography.bib
+	@${BIBTEX} --tool --validate-datamodel info/bibliography.bib
 
 ## valid: run html5validator on generated files
 .PHONY: valid
@@ -115,12 +140,15 @@ order:
 book_settings:
 	@echo "ARK:" ${ARK}
 	@echo "ARK_BIN:" ${ARK_BIN}
+	@echo "BUILD_DATE:" ${BUILD_DATE}
 	@echo "CONFIG:" ${CONFIG}
+	@echo "DOCS_PDF:" ${DOCS_PDF}
 	@echo "HTML:" ${HTML}
 	@echo "HTML_DIR:" ${HTML_DIR}
 	@echo "LATEX:" ${LATEX}
 	@echo "MARKDOWN:" ${MARKDOWN}
-	@echo "SRC_DIR:" ${SRC_DIR}
 	@echo "SLUG:" ${SLUG}
-	@echo "BUILD_DATE:" ${BUILD_DATE}
+	@echo "SRC_DIR:" ${SRC_DIR}
+	@echo "SRC_PDF:" ${SRC_PDF}
+	@echo "SRC_SVG:" ${SRC_SVG}
 	@echo "STEM:" ${STEM}

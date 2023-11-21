@@ -25,7 +25,7 @@ def collect_files(config, which, with_root=True):
         filename = "index.html"
         transform = _parse
     else:
-        util.fail(f"unknown file type in collector {which}")
+        fail(f"unknown file type in collector {which}")
 
     paths = [Path(root_dir, slug, filename) for slug in config.chapters]
     if with_root:

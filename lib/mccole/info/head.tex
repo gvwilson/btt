@@ -172,6 +172,11 @@ backgroundcolor=black!5]{tBox}
 {\begin{mdframed}}%
 {\end{mdframed}}
 
+% FIXME sections
+\newenvironment{fixme}%
+{\begin{mdframed}}%
+{\end{mdframed}}
+
 % Unicode characters.
 \usepackage{newunicodechar}
 \newunicodechar{√}{$\sqrt{}$}
@@ -193,15 +198,12 @@ backgroundcolor=black!5]{tBox}
 \hfil {\vrule height.5pt width 7pc}\hfil\par\vspace*{16pt}%
 \vbox{\centering {#1}}}
 
+% insert author/title commands below
+% AUTHOR_TITLE
+
 \begin{document}
 
-\include{config}
 \maketitle
-
-% Start numbering pages at 5 as per editor's request.
-\frontmatter\setcounter{page}{5}
-
-\include{dedication}
 
 \tableofcontents
 
