@@ -18,6 +18,7 @@ appendices = [
     "license",
     "bib",
     "conduct",
+    "contrib",
     "credits",
     "syllabus",
 ]
@@ -50,7 +51,7 @@ exclude = copy + [
 ]
 
 lint = {
-    "disable_h2_id": ["@root", "conduct", "license", "syllabus"],
+    "disable_h2_id": ["@root", "conduct", "contrib", "license", "syllabus"],
 }
 
 markdown_settings = {

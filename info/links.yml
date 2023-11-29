@@ -1,11 +1,14 @@
 # configuration
 
-- key: config_website
-  url: "https://third-bit.com/btt/"
-  en: "Website"
+- key: config_email
+  url: "mailto:gvwilson@third-bit.com"
+  en: "Email"
 - key: config_repo
   url: "https://github.com/gvwilson/btt"
   en: "GitHub repo"
+- key: config_website
+  url: "https://third-bit.com/btt/"
+  en: "Website"
 
 # AAA
 
@@ -48,6 +51,10 @@
 - key: creative-commons
   url: https://creativecommons.org/
   title: "Creative Commons"
+
+- key: cunninghams_law
+  url: https://en.wikipedia.org/wiki/Ward_Cunningham#%22Cunningham's_Law%22
+  title: "Cunningham's law"
 
 # DDD
 

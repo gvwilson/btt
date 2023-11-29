@@ -1,0 +1,1 @@
+[% rootpage CONTRIBUTING.md %]
