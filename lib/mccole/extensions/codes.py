@@ -139,7 +139,10 @@ def rootpage(pargs, kwargs, node):
 @shortcodes.register("syllabus")
 def syllabus(pargs, kwargs, node):
     """Handle [% syllabus %] shortcode."""
-    util.require((not pargs) and set(kwargs.keys()).issubset({"links"}), f"Bad 'syllabus' shortcode in {node}")
+    util.require(
+        (not pargs) and set(kwargs.keys()).issubset({"links"}),
+        f"Bad 'syllabus' shortcode in {node}",
+    )
     lines = []
     with_links = kwargs.get("links", True) != "False"
     for slug in ark.site.config["chapters"]:
@@ -154,9 +157,7 @@ def syllabus(pargs, kwargs, node):
             lines.append(
                 f"\n## {meta['title']} ([slides](@root/{slug}/slides.html)) {{: #syllabus-{slug}}}\n"
             )
-        lines.append(
-            f"*{meta['tag']}*\n"
-        )
+        lines.append(f"*{meta['tag']}*\n")
         for item in meta["syllabus"]:
             lines.append(f"- {util.markdownify(item)}")
     return "\n".join(lines)
@@ -232,14 +233,19 @@ def toc(pargs, kwargs, node):
         slides = ""
         if not is_appendix:
             slides = f' (<a href="@root/{slug}/slides.html">slides</a>)'
-        return f'<li>{title}{tag}{slides}</li>'
+        return f"<li>{title}{tag}{slides}</li>"
 
     util.require(
-        (not pargs) and ("kind" in kwargs), f"Bad 'toc' shortcode with {pargs} and {kwargs}"
+        (not pargs) and ("kind" in kwargs),
+        f"Bad 'toc' shortcode with {pargs} and {kwargs}",
     )
-    chapters = [_format(slug, kwargs["kind"], False) for slug in ark.site.config["chapters"]]
+    chapters = [
+        _format(slug, kwargs["kind"], False) for slug in ark.site.config["chapters"]
+    ]
     chapters = '<ol class="toc" type="1">\n' + "\n".join(chapters) + "\n</ol>"
-    appendices = [_format(slug, kwargs["kind"], True) for slug in ark.site.config["appendices"]]
+    appendices = [
+        _format(slug, kwargs["kind"], True) for slug in ark.site.config["appendices"]
+    ]
     appendices = '<ol class="toc" type="A">\n' + "\n".join(appendices) + "\n</ol>"
     return f"{chapters}\n{appendices}"
 
