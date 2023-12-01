@@ -74,10 +74,11 @@ def get_title(node):
     return ark.site.config["_meta_"][slug]["title"]
 
 
-def markdownify(text, strip_p=True):
+def markdownify(text, strip_p=True, with_links=True):
     """Convert Markdown to HTML."""
     extensions = ["markdown.extensions.extra", "markdown.extensions.smarty"]
-    combined = f"{text}\n{ark.site.config['_links_block_']}"
+    links = ark.site.config['_links_block_']
+    combined = f"{text}\n{links}" if with_links else text
     result = markdown.markdown(combined, extensions=extensions)
     if strip_p and result.startswith("<p>"):
         result = INSIDE_PARAGRAPH.match(result).group(1)

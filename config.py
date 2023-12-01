@@ -5,6 +5,7 @@ slug = "btt"
 repo = f"https://github.com/gvwilson/{slug}"
 author = "Greg Wilson"
 draft = True
+debug = False
 
 chapters = [
     "intro",
