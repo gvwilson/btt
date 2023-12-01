@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="repo" content="https://github.com/gvwilson/btt">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Building Tech Together: Cognitive Load</title>
+  <link rel="stylesheet" href="../tango.css">
+<link rel="stylesheet" href="../mccole.css">
+
+<link rel="stylesheet" href="../slides.css">
+<script src="../slides.js" defer></script>
+
+
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']]
+    }
+  };
+</script>
+<script
+  type="text/javascript"
+  id="MathJax-script"
+  async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+  
+
+</head>
+
+  <body>
+
+<p>
+  <a href="">Building Tech Together</a>
+</p>
+<h1>Cognitive Load</h1>
+
+<hr>
+
+<h2>Goals</h2>
+<ul>
+<li>The biggest constraint on how we program is how our brains work<ul>
+<li>It takes (literally) millions of lines of code
+    to translate what we write into something machines can execute</li>
+<li>All that syntax is for <em>our</em> benefit, not theirs</li>
+</ul>
+</li>
+<li>How we think is also a factor in how we work together<ul>
+<li>Though we have to be careful to avoid <strong>psychological determinism</strong></li>
+<li>Which is often used to justify things as they as as &ldquo;natural&rdquo;</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>Cognitive Architecture</h2>
+<figure id="cogload-architecture">
+<img src="./cognitive-architecture.svg" alt="Cognitive architecture"/>
+<figcaption markdown="1">Figure&nbsp;1: The cognitive architecture of the human mind (simplified).</figcaption>
+</figure>
+
+<ul>
+<li>Start on the left…</li>
+<li>Long-term memory (LTM) is &ldquo;permanent&rdquo; storage<ul>
+<li>Large but slow</li>
+<li>We don&rsquo;t have direct access to it</li>
+</ul>
+</li>
+<li>Short-term memory (STM) is a cache or working set<ul>
+<li>More sophisticated models distinguish several kinds of STM <span class="bib-ref">[<a class="bib-ref" href="../bib/#Kirschner2018">Kirschner2018</a>, <a class="bib-ref" href="../bib/#Hermans2021">Hermans2021</a>]</span></li>
+<li>Differences aren&rsquo;t relevant for our purposes</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>Encoding and Decoding</h2>
+<ul>
+<li>Constantly fetch things from LTM into STM based on pattern matching</li>
+<li><strong>Integrate</strong> that information with new data</li>
+<li><strong>Re-encode</strong> the result (i.e., write it back to STM)<ul>
+<li>Constant rewriting is one of the differences between brains and computers</li>
+</ul>
+</li>
+<li>Updating LTM this way is called &ldquo;learning&rdquo;</li>
+</ul>
+<hr />
+<h2>Capacity</h2>
+<ul>
+<li>STM is very small<ul>
+<li><span class="bib-ref">[<a class="bib-ref" href="../bib/#Miller1956">Miller1956</a>]</span> estimated it could hold 7±2 things at any time</li>
+<li>Modern estimates are closer to 4±1 <span class="bib-ref">[<a class="bib-ref" href="../bib/#Didau2016">Didau2016</a>]</span></li>
+</ul>
+</li>
+<li>This number is a bottleneck for learning<ul>
+<li>If a lecture presents too many ideas too quickly,
+    new arrivals knock older ones out of STM
+<em>before</em> they can be encoded</li>
+<li>Learner is overwhelmed: nothing sticks</li>
+</ul>
+</li>
+<li>And for thinking<ul>
+<li>If you have to keep track of too many unrelated facts at once
+    in order to write or debug the next line of code,
+error rates and required time increase dramatically</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>Cognitive Load Theory</h2>
+<ul>
+<li><strong>Intrinsic</strong> load: the thinking required by the learning task itself</li>
+<li><strong>Germane</strong> load: other thinking that the problem requires
+    that isn&rsquo;t the focus of the lesson</li>
+<li><strong>Extraneous</strong> load: everything you have to do that&rsquo;s irrelevant</li>
+<li>Give learners <strong>scaffolding</strong> for germane load and eliminate extraneous load</li>
+</ul>
+<figure id="cogload-parsons">
+<img src="./parsons-problem.svg" alt="A Parsons Problem for finding the maximum value in a list."/>
+<figcaption markdown="1">Figure&nbsp;2: A Parsons Problem illustrating cognitive load.</figcaption>
+</figure>
+
+<ul>
+<li>Intrinsic: where do keywords go?</li>
+<li>Germane: what are the keywords?</li>
+<li>Extraneous: brain can&rsquo;t stop itself wondering why the fonts different<ul>
+<li>Which leaves less mental energy for solving the problem</li>
+</ul>
+</li>
+</ul>
+<hr />
+<!--# class="aside" -->
+
+<h2>Working in Groups</h2>
+<ul>
+<li>Cognitive load limits how large groups can be<ul>
+<li>How many people&rsquo;s work can you keep track of at once?</li>
+</ul>
+</li>
+<li>Forcing work to be uniform (e.g., assembly line) reduces the manager&rsquo;s cognitive load<ul>
+<li>Even if it makes individuals less productive</li>
+</ul>
+</li>
+<li>Discuss the implications in Chapter&nbsp;4 and Chapter&nbsp;5</li>
+</ul>
+<hr />
+<h2>Chunking</h2>
+<ul>
+<li>Our brains handle larger information sets by <strong>chunking</strong><ul>
+<li>A pattern only takes up one slot in STM</li>
+</ul>
+</li>
+<li>Which version of these symbols is easier to remember?</li>
+</ul>
+<figure id="cogload-chunking">
+<img src="./chunking.svg" alt="Symbols are easier to remember when the pattern is clear."/>
+<figcaption markdown="1">Figure&nbsp;3: Symbols for the digits 1-9 arranged at random or in a pattern.</figcaption>
+</figure>
+
+<ul>
+<li>Experts &ldquo;see&rdquo; more and larger patterns</li>
+<li>Which helps them think faster…</li>
+<li>…but can mislead them if the pattern isn&rsquo;t actually there</li>
+</ul>
+<hr />
+<!--# class="aside" -->
+
+<h2>PETE</h2>
+<ul>
+<li>We learn faster if we are explicitly taught patterns</li>
+<li>PETE: Problem, Example, Theory, Elaboration<ul>
+<li>Need an example to ground the theory</li>
+<li>Need a second example to show what stays the same and what varies</li>
+</ul>
+</li>
+<li>Learning <strong>design patterns</strong> makes people better programmers <span class="bib-ref">[<a class="bib-ref" href="../bib/#Tichy2010">Tichy2010</a>]</span></li>
+<li>But they have to be learned in context rather than in the abstract</li>
+<li>It&rsquo;s a shame the novice-level design patterns of <span class="bib-ref">[<a class="bib-ref" href="../bib/#Sajaniemi2006">Sajaniemi2006</a>]</span>
+    weren&rsquo;t followed up…</li>
+</ul>
+<hr />
+<h2>Cognitive Development</h2>
+<ul>
+<li><strong>Novice</strong>: doesn&rsquo;t yet have a <strong>mental model</strong> of the problem domain<ul>
+<li>Don&rsquo;t know what they don&rsquo;t know</li>
+<li>Don&rsquo;t know how the pieces they <em>do</em> know fit together</li>
+</ul>
+</li>
+<li><strong>Competent</strong>: can solve normal problems in reasonable time<ul>
+<li>What counts as &ldquo;normal&rdquo; and &ldquo;reasonable&rdquo; usually defined by
+    &ldquo;what most people can learn to do&rdquo;</li>
+</ul>
+</li>
+<li><strong>Expert</strong>: solve easy problems at a glance and hard ones eventually<ul>
+<li>Again, &ldquo;easy&rdquo; and &ldquo;hard&rdquo; are determined by
+    what the minority of people who have invested a lot of time
+    are able to achieve</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>Explaining the Difference</h2>
+<ul>
+<li>Our brains don&rsquo;t actually store knowledge as a graph</li>
+<li>But it&rsquo;s a useful mental model of how they work</li>
+</ul>
+<figure id="cogload-models">
+<img src="./novice-competent-expert.svg" alt="Novices&rsquo; mental models are disconnected, experts&rsquo; are densely connected."/>
+<figcaption markdown="1">Figure&nbsp;4: Differences between novice, competent, and expert mental models.</figcaption>
+</figure>
+
+<hr />
+<!--# class="aside" -->
+
+<h2>Confidence</h2>
+<ul>
+<li>Dunning-Kruger Effect <span class="bib-ref">[<a class="bib-ref" href="../bib/#Kruger1999">Kruger1999</a>]</span>:
+    a cognitive bias whereby people over-estimate their understanding
+    because they don&rsquo;t know enough to realize how much they don&rsquo;t know</li>
+<li>Ironically, original finding was a mirage caused by poor statistics
+    <span class="bib-ref">[<a class="bib-ref" href="../bib/#Jarry2020">Jarry2020</a>, <a class="bib-ref" href="../bib/#Gelman2021">Gelman2021</a>]</span></li>
+<li>People with high social status tend to think that
+    being an expert in one domain makes them an expert in others</li>
+<li>So &ldquo;how much do you know?&rdquo; produces misleading answers:<ul>
+<li>If they say &ldquo;a lot&rdquo;,
+    there&rsquo;s no way to tell if they&rsquo;re actually an expert
+    or just a physicist</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2>How to Teach</h2>
+<ul>
+<li>Novices need to be told what to learn next:
+    don&rsquo;t know what to ask for<ul>
+<li>&ldquo;Figure out how to solve this real problem&rdquo;
+    is less effective than guided learning <span class="bib-ref">[<a class="bib-ref" href="../bib/#Kirschner2006">Kirschner2006</a>]</span></li>
+</ul>
+</li>
+<li>Competent practitioners should be mentored rather than taught<ul>
+<li>Can tell when someone has reached this level because they ask meaningful questions
+    and can understand the answers</li>
+</ul>
+</li>
+<li>Most effective way to &ldquo;teach&rdquo; experts
+    is to have them reflect or introspect on their own practice <span class="bib-ref">[<a class="bib-ref" href="../bib/#Schon1984">Schon1984</a>]</span></li>
+</ul>
+<hr />
+<!--# class="aside" -->
+
+<h2>Learning Styles Aren&rsquo;t Real</h2>
+<ul>
+<li>&ldquo;Learning styles&rdquo; is the idea that
+    some people learn better visually
+    while others do so more quickly or more accurately by listening or reading</li>
+<li>Lots of companies make and sell materials based on this myth,
+    but no one has ever shown that tuning what or how we teach to match people&rsquo;s preferences
+    has any impact on outcomes <span class="bib-ref">[<a class="bib-ref" href="../bib/#DeBruyckere2015">DeBruyckere2015</a>]</span></li>
+</ul>
+<hr />
+<!--# class="exercise" -->
+
+<h2>Learning Strategies</h2>
+<ol>
+<li>Review the <a href="https://www.learningscientists.org/">six learning strategies</a>
+    that have been proven to help people learn faster and better <span class="bib-ref">[<a class="bib-ref" href="../bib/#Weinstein2018">Weinstein2018</a>]</span>.</li>
+<li>Which ones do you use regularly?</li>
+<li>Which ones can be adapted to learning your way around a new code base?</li>
+</ol>
+
+  </body>
+</html>

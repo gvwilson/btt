@@ -8,6 +8,7 @@ draft = True
 
 chapters = [
     "intro",
+    "cogload",
     "meetings",
     "decomp",
     "grading",

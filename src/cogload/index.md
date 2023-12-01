@@ -1,10 +1,3 @@
----
-title: "Cognitive Load"
-tag: "FIXME"
-syllabus:
-- FIXME
----
-
 [%f cogload-architecture %] shows a very (very) simple model of
 the cognitive architecture of the human brain.
 On the left is long-term memory (LTM),
@@ -43,7 +36,8 @@ before you have a chance to encode them and store them in LTM,
 so learning won't take place.
 
 This realization and others have produced the theory of cognitive load,
-which (among other things) divides the things you have to do while learning into three categories.
+which (among other things) divides the things you have to do while learning
+into three categories.
 The intrinsic load is the thinking that is required by the learning task itself.
 The germane (or relevant) load is the other thinking that the problem requires,
 but which isn't the focus of the lesson,
