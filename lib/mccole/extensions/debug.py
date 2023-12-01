@@ -1,24 +1,8 @@
 """Debug Ark."""
 
-from collections import defaultdict
-import time
-
 import ark
 
 import util
-
-
-TIMINGS = defaultdict(float)
-
-
-def timing(func):
-    def wrapper(*args, **kwargs):
-        global TIMINGS
-        t_start = time.time()
-        result = func(*args, **kwargs)
-        TIMINGS[func.__name__] += time.time() - t_start
-        return result
-    return wrapper
 
 
 @ark.events.register(ark.events.Event.CLI)
@@ -35,7 +19,7 @@ def debug_DEPLOY():
 def debug_EXIT():
     util.debug(f"EVENT EXIT")
     if ark.site.config["debug"]:
-        for (func, total) in sorted(TIMINGS.items(), reverse=True, key=lambda x: x[1]):
+        for (func, total) in sorted(util.TIMINGS.items(), reverse=True, key=lambda x: x[1]):
             print(f"{func}: {total}")
 
 

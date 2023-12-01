@@ -8,12 +8,11 @@ import shortcodes
 import textwrap
 import yaml
 
-from debug import timing
 import util
 
 
 @shortcodes.register("b")
-@timing
+@util.timing
 def bibliography_ref(pargs, kwargs, node):
     """Handle [%b key1 key2 %] biblography references."""
     util.require(
@@ -27,26 +26,18 @@ def bibliography_ref(pargs, kwargs, node):
 
 
 @shortcodes.register("bibliography")
-@timing
+@util.timing
 def bibliography(pargs, kwargs, node):
     """Handle [% bibliography %] shortcode."""
-
-    def _fmt(key, body):
-        return f'<dt id="{key}" class="bib-def">{key}</dt>\n<dd>{body}</dd>'
-
     util.require(
         (not pargs) and (not kwargs),
         f"Bad 'bibliography' shortcode with {pargs} and {kwargs} in {node}",
     )
-
-    styled_bib = ark.site.config["_bib_"]
-    html = pybtex.plugin.find_plugin("pybtex.backends", "html")()
-    entries = [_fmt(entry.key, entry.text.render(html)) for entry in styled_bib]
-    return '<dl class="bib-list">\n\n' + "\n\n".join(entries) + "\n\n</dl>"
+    return Path(ark.site.home(), "tmp", "bibliography.html").read_text()
 
 
 @shortcodes.register("date")
-@timing
+@util.timing
 def date(pargs, kwargs, node):
     """Handle [% date %] shortcode."""
     util.require(
@@ -57,7 +48,7 @@ def date(pargs, kwargs, node):
 
 
 @shortcodes.register("f")
-@timing
+@util.timing
 def figure_ref(pargs, kwargs, node):
     """Handle [%f slug %] figure reference shortcodes."""
     util.require((len(pargs) == 1) and (not kwargs), f"Bad 'f' shortcode in {node}")
@@ -68,7 +59,7 @@ def figure_ref(pargs, kwargs, node):
 
 
 @shortcodes.register("figure")
-@timing
+@util.timing
 def figure_def(pargs, kwargs, node):
     """Handle figure definition."""
     allowed = {"cls", "scale", "slug", "img", "alt", "caption"}
@@ -86,7 +77,7 @@ def figure_def(pargs, kwargs, node):
     slug = kwargs["slug"]
     img = kwargs["img"]
     alt = util.markdownify(kwargs["alt"])
-    caption = util.markdownify(kwargs["caption"], with_links=False)
+    caption = util.markdownify(kwargs["caption"])
 
     util.require_file(node, img, "figure")
     known = ark.site.config["_figures_"]
@@ -98,7 +89,7 @@ def figure_def(pargs, kwargs, node):
 
 
 @shortcodes.register("fixme")
-@timing
+@util.timing
 def fixme(pargs, kwargs, node):
     """Handle [% fixme 'item' ... %] shortcode."""
     util.require(
@@ -112,7 +103,7 @@ def fixme(pargs, kwargs, node):
 
 
 @shortcodes.register("image")
-@timing
+@util.timing
 def image(pargs, kwargs, node):
     """Handle image."""
     allowed = {"src", "alt", "width"}
@@ -121,7 +112,7 @@ def image(pargs, kwargs, node):
         f"Bad 'image' shortcode {pargs} and {kwargs} in {node}",
     )
     src = kwargs["src"]
-    alt = util.markdownify(kwargs["alt"], with_links=False)
+    alt = util.markdownify(kwargs["alt"])
     width = kwargs.get("width", None)
 
     util.require_file(node, src, "image")
@@ -131,7 +122,7 @@ def image(pargs, kwargs, node):
 
 
 @shortcodes.register("rootpage")
-@timing
+@util.timing
 def rootpage(pargs, kwargs, node):
     """Handle [% rootpage NAME.md %] shortcode."""
     util.require(
@@ -146,7 +137,7 @@ def rootpage(pargs, kwargs, node):
 
 
 @shortcodes.register("syllabus")
-@timing
+@util.timing
 def syllabus(pargs, kwargs, node):
     """Handle [% syllabus %] shortcode."""
     util.require(
@@ -169,12 +160,12 @@ def syllabus(pargs, kwargs, node):
             )
         lines.append(f"*{meta['tag']}*\n")
         for item in meta["syllabus"]:
-            lines.append(f"- {util.markdownify(item, with_links=False)}")
+            lines.append(f"- {item}")
     return "\n".join(lines)
 
 
 @shortcodes.register("t")
-@timing
+@util.timing
 def table_ref(pargs, kwargs, node):
     """Handle [%t slug %] table reference shortcodes."""
     util.require((len(pargs) == 1) and (not kwargs), f"Bad 't' shortcode in {node}")
@@ -185,7 +176,7 @@ def table_ref(pargs, kwargs, node):
 
 
 @shortcodes.register("table")
-@timing
+@util.timing
 def table_def(pargs, kwargs, node):
     """Handle table definition."""
     allowed = {"slug", "tbl", "caption"}
@@ -198,20 +189,20 @@ def table_def(pargs, kwargs, node):
     tbl = kwargs["tbl"]
     known = ark.site.config["_tables_"]
     label = f"Table&nbsp;{known[slug]}"
-    caption = util.markdownify(kwargs["caption"], with_links=False)
+    caption = util.markdownify(kwargs["caption"])
     header = (
         f'<table id="{slug}" data-tbl="{tbl}">\n<caption>{label}: {caption}</caption>'
     )
 
     util.require_file(node, tbl, "table")
     content = util.read_file(node, tbl, "table").strip()
-    content = util.markdownify(content, strip_p=False, with_links=False)
+    content = util.markdownify(content, strip_p=False)
     content = content.replace("<table>", header)
     return content
 
 
 @shortcodes.register("thanks")
-@timing
+@util.timing
 def thanks(pargs, kwargs, node):
     """Handle [% thanks %] table of thanks shortcode."""
     util.require(
@@ -234,13 +225,13 @@ def thanks(pargs, kwargs, node):
 
 
 @shortcodes.register("toc")
-@timing
+@util.timing
 def toc(pargs, kwargs, node):
     """Handle [% toc %] table of contents shortcode."""
 
     def _format(slug, kind, is_appendix):
         meta = ark.site.config["_meta_"][slug]
-        title = util.markdownify(meta["title"], with_links=False)
+        title = util.markdownify(meta["title"])
         if (kind == "chapters") or is_appendix:
             title = f'<a href="@root/{slug}">{title}</a>'
         tag = "" if is_appendix else f": {util.markdownify(meta['tag'])}"
@@ -265,7 +256,7 @@ def toc(pargs, kwargs, node):
 
 
 @shortcodes.register("x")
-@timing
+@util.timing
 def x_reference(pargs, kwargs, node):
     """Handle [%x slug %] cross-reference shortcode."""
     util.require(
