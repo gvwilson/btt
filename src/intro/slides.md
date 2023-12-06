@@ -75,7 +75,7 @@ template: slides
 >
 > — [Theodosius Dobzhansky][dobzhanskys_law] (modified)
 
--   Our mental capabity is limited [%b Hermans2021 %]
+-   Our mental capability is limited [%b Hermans2021 %]
 -   Our designs and development processes have to take these limits into account
 
 ---
