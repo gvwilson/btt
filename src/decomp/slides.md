@@ -260,3 +260,6 @@ template: slides
     and will be doing each for the time time,
     how will you know which struggles are intrinsic to the method
     and which are **learning effects**?
+3.  Some schools have upper-year students act as team leads
+    for groups in lower-year courses.
+    What are the pros and cons of this approach?

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="repo" content="https://github.com/gvwilson/btt">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <title>Building Tech Together: Forming and Reforming Teams</title>
+  <link rel="stylesheet" href="../tango.css">
+<link rel="stylesheet" href="../mccole.css">
+
+<link rel="stylesheet" href="../pages.css">
+
+
+  <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']]
+    }
+  };
+</script>
+<script
+  type="text/javascript"
+  id="MathJax-script"
+  async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+  
+
+</head>
+
+  <body>
+    <main data-slug="teaming">
+      <div class="row title">
+  <div class="col-1 left">
+    <p>
+      <a href="../"><img src="../codebender-logo.svg" alt="logo" class="logo"/></a>
+    </p>
+  </div>
+  <div class="col-10 center">
+    <h1>Forming and Reforming Teams</h1>
+  </div>
+  <div class="col-1"></div>
+</div>
+
+
+<div class="row notex">
+  <div class="col-1 left">
+    <a href="../decomp/">&lArr;</a>
+  </div>
+  <div class="col-10 center">
+    <span class="tagline">How to assemble people into teams and reorganize those teams as circumstances change.</span>
+  </div>
+  <div class="col-1 right">
+    <a href="../grading/">&rArr;</a>
+  </div>
+</div>
+<ul class="syllabus">
+<li>Having students of varying abilities in every team helps everyone.</li>
+<li>The biggest challenge for student teams is finding time to work together.</li>
+<li>Avoid isolating at-risk students when forming teams.</li>
+<li><strong>One by One</strong> reorganization is the most common way to reorganize teams.</li>
+<li><strong>Grow and Split</strong> helps teams regain efficiency.</li>
+<li><strong>Merging</strong> is common as work or larger organization changes over time.</li>
+<li><strong>Isolation</strong> can be used to solve a single problem, but team members must bring knowledge back to the group quickly.</li>
+<li><strong>Switching</strong> team members can prevent stagnation and reduce lottery factor, but there is always a learning overhead.</li>
+<li>People may have both valid and invalid reasons for not wanting to be on teams with specific other people.</li>
+</ul>
+
+
+      <p>I once heard an anthropologist ask,
+&ldquo;How big is a sports team?&rdquo;
+When people said it depends on the sport,
+she explained that in fact they all have about half a dozen members.
+Anything larger than that splits into smaller groups:
+the forwards and backs in rugby,
+the infield and outfield in baseball,
+and so on.
+She went on to explain that
+hunting parties in non-agricultural societies are usually that size as well,
+as are the basic military units around the world
+(a platoon is two squads of six people).
+Since we can only keep a handful of things in our short-term memory at once (Chapter&nbsp;2),
+that&rsquo;s as big as a team can practically be.</p>
+<p>The same applies to software development.
+Three or four people can work tightly on a single piece of code,
+but when there are more they have to define interfaces
+so that they can develop in parallel.</p>
+<p>Teams of three to five provide a good balance between skills and accountability.
+A team of two may not have enough breadth and background
+to tackle a large piece of work;
+more importantly,
+one or the other person is likely to take a dominant role.
+If you put more than half a dozen people in a single team,
+on the other hand,
+you may not be able to divide up the work
+in a way that will keep everyone engaged and busy.
+Large teams also make scheduling meetings much more difficult,
+and increase the odds that at least one member will be a hitchhiker.</p>
+<h2 id="teaming-create">Creating Teams</h2>
+<p>Many students prefer to select their teammates,
+and students with high grades tend to want teammates with a similar profile.
+However,
+having students with a range of grades in the same team
+either has no effect or improves outcomes <em>for everyone</em>
+<span class="bib-ref">[<a class="bib-ref" href="../bib/#Mosher2013">Mosher2013</a>, <a class="bib-ref" href="../bib/#Donovan2018">Donovan2018</a>, <a class="bib-ref" href="../bib/#Farland2019">Farland2019</a>, <a class="bib-ref" href="../bib/#Auvinen2020">Auvinen2020</a>]</span>.
+It&rsquo;s easy to see how this benefits teams of weak students:
+they are likely to get coaching from their stronger teammates.
+One theory for why it also helps stronger students is that
+the best way to learn something is to explain it to someone else;
+bringing a weaker teammate up to speed
+will usually do more for your grade
+than spending those same hours hacking or reading.</p>
+<p>In my experience,
+teams of strong students are more likely to use a divide-and-conquer strategy,
+effectively reducing the project to
+a set of parallel sub-projects handled by one person each.
+This may feel more efficient,
+but most of the benefits of working in a team are lost:
+there&rsquo;s less back-and-forth discussion of design issues
+and little improvement in communication skills.
+Those may not be important to you at first,
+but if there is a final exam in your course with questions about the project work,
+your mark on it may depend on how much you know about your teammates&rsquo; work
+(Chapter&nbsp;6).</p>
+<p>The most powerful argument for instructors allocating people to teams,
+though,
+is that&rsquo;s how it works in the real world <span class="bib-ref">[<a class="bib-ref" href="../bib/#Oakley2004">Oakley2004</a>]</span>.
+You probably won&rsquo;t get to pick your colleagues
+if you join a company or an academic research group.
+Instead,
+you&rsquo;ll be put on a project
+and expected to work well with whoever else is on it.
+Your performance will depend as much on your ability to get along with others
+as it will on your raw technical ability,
+so you might as well start practicing those skills now.</p>
+<p>If instructors create teams,
+they should avoid isolating at-risk students.
+Women and members of racialized minority groups
+are more likely to drop out of computer science than other students,
+particularly in first and second year,
+and one of the main reasons is feeling isolated or out of place.
+Research has shown that putting at-risk students together in the first couple of years
+can mitigate this problem <span class="bib-ref">[<a class="bib-ref" href="../bib/#Margolis2002">Margolis2002</a>]</span>.
+It is less necessary in upper years,
+since by then students have a stronger commitment to whatever program they&rsquo;re in,
+but it still helps to prevent some of the problems discussed in the next section.</p>
+<p>The biggest headache when instructors select teams is scheduling.
+COVID-19 made distributed work more normal,
+but the last university I taught at had three campuses spread across a large metropolitan area,
+and some students commuted an hour and a half each way to get to classes.
+Instructors should therefore take students&rsquo; schedules into account when forming teams.
+If the class is small,
+the simplest way is
+to get each student to fill in a weekly timesheet showing when they&rsquo;re available
+and then group people who have large blocks of overlap.
+If the class is larger,
+a web-based calendaring tool may be easier.
+I <em>don&rsquo;t</em> suggest trying to use whatever software the university uses
+to figure out course timetables:
+although that usually doesn&rsquo;t scale down to in-class scheduling.</p>
+<p>Another factor to take into account is that
+some people are early birds while others are night owls.
+Putting the two on the same team pretty much guarantees that someone will miss meetings,
+or sleep through them,
+no matter when they&rsquo;re held.
+Simply asking people,
+&ldquo;Do you prefer to work in the morning or the evening?&rdquo;
+can be surprisingly effective.</p>
+<p>However you form teams,
+each team should have at least one block of ninety minutes
+to work together each week outside of class.
+Teams should also try to find a second block
+that&rsquo;s half an hour long
+for a weekly status meeting (Chapter&nbsp;3).
+Try to keep the two blocks separate
+so that it&rsquo;s clear to everyone when they&rsquo;re supposed to be talking about the project
+and when they&rsquo;re supposed to be doing design,
+writing code,
+testing,
+and so on.
+If the two are scheduled back-to-back,
+the meeting will drag on into working time or vice versa.</p>
+<h2 id="teaming-reorg">Reteaming</h2>
+<p>sometimes it makes sense to reorganize teams.
+<span class="bib-ref">[<a class="bib-ref" href="../bib/#Helfand2020">Helfand2020</a>]</span> lays out five patterns for doing this;
+they don&rsquo;t all come up in undergraduate course projects,
+but are common in research teams, open source, and on the job.
+Like most advice about teamwork,
+they sound obvious when you hear them,
+but (a) having names for things helps us talk about them,
+and (b) saying that something is obvious in retrospect
+isn&rsquo;t the same as saying you&rsquo;d have thought of it yourself.</p>
+<h3>One by One</h3>
+<p>The simplest way to change a new team
+is to add or remove one person at a time.
+Since every real team has no more than about half a dozen people
+(see <span class="fixme">see&nbsp;FIXME</span> for the reasons),
+changing even one person usually changes the personality of
+the team as a whole.</p>
+<p>One-by-one is the most common pattern in organizations of all size:
+a new person will join an open source project,
+or someone will move from one lab to another.
+Its most extreme form occurs during large reorganizations
+when almost every team gains or loses one or two people.
+In this case it&rsquo;s better to think of the teams as re-forming entirely
+because the stability normally provided by neighboring teams <em>not</em> changing
+isn&rsquo;t there to keep this one anchored.</p>
+<p>Groups can take several steps to ready themselves for one-by-one changes:</p>
+<dl>
+<dt>Define career ladders or equivalent ways to progress.</dt>
+<dd>Most people want to get better at what they do
+and to be recognized for it.
+In school,
+this is often presented as a grading scheme that tells students
+whether they are ready for the next course in a sequence or not (Chapter&nbsp;6).
+In the workplace,
+there is often a sequence of job titles like &ldquo;Software Engineer&rdquo;,
+&ldquo;Senior Software Engineer&rdquo;,
+&ldquo;Staff Software Engineer&rdquo;,
+and so on.
+Whatever it is,
+make it explicit so that everyone understands what the rules are.</dd>
+<dt>Make the new people welcome.</dt>
+<dd>As discussed <span class="fixme">see&nbsp;FIXME</span>,
+pairing the new team member with a mentor or buddy shows you care;
+pointing them at a Git repository
+and telling them that you&rsquo;re sure they&rsquo;ll figure it out
+sends a pretty clear signal that you don&rsquo;t.</dd>
+<dt>Ask them for their ideas.</dt>
+<dd><span class="fixme">see&nbsp;FIXME</span> recommended that if you&rsquo;re the new person on the team
+you shouldn&rsquo;t immediately start telling people what they&rsquo;re doing wrong.
+Conversely,
+though,
+incumbent team members should ask new arrivals for their ideas.
+(Moving people around is often the best way to spread good practices.)</dd>
+</dl>
+<h3>Grow and Split</h3>
+<p>Successful projects tend to grow,
+which often means that successful teams become so large
+that they stop being successful.
+The Grow and Split pattern should be used
+when breaking a team in two
+will allow its members to recapture the efficiency they once had.</p>
+<dl>
+<dt>Let experienced team members decide.</dt>
+<dd>People who have worked on enough team projects
+will usually recognize when their team needs to fission,
+so &ldquo;Is it time we broke up?&rdquo;
+should be asked in every retrospective (<span class="fixme">see&nbsp;FIXME</span>).</dd>
+<dt>Recognize that every rule has exceptions.</dt>
+<dd>Not all big teams should be split,
+at least not right away.
+Again,
+let experienced team members make the call,
+and if everyone on the team is so new to this
+that they don&rsquo;t trust their own opinion,
+bring in someone from outside who knows more.</dd>
+<dt>Divide responsibilities as well as teams.</dt>
+<dd>Each of the new teams should have a clear mission
+that doesn&rsquo;t overlap with the other team&rsquo;s.
+Making lists helps here,
+as does reallocating open issues (<span class="fixme">see&nbsp;FIXME</span>)
+and having the teams draw and compare concept maps (<span class="fixme">see&nbsp;FIXME</span>).</dd>
+</dl>
+<h3>Merging</h3>
+<p>Merging is the inverse of the Grow and Split pattern,
+and is usually followed by one or more people moving to other teams
+in order to keep the new team&rsquo;s size manageable.
+Merging also often happens after one company acquires another,
+though in that case people are often laid off rather than being moved to new teams.</p>
+<dl>
+<dt>Combine teams as projects wind down.</dt>
+<dd>The next project might be larger than the ones that just finished,
+and might need a larger team.
+In courses,
+this sometimes happens by design:
+instructors will have small teams build components of a large application
+for the first few weeks,
+then combine those teams
+and ask them to try to fit their pieces together.</dd>
+<dt>Distinguish mergers from takeovers.</dt>
+<dd>Another reason to merge teams is as a form of teaching.
+Sitting in with a band is a great way to learn their style of music;
+having two teams work as one temporarily
+is a great way to transfer working practices.</dd>
+</dl>
+<h3>Isolation</h3>
+<p>This pattern doesn&rsquo;t come up often in courses,
+but in open source projects, research labs, or companies,
+it sometimes makes sense to put a few people together
+to focus on solving a single problem or producing a prototype
+free from distraction.</p>
+<dl>
+<dt>Don&rsquo;t create silos.</dt>
+<dd>I&rsquo;ve worked in a company that were essentially
+half a dozen independent (and mutually hostile) groups
+that happened to share a website and a payroll system.
+That situation arose because the founder repeatedly used the Isolation pattern
+and then didn&rsquo;t merge the teams back together.
+It didn&rsquo;t end well…</dd>
+<dt>Don&rsquo;t make it a status badge.</dt>
+<dd>I also once worked in a company where every team lead talked as if
+their team was the best of the best, of the best.
+That situation arose because being put in an isolated team
+was seen as equivalent to being awarded all-star status.
+It didn&rsquo;t end well either…</dd>
+<dt>Bring the knowledge back—quickly.</dt>
+<dd>If you use the Isolation pattern,
+you should dissolve the isolated team as soon as possible
+and bring its members back into other teams
+so that they can share their knowledge.</dd>
+</dl>
+<h3>Switching</h3>
+<p>Sometimes it&rsquo;s a good idea to shuffle team membership to prevent stagnation.
+Be cautious when someone suggests this, though:
+consultants and newly-hired managers often launch re-organizations
+in order to show that they&rsquo;re doing something
+and to demonstrate their power.</p>
+<p>Less cynically,
+though,
+shuffling team membership is a good way to reduce the group&rsquo;s lottery factor,
+i.e.,
+to make sure that there isn&rsquo;t just one person or one team
+who knows their way around something critical.
+I&rsquo;ve never seen this pattern used in an open source project or research team,
+but it&rsquo;s quite common in undergrad courses:
+it gives students a chance for a fresh start
+and also the experience of wrestling with code that they didn&rsquo;t write.</p>
+<dl>
+<dt>Base changes on individual aspirations.</dt>
+<dd>Don&rsquo;t shuffle team membership at random
+(unless that&rsquo;s a deliberate aim).
+Instead,
+try to move people en masse to places where they can pursue their interests
+and/or further their careers.</dd>
+<dt>Allow people to avoid teams if they&rsquo;re willing to explain why in private.</dt>
+<dd>Some people have good reasons to want to avoid other people.
+(Female students might drop a course rather than be on a team with &ldquo;that guy&rdquo;,
+and members of minoritized groups probably don&rsquo;t want to have to work with racists.)
+However,
+every one of these reasons can be turned around:
+a misogynist might not want any women on his team,
+while those racists probably don&rsquo;t want to have to work with &ldquo;those people&rdquo;.
+Getting this right is probably the hardest thing in this chapter,
+and we will return to it in <span class="fixme">see&nbsp;FIXME</span>.</dd>
+</dl>
+<h2 id="teaming-problems">Problems and Solutions</h2>
+<p>When I first put these notes together fifteen years ago, I wrote a section
+titled &ldquo;People to Watch Out For&rdquo; that described a dozen people who make teams
+less productive in different ways. As several reviewers have pointed out since,
+it was arrogant and harmful: arrogant because what I was really saying was, &ldquo;If
+you don&rsquo;t work the way I do then you&rsquo;re wrong,&rdquo; and harmful because it would
+make people who already doubt themselves do so even more.</p>
+<p>If you read one of those earlier versions, I apologize. What I&rsquo;ve tried to do
+below is describe ways in which I&rsquo;ve seen people undermine themselves.  If you
+go through this list with your teammates and tell them what you&rsquo;d like to get
+better at, they&rsquo;ll probably help you.</p>
+<dl>
+<dt>Not everything needs to be completely correct.</dt>
+<dd>Before correcting a factual error, ask yourself whether it really matters.
+If it&rsquo;s the name of the configuration file the program reads on startup, the
+answer is probably yes; if it&rsquo;s the name of a minor villain from the Marvel
+Cinematic Universe, the answer is probably no.</dd>
+<dt>The devil doesn&rsquo;t need more advocates.</dt>
+<dd>We remember when contrarians
+turn out to be right because it happens so infrequently, but because those
+moments are memorable, some people fall into the habit of taking the
+opposite point of view no matter what is being discussed.</dd>
+<dt>You wouldn&rsquo;t have gotten this far if you weren&rsquo;t good at this.</dt>
+<dd>Some people have so little
+confidence in their ability despite their good grades that they won&rsquo;t
+make any decision, no matter how small, until they have checked with someone
+else. This is often a result of social conditioning: in particular, women
+are more likely to doubt themselves, while men often over-estimate their
+ability.</dd>
+<dt>Not everything worth doing should be done.</dt>
+<dd>For many years my favorite phrase was, &ldquo;Why don&rsquo;t we?&rdquo; Why don&rsquo;t we write a
+GUI to help people edit the program&rsquo;s configuration files? Hey, why don&rsquo;t we
+invent our own little language for designing GUIs? This energy and
+enthusiasm are hard to argue with, but argue you must.  Otherwise, for every
+step you move forward, the project&rsquo;s goalposts will recede by two. This is
+called feature creep, and has ruined many projects that might otherwise have
+delivered something small but useful.  My solution these days is to keep a
+to-don&rsquo;t list of things that would be fun and
+worthwhile, but that I&rsquo;m <em>not</em> going to tackle.</dd>
+<dt>Success is a habit.</dt>
+<dd>The more you follow a routine, the more your brain will be able to focus on
+the right things at the right time. <span class="bib-ref">[<a class="bib-ref" href="../bib/#Gawande2011">Gawande2011</a>]</span> found that
+checklists improve results even for
+experts, and FIXME talked about the value of to-do lists for
+managing your time. Making these a habit reduce cognitive load (Chapter&nbsp;2) and
+gives you more mental capacity for dealing with the work itself.</dd>
+<dt>Acting like an asshole doesn&rsquo;t make you cool—it just makes you an asshole.</dt>
+<dd>I had a teammate once whose favorite phrase was, &ldquo;That&rsquo;s stupid.&rdquo;  If anyone
+complained, he said, &ldquo;It&rsquo;s just the way I talk.&rdquo; The problem with people
+using vulgar or aggressive language in everyday conversation is that for
+many other people, that language has often been followed by bullying or
+discrimination. They&rsquo;re right not to trust you if those are the signals you
+choose to send. (And no, calling someone out for being vulgar or aggressive
+is not the same as tone policing.)</dd>
+<dt>Sometimes it&rsquo;s hard to care.</dt>
+<dd>You have a teammate who doesn&rsquo;t read the assignment specs, hasn&rsquo;t bothered
+to learn the tools and libraries you&rsquo;re supposed to be using, and commits
+code that doesn&rsquo;t even compile.  Before treating them like a hitchhiker, try
+to find out if there&rsquo;s a reason for their behavior: if he&rsquo;s caring for a
+family member or struggling with mental
+health issues, the most compassionate thing to do is to help them get
+back on their feet.</dd>
+</dl>
+    </main>
+    <footer>
+  <div class="row">
+    <div class="col-1 left">
+      <a href="../decomp/">&lArr;</a>
+    </div>
+    <div class="col-10 center">
+      <a href="../">Home</a>
+      &middot;
+      <a href="../license/">License</a>
+      &middot;
+      <a href="https://github.com/gvwilson/btt">Repository</a>
+    </div>
+    <div class="col-1 right">
+      <a href="../grading/">&rArr;</a>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
