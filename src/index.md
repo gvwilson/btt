@@ -36,7 +36,7 @@ how to do it better.
 
 ## Content
 
-[% toc kind="slides" %]
+[% toc %]
 
 [% syllabus links=False %]
 
