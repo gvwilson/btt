@@ -12,6 +12,7 @@ chapters = [
     "cogload",
     "meetings",
     "decomp",
+    "teaming",
     "grading",
     "finale",
 ]
