@@ -14,6 +14,7 @@ chapters = [
     "decomp",
     "teaming",
     "grading",
+    "property",
     "finale",
 ]
 

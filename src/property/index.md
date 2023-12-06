@@ -1,10 +1,3 @@
----
-title: "Intellectual Property"
-tag: "FIXME"
-syllabus:
-- FIXME
----
-
 Which of these do you believe?
 
 1.  As a student,
