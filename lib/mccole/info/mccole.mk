@@ -104,6 +104,11 @@ reformat:
 lint: ${HTML}
 	@${PYTHON} ${ARK_BIN}/lint.py --config ${CONFIG} --src src
 
+## spelling: check spelling
+.PHONY: spelling
+spelling:
+	bash ${ARK_BIN}/spelling.sh
+
 ## bibvalid: validate bibliography
 .PHONY: bibvalid
 bibvalid:

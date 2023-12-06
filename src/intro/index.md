@@ -64,7 +64,7 @@ everything will take longer and hurt more than it needs to.
 Second,
 much of what's hard about building software stems from
 the way our brains work [%b Hermans2021 %],
-and in particular from our limited mental capabity ([%x cogload %]).
+and in particular from our limited mental capability ([%x cogload %]).
 This insight is a modified version of [Dobzhansky's Law][dobzhanskys_law]:
 
 > Nothing in software engineering makes sense except in the light of psychology.
