@@ -258,7 +258,7 @@ The next step up is the Creative Commons-Attribution license,
 usually referred to as CC-BY.
 This allows people to do whatever they want to with the work
 as long as they cite the original source.
-This is the best license to use for papers and report,
+This is the best license to use for papers and reports,
 since you want people to share them widely but also want to get credit for your work.
 
 Other Creative Commons licenses incorporate various restrictions,

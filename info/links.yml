@@ -24,6 +24,10 @@
   url: https://aosabook.org/
   en: "The Architecture of Open Source Applications"
 
+- key: artificial_scarcity
+  url: https://en.wikipedia.org/wiki/Artificial_scarcity
+  en: "Artificial scarcity"
+
 # BBB
 
 - key: buzzfeed_datacamp
@@ -116,6 +120,10 @@
 
 # MMM
 
+- key: mickey_mouse_act
+  url: https://en.wikipedia.org/wiki/Copyright_Term_Extension_Act
+  title: "Copyright Term Extension Act"
+
 # NNN
 
 - key: noaa_disruptive
@@ -145,6 +153,14 @@
   title: Quarterback syndrome
 
 # RRR
+
+- key: regulatory_capture
+  url: https://en.wikipedia.org/wiki/Regulatory_capture
+  title: "Regulatory capture"
+
+- key: rent_seeking
+  url: https://en.wikipedia.org/wiki/Rent-seeking
+  title: "Rent seeking"
 
 # SSS
 
