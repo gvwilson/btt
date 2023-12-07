@@ -15,6 +15,6 @@ cat $(find docs -name '*.html') \
   -e 's/&ndash;//g' \
   -e 's/&gt;/ /g' \
   -e 's/&lt;/ /g' \
-| aspell -H --encoding=UTF-8 -l en_US --home-dir=. --personal=info/wordlist.txt list \
+| aspell -H --encoding=UTF-8 -l en_US list \
 | sort \
 | uniq

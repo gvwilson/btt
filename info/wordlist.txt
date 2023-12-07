@@ -1,4 +1,3 @@
-personal_ws-1.1 en 162
 ACM
 ASCD
 ASE
@@ -25,7 +24,6 @@ Auvinen
 Averick
 Ayres
 Aziz
-Bäck
 Banaji
 Barendsen
 Barik
@@ -50,7 +48,6 @@ Bo
 Boehm
 Boettcher
 Bohay
-Böhme
 Bollier
 Borst
 Boyce
@@ -62,6 +59,8 @@ Burak
 Burlingham
 Burrell
 Byckling
+Bäck
+Böhme
 CACM
 CBE
 COVID
@@ -78,7 +77,6 @@ Cataldo
 Cathrin
 Caulfield
 Caviglioli
-Cécile
 Cheng
 Chia
 Chinmay
@@ -93,6 +91,7 @@ CriadoPerez
 Crowe
 Csikszentmihalyi
 Cyclomatic
+Cécile
 DVC
 Darko
 Dasgupta
@@ -351,20 +350,18 @@ Packt
 Pais
 Panichella
 Papadopoulos
-Paré
 Parnas
 Parnin
 Parris
 Partanen
+Paré
 Pascaline
 Pasi
 Patitsas
 PeerJ
 Penta
 Pentesters
-Péraire
 Perdriau
-Pérez
 Perri
 Petre
 Petri
@@ -380,6 +377,8 @@ Premraj
 Preskill
 Prioleau
 Proc
+Péraire
+Pérez
 Quiñones
 Radvansky
 Rahim
@@ -397,6 +396,7 @@ Reteaming
 Rijn
 Ritu
 Rohan
+Rohingya
 Rohrer
 Routledge
 Rozworski
@@ -413,12 +413,12 @@ Sadowski
 Safiya
 Sahlberg
 Saibene
-Saïda
 Sajaniemi
 Sanjay
 Sarma
 Sascha
 Sasser
+Saïda
 Scaliante
 Scalzi
 Scanniello
@@ -550,21 +550,17 @@ doi
 dr
 drawio
 else's
-facebook
 favoured
 findable
-finland's
 img
 inclusivity
 js
-kruger
 licensor
 masse
 mccole
 md
 minoritized
 mis
-myanmar
 nd
 nonmajors
 peerScholar
@@ -586,7 +582,6 @@ tbl
 timesheet
 tl
 unenforceability
-unix
 von
 warmup
 wc
