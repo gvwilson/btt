@@ -38,6 +38,6 @@ how to do it better.
 
 [% toc %]
 
-[% syllabus links=False %]
+[% summary kind="syllabus" links=False %]
 
 *Last built: [% date %].*

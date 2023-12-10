@@ -1,5 +1,7 @@
 title: "Introduction"
 tag: "What this book talks about and why."
+abstract: >
+    FIXME write abstract
 syllabus:
 - Our goal is to help you become a compassionate programmer.
 - Nothing in software engineering makes sense except in the light of psychology.

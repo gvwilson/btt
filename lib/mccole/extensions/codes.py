@@ -3,7 +3,6 @@
 from pathlib import Path
 
 import ark
-import pybtex.plugin
 import shortcodes
 import textwrap
 import yaml
@@ -136,31 +135,39 @@ def rootpage(pargs, kwargs, node):
         util.fail(f"cannot read .ark file {str(path)}")
 
 
-@shortcodes.register("syllabus")
+@shortcodes.register("summary")
 @util.timing
-def syllabus(pargs, kwargs, node):
-    """Handle [% syllabus %] shortcode."""
+def summary(pargs, kwargs, node):
+    """Handle [% summary %] shortcode."""
     util.require(
-        (not pargs) and set(kwargs.keys()).issubset({"links"}),
-        f"Bad 'syllabus' shortcode in {node}",
+        (not pargs) and ("kind" in kwargs),
+        f"Bad 'syllabus' shortcode in {node} with {pargs} and {kwargs}",
     )
+    kind = kwargs["kind"]
+    util.require(
+        kind in {"abstracts", "syllabus"},
+        f"Unknown kind '{kind}' in summary shortcode"
+    )
+    with_links = kwargs.get("links", "") != "False"
+
     lines = []
-    with_links = kwargs.get("links", True) != "False"
     for slug in ark.site.config["chapters"]:
         meta = ark.site.config["_meta_"][slug]
-        assert "syllabus" in meta, f"No syllabus data found for {slug}"
         assert "tag" in meta, f"No tag found for {slug}"
-        if with_links:
-            lines.append(
-                f"\n## [{meta['title']}](@root/{slug}) ([slides](@root/{slug}/slides.html)) {{: #syllabus-{slug}}}\n"
-            )
-        else:
-            lines.append(
-                f"\n## {meta['title']} ([slides](@root/{slug}/slides.html)) {{: #syllabus-{slug}}}\n"
-            )
+        util.require("abstract" in meta, f"No abstract found for {slug}")
+        util.require("syllabus" in meta, f"No syllabus data found for {slug}")
+
+        title = f"[{meta['title']}](@root/{slug})" if with_links else meta["title"]
+        slides = f"[slides](@root/{slug}/slides.html)"
+        label = f"{{: #syllabus-{slug}}}"
+        lines.append(f"\n## {title} ({slides}) {label}\n")
         lines.append(f"*{meta['tag']}*\n")
-        for item in meta["syllabus"]:
-            lines.append(f"- {item}")
+        if kind == "abstracts":
+            lines.append(meta["abstract"])
+        elif kind == "syllabus":
+            for item in meta["syllabus"]:
+                lines.append(f"- {item}")
+
     return "\n".join(lines)
 
 
@@ -233,20 +240,18 @@ def toc(pargs, kwargs, node):
         meta = ark.site.config["_meta_"][slug]
         title = f'<a href="@root/{slug}">{util.markdownify(meta["title"])}</a>'
         tag = f": {util.markdownify(meta['tag'])}" if is_chapter else ""
-        slides = f' (<a href="@root/{slug}/slides.html">slides</a>)' if is_chapter else ""
+        slides = (
+            f' (<a href="@root/{slug}/slides.html">slides</a>)' if is_chapter else ""
+        )
         return f"<li>{title}{tag}{slides}</li>"
 
     util.require(
         (not pargs) and (not kwargs),
         f"Bad 'toc' shortcode with {pargs} and {kwargs}",
     )
-    chapters = [
-        _format(slug, True) for slug in ark.site.config["chapters"]
-    ]
+    chapters = [_format(slug, True) for slug in ark.site.config["chapters"]]
     chapters = '<ol class="toc" type="1">\n' + "\n".join(chapters) + "\n</ol>"
-    appendices = [
-        _format(slug, False) for slug in ark.site.config["appendices"]
-    ]
+    appendices = [_format(slug, False) for slug in ark.site.config["appendices"]]
     appendices = '<ol class="toc" type="A">\n' + "\n".join(appendices) + "\n</ol>"
     return f"{chapters}\n{appendices}"
 

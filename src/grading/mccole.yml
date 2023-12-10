@@ -1,5 +1,7 @@
 title: Grading
 tag: "Because your team's real product is your grades, not your software."
+abstract: >
+    FIXME write abstract
 syllabus:
 -   "Measuring programmers' productivity is hard and depends on context."
 -   Developers are most productive when they're thriving, which depends on four factors.

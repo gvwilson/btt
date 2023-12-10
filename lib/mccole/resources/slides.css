@@ -49,7 +49,7 @@ body {
     content: "\270E "; /* pencil */
 }
 .exercise h2 {
-    background-color: var(--stamp-purple-light);
+    background-color: var(--stamp-orange-light);
 }
 
 .aside h2::before {
