@@ -1,0 +1,101 @@
+Coco 2018
+Majumder 2019
+Ford 2019
+Gitinabard 2020
+Behroozi 2020
+Peiteik 2021
+
+::: callout
+### Don't define your own style
+
+Just as the world doesn't need more file format (<x key="regexp-parser"></x>)
+it also doesn't need more programming styles,
+or more arguments among programmers about whether there should be spaces before curly braces or not.
+[Standard JS][standard-js] may not do everything exactly the way you want,
+but adopting it increases the odds that other programmers will be able to read your code at first glance.
+:::
+
+
+for example ko05 found that devs spend 30% of their time navigating between source files
+dibella13 (pair programming has a small but measurable impact on defects)
+bird11 (the less sense of ownership programmers have over particular pieces of code, the more bugs there are)
+aranda09 (crucial information about bugs is never recorded digitally)
+glerum09 (Microsoft monitoring in the large)
+hilton16 (CI projects release more often)
+sillito06, latoza06 (questions programmers ask when trying to understand programs) - see list in comprehension.md
+roehm12 (programmers rely on explanations from each other to understand code)
+dagenais10 (juniors spend most of their time in their first job finding their way around the code)
+maalej14 (most programmers spend most of their time reading code - "program comprehension")
+aghajani20
+bettenburg12
+Conway's Law (conway68)
+silva16 kim12 (refactoring)
+abdalkareem17 (using trivial packages)
+mark08 (interruptions cause stress)"
+washington20 (cultural competence)
+treude11 (staying aware of peers' work)
+may19 (gender participation on SO)
+begel08 (novices are afraid to ask questions out of fear of looking stupid)
+salvaneschi14 (declarative languages are easier to understand)
+beller18 (most programmers debug with print statements)
+meyer17 (interruption frequency and cost)
+li15 (most important skills for a successful software engineer are interpersonal)
+
+sedano17 sources of waste
+
+* *Building the wrong feature or product*. The cost of building a feature or product that does not address user or business needs.
+* *Mismanaging the backlog*. The cost of duplicating work, expediting lower value user features, or delaying necessary bug fixes.
+* *Rework*. The cost of altering delivered work that should have been done correctly but was not.
+* *Unnecessarily complex solutions*. The cost of creating a more complicated solution than necessary, a missed opportunity to simplify features, user interface, or code.
+* *Extraneous cognitive load*. The costs of unneeded expenditure of mental energy, such as poorly written code, context switching, confusing APIs, or technical debt. 
+* *Psychological distress*. The costs of burdening the team with unhelpful stress arising from low morale, pace, or interpersonal conflict.
+* *Waiting/multitasking*. The cost of idle time, often hidden by multi-tasking, due to slow tests, missing information, or context switching.
+* *Knowledge loss*. The cost of re-acquiring information that the team once knew.
+* *Ineffective communication*. The cost of incomplete, incorrect, misleading, inefficient, or absent communication.
+
+requirements
+  * Are they *complete*?
+  * Are they *consistent*?
+  * Are they *verifiable* (precise)?
+
+debugging
+1. reproduce
+2. minimize
+3. localize
+  - step forward
+  - step backward
+  - delta debugging (Zeller compare successful and unsucessful runs)
+
+  "zeller09": [
+    "Andreas Zeller"
+    2009, 
+    "Why programs fail: a guide to systematic debugging"
+    "Elsevier"
+    
+    "https://www.google.com/books/edition/_/_63Bm4LAdDIC"
+
+
+latoza20 (following effective debugging practices can make juniors as effective as seniors)
+
+the problem of collecting data about behavior (it's surveillance)
+
+Quote Ko:
+
+So how do developers go about answering these questions? Studies comparing experts and novices show that experts use prior knowledge that they have about architecture, design patterns, and the problem domain a program is built for to know what questions to ask and how to answer them, whereas novices use surface features of code, which leads them to spend considerable time reading code that is irrelevant to a question<vonmayrhauser94,latoza07>. Reading and comprehending source code is fundamentally different from those of reading and comprehending natural language<binkley13>; what experts are doing is ultimately reasoning about *dependencies* between code<weiser81>. Dependencies include things like *data dependencies* (where a variable is used to compute something, what modifies a data structure, how data flows through a program, etc.) and *control dependencies* (which components call which functions, which events can trigger a function to be called, how a function is reached, etc.). All of the questions above fundamentally get at different types of data and control dependencies. In fact, theories of how developers navigate code by following these dependencies are highly predictive of what information a developer will seek next<fleming13>, suggesting that expert behavior is highly procedural. This work, and work explicitly investigating the role of identifier names<lawrie06>, finds that names are actually critical to facilitating higher level comprehension of program behavior.
+
+Herbsleb's *Socio-Technical Theory of Coordination (STTC)*. The idea of the theory is quite simple: _technical dependencies_ in engineering decisions (e.g., this function calls this other function, this data type stores this other data type) define the _social constraints_ that the organization must solve in a variety of ways to build and maintain software<herbsleb03,herbsleb16>. The better the organization builds processes and awareness tools to ensure that the people who own those engineering dependencies are communicating and aware of each others' work, the fewer defects that will occur. Herbsleb referred this alignment as _sociotechnical congruence_, and conducted a number of studies demonstrating its predictive and explanatory power.
+
+  "abbate12": [
+    "Janet Abbate"
+    2012,
+    "Recoding gender: women's changing participation in computing"
+    "MIT Press",
+    "https://mitpress.mit.edu/books/recoding-gender"
+
+  "benjamin19": [
+    "Ruha Benjamin"
+    2019, 
+    "Race after technology: Abolitionist tools for the New Jim Code"
+    "Polity Books"
+    "https://www.ruhabenjamin.com/race-after-technology"
+

@@ -1,0 +1,30 @@
+hi everyone - please excuse me for asking, but if you can spare a few minutes I would be very grateful for your thoughts on how to improve https://third-bit.com/2021/03/30/joining-a-project/ - I would like it to be useful to as wide a range of people as possible, and I’m just a point sample in this big old universe of ours :slightly_smiling_face:
+11 replies
+
+Nice. My first impression is that there are things mixed. A job is not the same as a project that you join because you want to (not everyone can choose their job or when leave that job).
+
+
+So point 8 and 9.... (edited) 
+
+I don't always want friendships in my work... (#8). I want good work relationships. Confidence on each other and on the team.
+
+And may be it's not on "joining"a project, but on staying: wellness and health are important
+
+I have been working at the same institution for 23 years. I have relationships that go beyond work and people are generally the reason why I stay or leave a project, now that I can choose.
+When I couldn't choose, I had a very insecure boss, 15 years older than me, who always felt like I was challenging him. He always wanted to have the type of relationship you mentioned in point 8 and he got very angry when I did not participate in those types of activities.
+It got to the point where we had a horrible argument, at work, where I ended up yelling at him while I cried with rage that we would never have that kind of relationship and that I had no obligation to have it. This was a job and he was my boss and he would never become my friend.
+So, you can make friends at work, yeah sure. But it is not an obligation and there are other places for that. (edited) 
+
+A few thoughts:
+But do ask: I like to remind people that when they start a new job they are expected to have a lot of questions. It's better to ask them early so you can get moving than it is to stubbornly try to figure it out on your own and have to ask 6 months later.
+Remember that software is only one part of a project: I like the point about " Updating or translating documentation" but it lands differently for men than women. Women have historically been given these types of administrative tasks that come with little to no decision-making power. The advice is great, with the word of caution that you want to have a good balance of that and more technical contributions like "testing bug fixes." You don't want to give people the opportunity to think you're "really good at" documentation and then hand off their own poor documentation for you to fix (there have been many conversations in R-Ladies about this)
+
+I like point 1 and 2. Like a good balance between showing that you made an effort to find the answer and asking.
+
+For the other point, I agree and I think the real problem is the value that is given to each task.
+
+It is like program a package vs. organizing a conference. The first is more valued for a very important portion of the community. Although it is the other that makes the community grow and moving.
+
+But that's discussion for another list :wink:
+
+And if it is a job, in general there is a guide to what you should be doing (not like you can choose what to do) and someone who should know what you are doing and how. I would recommend that communication with that person be fluid. If you have a new idea, before do it, ask, if you done something, check how you are doing (I think is different kind of question that the one on point 2) (edited) 
