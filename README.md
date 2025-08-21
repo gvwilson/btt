@@ -6,9 +6,9 @@ FIXME
 
 FIXME
 
-## Syllabus
+## Lessons
 
-<div id="syllabus" markdown="1">
+<div id="lessons" markdown="1">
 
 1.  [Introduction](./intro/)
 1.  [The Important Stuff](./important/)
